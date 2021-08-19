@@ -14,7 +14,7 @@
 ## =============================================================================
 
 
-## IMPORT PACKAGES==============================================================
+## IMPORT PACKAGES =============================================================
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
   tidyverse,      # Tidyverse umbrella package
@@ -22,11 +22,11 @@ pacman::p_load(
   )  
 
 
-## IMPORT DATA==================================================================
+## IMPORT DATA =================================================================
 df <- import('./Study 1/main-analysis/data/raw-data_study-1.xlsx')
 
 
-## WRANGLING====================================================================
+## WRANGLING ===================================================================
 mydata <- df %>% 
   mutate(
     # Assigned experimental group
@@ -98,7 +98,7 @@ mydata <- df %>%
   rowid_to_column("id")
 
 
-## EXPORT PROCESSED DATA========================================================
+## EXPORT PROCESSED DATA =======================================================
 export(mydata, './Study 1/main-analysis/data/processed-data_study-1.csv')
 save(mydata, file = './Study 1/main-analysis/data/processed-data_study-1.RData')
 
