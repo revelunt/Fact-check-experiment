@@ -2,7 +2,7 @@
 
 This repository contains replication materials for the paper _"Perceiving Fact-Checks as Biased but Nevertheless Persuaded? Effects of Fact-Checking News Delivered by Partisan Media"_ (working paper). 
 
-For any questions or inquries, please contact the corresponding author, Hyunjin (Jin) Song (hyunjinsong@yonsei.ac.kr) or the first author [Je Hoon Chae][https://jehoonchae.github.io/] (chaejehoon@yonsei.ac.kr). Questions concerning R codes should be directed to the first author.
+For any questions or inquries, please contact the corresponding author, Hyunjin (Jin) Song (hyunjinsong@yonsei.ac.kr) or the first author Je Hoon Chae (chaejehoon@yonsei.ac.kr). Questions concerning R codes should be directed to the first author.
 
 
 
