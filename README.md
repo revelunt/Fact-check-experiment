@@ -12,7 +12,7 @@ Replication codes for reproducing the results reported in the paper are located 
 
 #### Data
 
-[`./Study 1/main-analysis/data/`]
+`./Study 1/main-analysis/data/`
 
 - `raw-data_study-1.xlsx`: Raw data which was initally collected for Study 1 with South Korean sample on September 2019.
 - `processed-data_study-1.csv`: Pre-processed data which recoding and leaving only relevant varilbles from `processed-data_study-1.csv`.
