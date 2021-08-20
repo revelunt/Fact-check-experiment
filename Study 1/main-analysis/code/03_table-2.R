@@ -16,10 +16,9 @@
 ## IMPORT PACKAGES==============================================================
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
-  tidyverse,      # Tidyverse umbrella package
-  data.table,     # Data.table type operation
   estimatr,       # HC2 robust SE linear regression
-  texreg          # Print regression table
+  texreg,         # Print regression table
+  tidyverse       # Tidyverse umbrella package
 )  
 
 
@@ -87,9 +86,9 @@ screenreg(
 )
 
 ## ==========================================================================================================================
-##   Liberals                          Moderates                         Conservatives           
-## --------------------------------  --------------------------------  ------------------------------------
-##   (1)              (2)              (3)                (4)            (5)                (6)              
+##                     Liberals                          Moderates                         Conservatives           
+##                   --------------------------------  --------------------------------  ------------------------------------
+##                     (1)              (2)              (3)                (4)            (5)                (6)              
 ## --------------------------------------------------------------------------------------------------------------------------
 ## Debunking: LC      -0.58 (0.23) *   -0.54 (0.25) *    0.30 (0.23)        0.29 (0.24)    0.85 (0.21) ***    0.85 (0.21) ***
 ## fact-check by LM   -0.18 (0.26)     -0.13 (0.27)      0.11 (0.18)        0.11 (0.19)    0.02 (0.23)        0.08 (0.23)    
