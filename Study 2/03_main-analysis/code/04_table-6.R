@@ -32,9 +32,9 @@ mydata <- read_csv(INPUT_DATA_PATH)
 mydata$media_slant <- factor(mydata$media_slant)
 mydata$media_slant <- relevel(mydata$media_slant, "Reuter")
 ## contrasts(mydata$media_slant)
-##        Fox MSNBC
+##        FOX MSNBC
 ## Reuter   0     0
-## Fox      1     0
+## FOX      1     0
 ## MSNBC    0     1
 
 # Subsampling based on partisanship
@@ -61,9 +61,9 @@ screenreg(
   custom.header = list("Democrats" = 1:2, "Independents" = 3:4, "Republican" = 5:6),
   custom.coef.map = list(
     "valenceDucey" = "Debunking: Ducey (vs. Biden)", 
-    "media_slantFox" = "Delivered by: FOX (vs. Reuter)",
+    "media_slantFOX" = "Delivered by: FOX (vs. Reuter)",
     "media_slantMSNBC" = "Delivered by: MSNBC (vs. Reuter)",
-    "valenceDucey:media_slantFox" = "Ducey × Fox",
+    "valenceDucey:media_slantFOX" = "Ducey × FOX",
     "valenceDucey:media_slantMSNBC" = "Ducey × MSNBC",
     "gen_knowledge" = "General knowledge",
     "immig_knowledge" = "Immigration knowledge", "media_trust" = "Media trust",
@@ -83,7 +83,7 @@ screenreg(
 ## Debunking: Ducey (vs. Biden)        0.76 (0.29) **     0.75 (0.30) *     -0.15 (0.34)       -0.21 (0.33)        0.43 (0.27)        0.42 (0.27)  
 ## Delivered by: FOX (vs. Reuter)      0.69 (0.27) *      0.69 (0.27) *      0.13 (0.33)        0.15 (0.34)        0.15 (0.26)        0.07 (0.27)  
 ## Delivered by: MSNBC (vs. Reuter)   -0.03 (0.30)       -0.00 (0.30)       -0.43 (0.35)       -0.63 (0.37)        0.54 (0.30)        0.51 (0.29)  
-## Ducey × Fox                        -0.69 (0.39)       -0.64 (0.39)        0.04 (0.48)       -0.07 (0.48)       -0.64 (0.38)       -0.60 (0.39)  
+## Ducey × FOX                        -0.69 (0.39)       -0.64 (0.39)        0.04 (0.48)       -0.07 (0.48)       -0.64 (0.38)       -0.60 (0.39)  
 ## Ducey × MSNBC                       0.28 (0.40)        0.26 (0.40)        0.60 (0.46)        0.74 (0.47)       -0.62 (0.42)       -0.70 (0.43)  
 ## General knowledge                                      0.02 (0.12)                          -0.17 (0.13)                          -0.03 (0.15)  
 ## Immigration knowledge                                  0.02 (0.09)                           0.15 (0.10)                           0.02 (0.11)  

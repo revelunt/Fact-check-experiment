@@ -102,9 +102,9 @@ merged_plot <- plot_grid(plot_1, plot_2, ncol = 1, labels = c("A", "B"), label_s
 ## OUTPUT ======================================================================
 # .png extension file output
 PLOT_FILE_PATH_PNG <- './Study 1/main-analysis/results/figure-2.png'
-ggsave(filename = PLOT_FILE_PATH_PNG, width = 10, height = 10, device = 'png', dpi = 'retina')
+merged_plot %>% ggsave(filename = PLOT_FILE_PATH_PNG, width = 10, height = 10, device = 'png', dpi = 'retina')
 
 # .pdf extension file output
 PLOT_FILE_PATH_PDF <- './Study 1/main-analysis/results/figure-2.pdf'
-ggsave(filename = PLOT_FILE_PATH_PDF, width = 10, height = 10, device = 'pdf', dpi = 'retina')
+merged_plot %>% ggsave(filename = PLOT_FILE_PATH_PDF, width = 10, height = 10, device = 'pdf', dpi = 'retina')
 

@@ -69,7 +69,7 @@ mydata <- df %>%
   # Reuter: Neutral, FOX: Conservative, MSNBC: Liberal
   media_slant = case_when(
     (!is.na(.$q10_11))|(!is.na(.$q13_11)) ~ "Reuter",
-    (!is.na(.$q11_11))|(!is.na(.$q14_11)) ~ "Fox",
+    (!is.na(.$q11_11))|(!is.na(.$q14_11)) ~ "FOX",
     (!is.na(.$q12_11))|(!is.na(.$q15_11)) ~ "MSNBC"
   ),
   # Dependent variable 1: Persuasive effect of fact-checking news

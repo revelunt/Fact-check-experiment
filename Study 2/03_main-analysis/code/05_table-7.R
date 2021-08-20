@@ -32,9 +32,9 @@ mydata <- read_csv(INPUT_DATA_PATH)
 mydata$media_slant <- factor(mydata$media_slant)
 mydata$media_slant <- relevel(mydata$media_slant, "Reuter")
 ## > contrasts(mydata$media_slant)
-##        Fox MSNBC
+##        FOX MSNBC
 ## Reuter   0     0
-## Fox      1     0
+## FOX      1     0
 ## MSNBC    0     1
 
 # Sub-sampling based on partisanship
@@ -61,15 +61,15 @@ screenreg(
   custom.header = list("Democrats" = 1:2, "Republican" = 3:4, "Partisan combined" = 5:6),
   custom.coef.map = list(
     "valenceDucey" = "Debunking: Ducey (vs. Biden)", 
-    "media_slantFox" = "Delivered by: FOX (vs. Reuter)",
+    "media_slantFOX" = "Delivered by: FOX (vs. Reuter)",
     "media_slantMSNBC" = "Delivered by: MSNBC (vs. Reuter)",
     "partisanshipRepublican" = "Republican (vs. Democrats)",
-    "valenceDucey:media_slantFox" = "Ducey × Fox",
+    "valenceDucey:media_slantFOX" = "Ducey × FOX",
     "valenceDucey:media_slantMSNBC" = "Ducey × MSNBC",
     "valenceDucey:partisanshipRepublican" = "Ducey × Republican",
-    "media_slantFox:partisanshipRepublican" = "FOX × Republican",
+    "media_slantFOX:partisanshipRepublican" = "FOX × Republican",
     "media_slantMSNBC:partisanshipRepublican" = "MSNBC × Republican",
-    "valenceDucey:media_slantFox:partisanshipRepublican" = "Ducey × Fox × Republican",
+    "valenceDucey:media_slantFOX:partisanshipRepublican" = "Ducey × FOX × Republican",
     "valenceDucey:media_slantMSNBC:partisanshipRepublican" = "Ducey x MSNBC x Republican",
     "gen_knowledge" = "General knowledge",
     "immig_knowledge" = "Immigration knowledge", "media_trust" = "Media trust",
@@ -91,12 +91,12 @@ screenreg(
 ## Delivered by: FOX (vs. Reuter)      0.24 (0.03) ***    0.24 (0.03) ***   -0.07 (0.03) *     -0.08 (0.03) *      0.24 (0.03) ***    0.24 (0.03) ***
 ## Delivered by: MSNBC (vs. Reuter)   -0.01 (0.03)       -0.01 (0.03)        0.04 (0.03)        0.03 (0.03)       -0.01 (0.03)       -0.02 (0.03)    
 ## Republican (vs. Democrats)                                                                                     -0.01 (0.03)       -0.08 (0.03) *  
-## Ducey × Fox                        -0.23 (0.04) ***   -0.23 (0.04) ***   -0.03 (0.05)       -0.06 (0.05)       -0.23 (0.04) ***   -0.22 (0.05) ***
+## Ducey × FOX                        -0.23 (0.04) ***   -0.23 (0.04) ***   -0.03 (0.05)       -0.06 (0.05)       -0.23 (0.04) ***   -0.22 (0.05) ***
 ## Ducey × MSNBC                      -0.01 (0.04)       -0.01 (0.04)       -0.07 (0.06)       -0.08 (0.05)       -0.01 (0.04)       -0.01 (0.04)    
 ## Ducey × Republican                                                                                              0.20 (0.05) ***    0.21 (0.05) ***
 ## FOX × Republican                                                                                               -0.31 (0.04) ***   -0.31 (0.04) ***
 ## MSNBC × Republican                                                                                              0.06 (0.04)        0.05 (0.04)    
-## Ducey × Fox × Republican                                                                                        0.19 (0.07) **     0.17 (0.07) *  
+## Ducey × FOX × Republican                                                                                        0.19 (0.07) **     0.17 (0.07) *  
 ## Ducey x MSNBC x Republican                                                                                     -0.06 (0.07)       -0.07 (0.07)    
 ## General knowledge                                     -0.01 (0.01)                           0.03 (0.02)                           0.01 (0.01)    
 ## Immigration knowledge                                  0.01 (0.01)                           0.01 (0.01)                           0.01 (0.01)    
