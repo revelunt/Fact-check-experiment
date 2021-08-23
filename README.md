@@ -14,13 +14,13 @@ Replication codes for reproducing the results reported in the paper are located 
 
 `./Study 1/main-analysis/data/`
 
-- `raw-data_study-1.xlsx`: Raw data which was initally collected for Study 1 with South Korean sample on September 2019.
-- `processed-data_study-1.csv`: Pre-processed data which recoding and leaving only relevant varilbles from `processed-data_study-1.csv`.
+- `raw-data_study-1.xlsx`: Raw data which was initally collected for Study 1 with South Korean sample in September 2019.
+- `processed-data_study-1.csv`: Pre-processed data which recoding and leaving only relevant variables from raw data.
 
 `./Study 2/03_main-analysis/data/`
 
-- `raw-data_study-2.csv`: Raw data which was collected for Study 2 with U.S. sample (Amazon MTurk) on June 2021.
-- `processed-data_study-2.csv`: Pre-processed data recoding and leaving only relevant variables from `raw-data_study-2.csv`
+- `raw-data_study-2.csv`: Raw data which was collected for Study 2 with U.S. sample (Amazon MTurk) in June 2021.
+- `processed-data_study-2.csv`: Pre-processed data recoding and leaving only relevant variables from raw data.
 
 #### Code
 

@@ -24,10 +24,9 @@ pacman::p_load(
 
 
 ## IMPORT FONT =================================================================
-# Call the PT Sans font which would be used in the figures
-font_add_google(name = "PT Sans", family = "PT Sans")
+font_add_google(name = "Fira Sans", family = "Fira Sans")
 showtext_auto()
-PLOT_FONT_FAMILY <- "PT Sans"
+PLOT_FONT_FAMILY <- "Fira Sans"
 
 
 ## IMPORT DATA =================================================================

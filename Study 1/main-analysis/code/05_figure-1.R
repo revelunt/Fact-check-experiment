@@ -24,11 +24,9 @@ pacman::p_load(
 
 
 ## IMPORT FONT =================================================================
-# Call PT Sans from Google Font
-font_add_google('PT Sans', 'PT Sans')
+font_add_google(name = "Fira Sans", family = "Fira Sans")
 showtext_auto()
-
-PLOT_FONT_FAMILY <- 'PT Sans'
+PLOT_FONT_FAMILY <- "Fira Sans"
 
 
 ## IMPORT DATA =================================================================

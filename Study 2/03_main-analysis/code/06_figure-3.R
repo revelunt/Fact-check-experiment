@@ -24,10 +24,9 @@ pacman::p_load(
 
 
 ## IMPORT FONT =================================================================
-# Call the PT Sans font which would be used in the figures
-font_add_google(name = "PT Sans", family = "PT Sans")
+font_add_google(name = "Fira Sans", family = "Fira Sans")
 showtext_auto()
-PLOT_FONT_FAMILY <- "PT Sans"
+PLOT_FONT_FAMILY <- "Fira Sans"
 
 
 ## IMPORT DATA =================================================================
@@ -46,10 +45,10 @@ agree_tab <- mydata %>%
 plot_1 <- agree_tab %>% 
   ggplot(aes(partisanship, mean, colour = partisanship)) +
   geom_hline(yintercept = 0, size = 1.5, colour = 'black', alpha = .3) +
-  geom_pointrange(size = 1.5, fatten = 3, aes(ymin = conf_95_low, ymax = conf_95_high)) +
+  geom_pointrange(size = 1, aes(ymin = conf_95_low, ymax = conf_95_high)) +
   scale_y_continuous(limits = c(-2.5, 2.5)) +
   scale_colour_manual(values = c("cornflowerblue", "grey40", "firebrick")) +
-  labs(x = NULL, y = 'Change score of agreement on the statement\n(persuasive <---> backfire)') +
+  labs(x = NULL, y = 'Change score of agreement on the statement\n(persuasive <-> backfire)') +
   theme_bw(base_size = 17, base_family = PLOT_FONT_FAMILY) +
   theme(
     panel.grid.minor = element_blank(), 
@@ -75,10 +74,10 @@ belief_tab <- mydata %>%
 plot_2 <- belief_tab %>% 
   ggplot(aes(partisanship, mean, colour = partisanship)) +
   geom_hline(yintercept = 0, size = 1.5, colour = 'black', alpha = .3) +
-  geom_pointrange(size = 1.5, fatten = 3, aes(ymin = conf_95_low, ymax = conf_95_high)) +
+  geom_pointrange(size = 1, aes(ymin = conf_95_low, ymax = conf_95_high)) +
   scale_y_continuous(limits = c(-2.5, 2.5)) +
   scale_colour_manual(values = c("cornflowerblue", "grey40", "firebrick")) +
-  labs(x = NULL, y = 'Change score of factual belief on the statement\n(persuasive <---> backfire)') +
+  labs(x = NULL, y = 'Change score of factual belief on the statement\n(persuasive <-> backfire)') +
   theme_bw(base_size = 17, base_family = PLOT_FONT_FAMILY) +
   theme(
     panel.grid.minor = element_blank(), 
