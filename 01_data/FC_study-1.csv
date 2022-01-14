@@ -1,0 +1,1063 @@
+id,no,gubun,group,ideology,partisanship,chosun,hani,news_quality,agree_t1,agree_t2,bias,age,education,gender,valence,media_slant,ideology_discrete,economic_policy,involvement,media_trust,agree_diff,hmp_score
+1,1,1,1,5,Independent,6,2,4,5,5,0,4,4,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1.33333333333333,1.5,2.625,0,0.5
+2,2,1,1,3,Minju Party,6,3,4,2,3,0.3,5,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,5,6,2.375,1,0.8
+3,4,1,1,4,Independent,7,1,1,1,1,0.5,1,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,2,5.5,1.125,0,
+4,5,1,1,7,Hankuk Party,4,4,5,7,7,0.2,4,4,Female,Conservative-consistent news,"Conservative
+Media",Conservative,1,4,1.75,0,0.3
+5,6,1,1,1,Minju Party,7,7,1,1,1,0.5,2,5,Male,Conservative-consistent news,"Conservative
+Media",Liberal,6,5.5,1.5,0,1
+6,8,1,1,4,Independent,4,4,4,4,4,0,2,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,1,4,1,0,
+7,9,1,1,2,Independent,7,3,4,2,1,0,4,4,Male,Conservative-consistent news,"Conservative
+Media",Liberal,1.33333333333333,5,2.25,-1,0.5
+8,10,1,1,5,Hankuk Party,5,2,5,5,3,0.1,2,4,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1,3,4.625,-2,0.4
+9,11,1,1,2,Minju Party,1,3,4,2,3,-0.1,5,4,Male,Conservative-consistent news,"Conservative
+Media",Liberal,4,4.5,1,1,0.4
+10,13,1,1,6,Independent,5,1,2,7,7,-0.3,5,4,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1,1,1.625,0,0.8
+11,15,1,1,4,Independent,5,1,5,7,5,0.1,4,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,1,7,2.75,-2,
+12,17,1,1,4,Minju Party,4,4,1,2,1,0.5,3,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,5,6,1,-1,
+13,19,1,1,4,Independent,4,3,2,2,2,0.2,3,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,4,5,1.875,0,
+14,20,1,1,4,Minju Party,6,3,4,3,3,0,5,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,3.33333333333333,5,3,0,
+15,21,1,1,7,Hankuk Party,6,1,5,7,6,0,2,4,Female,Conservative-consistent news,"Conservative
+Media",Conservative,1,7,1,-1,0.5
+16,22,1,1,3,Minju Party,7,3,1,1,1,0.5,5,4,Male,Conservative-consistent news,"Conservative
+Media",Liberal,6,6,1.25,0,1
+17,23,1,1,5,Independent,4,4,4,4,3,0.1,5,4,Female,Conservative-consistent news,"Conservative
+Media",Conservative,2.66666666666667,5,3.5,-1,0.4
+18,24,1,1,4,Independent,4,4,4,5,5,0.1,2,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,3,4,2.75,0,
+19,25,1,1,4,Minju Party,4,4,3,3,3,0,2,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,4.33333333333333,4.5,3,0,
+20,26,1,1,4,Independent,7,3,2,2,1,0.5,3,5,Male,Conservative-consistent news,"Conservative
+Media",Moderate,4,4.5,2,-1,
+21,28,1,1,5,Independent,5,4,5,6,3,0.1,4,4,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1.33333333333333,6.5,3.5,-3,0.4
+22,29,1,1,3,Independent,4,4,4,6,5,0.3,4,3,Female,Conservative-consistent news,"Conservative
+Media",Liberal,3.66666666666667,5.5,4.625,-1,0.8
+23,30,1,1,4,Independent,3,5,4,4,3,0,5,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,3.66666666666667,4.5,2.375,-1,
+24,31,1,1,5,Independent,5,1,4,6,4,-0.1,5,3,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1.33333333333333,2.5,3.125,-2,0.6
+25,32,1,1,5,Minju Party,4,5,4,4,4,0,5,3,Female,Conservative-consistent news,"Conservative
+Media",Conservative,4.33333333333333,5,4.625,0,0.5
+26,33,1,1,5,Independent,5,3,6,6,5,0,1,3,Female,Conservative-consistent news,"Conservative
+Media",Conservative,1.33333333333333,6,1.25,-1,0.5
+27,34,1,1,4,Independent,5,2,4,4,4,0,5,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,1.66666666666667,5,4.125,0,
+28,35,1,1,5,Minju Party,7,3,5,5,3,-0.3,2,4,Male,Conservative-consistent news,"Conservative
+Media",Conservative,3.66666666666667,5.5,2.25,-2,0.8
+29,36,1,1,4,Minju Party,4,4,3,1,2,-0.1,3,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,5,5,4,1,
+30,37,1,1,3,Minju Party,7,2,6,2,2,0,4,5,Male,Conservative-consistent news,"Conservative
+Media",Liberal,3.33333333333333,5,3.25,0,0.5
+31,38,1,1,4,Independent,4,4,4,5,5,-0.1,1,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,3.33333333333333,3.5,3.875,0,
+32,39,1,1,4,Minju Party,4,3,1,1,1,0,3,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,4,4,3.375,0,
+33,40,1,1,7,Hankuk Party,7,1,7,7,7,0.5,4,3,Male,Conservative-consistent news,"Conservative
+Media",Conservative,2,4.5,6.5,0,0
+34,41,1,1,4,Independent,5,3,4,5,4,0,3,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,3,4.5,2.375,-1,
+35,42,1,1,4,Independent,4,4,4,4,4,0,5,3,Female,Conservative-consistent news,"Conservative
+Media",Moderate,3,5.5,3.5,0,
+36,43,1,1,4,Independent,5,1,4,5,5,0,5,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,1.33333333333333,7,2,0,
+37,44,1,1,4,Independent,7,4,4,2,1,-0.1,2,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,4.33333333333333,4,3.25,-1,
+38,45,1,1,4,Minju Party,7,1,1,6,3,0.5,5,3,Female,Conservative-consistent news,"Conservative
+Media",Moderate,2.66666666666667,5,1.875,-3,
+39,46,1,1,3,Independent,5,4,4,4,4,0.1,3,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,3.33333333333333,5,3.125,0,0.6
+40,47,1,1,4,Independent,5,4,4,6,4,0,4,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,1.66666666666667,1.5,2.5,-2,
+41,49,1,1,3,Independent,5,4,4,3,3,-0.1,4,4,Male,Conservative-consistent news,"Conservative
+Media",Liberal,3.66666666666667,5,2.875,0,0.4
+42,50,1,1,5,Independent,3,4,4,4,3,-0.1,4,4,Female,Conservative-consistent news,"Conservative
+Media",Conservative,3.33333333333333,5.5,3.125,-1,0.6
+43,51,1,1,4,Hankuk Party,2,2,4,6,5,0,5,3,Male,Conservative-consistent news,"Conservative
+Media",Moderate,1.33333333333333,6.5,1.875,-1,
+44,52,1,1,4,Independent,2,3,4,4,4,-0.1,2,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,2.33333333333333,6,3,0,
+45,53,1,1,4,Independent,5,3,6,5,4,0,5,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,3.33333333333333,4.5,2.875,-1,
+46,54,1,1,3,Minju Party,6,2,5,3,2,-0.2,4,4,Male,Conservative-consistent news,"Conservative
+Media",Liberal,5,4.5,4,-1,0.3
+47,55,1,1,4,Independent,3,4,4,6,6,-0.1,2,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,1,6,4.5,0,
+48,56,1,1,4,Independent,5,3,5,3,2,0.1,4,5,Male,Conservative-consistent news,"Conservative
+Media",Moderate,3,5.5,2.875,-1,
+49,57,1,1,4,Independent,6,4,4,3,3,0.2,4,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,3.66666666666667,6,2,0,
+50,58,1,1,5,Independent,7,4,2,2,2,0.1,4,4,Male,Conservative-consistent news,"Conservative
+Media",Conservative,4.66666666666667,5,2,0,0.4
+51,59,1,1,4,Independent,6,2,3,5,5,0.5,1,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,2,5,1.375,0,
+52,61,1,1,5,Independent,4,1,5,6,5,0,4,3,Female,Conservative-consistent news,"Conservative
+Media",Conservative,1.33333333333333,5,2.125,-1,0.5
+53,62,1,1,3,Independent,7,2,5,1,1,0.2,5,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,3.66666666666667,7,2.25,0,0.7
+54,65,1,1,3,Minju Party,7,7,4,1,1,0,1,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,5.33333333333333,4.5,1,0,0.5
+55,68,1,1,3,Minju Party,6,2,5,5,4,0,4,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,3.33333333333333,6,1.75,-1,0.5
+56,71,1,1,4,Minju Party,7,4,2,1,1,0,2,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,3.33333333333333,6,1.5,0,
+57,76,1,1,4,Minju Party,7,4,2,2,1,0.5,5,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,5,5.5,1.375,-1,
+58,82,1,1,4,Minju Party,5,3,4,3,3,-0.2,2,3,Female,Conservative-consistent news,"Conservative
+Media",Moderate,2.33333333333333,2.5,3.125,0,
+59,86,1,1,6,Hankuk Party,5,1,5,7,7,0.2,2,3,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1,1,1,0,0.3
+60,91,1,1,5,Hankuk Party,4,3,4,7,7,0,3,4,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1,4,5.25,0,0.5
+61,92,1,1,6,Hankuk Party,5,1,6,7,7,0,3,5,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1,6,2.25,0,0.5
+62,95,1,1,3,Minju Party,5,5,3,3,3,-0.1,3,4,Male,Conservative-consistent news,"Conservative
+Media",Liberal,3,3,4.5,0,0.4
+63,96,1,1,4,Minju Party,3,4,4,4,4,0,2,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,4.33333333333333,3.5,3.625,0,
+64,102,1,1,4,Minju Party,7,7,1,1,1,0.5,2,5,Male,Conservative-consistent news,"Conservative
+Media",Moderate,4,4.5,1.125,0,
+65,103,1,1,4,Hankuk Party,5,2,4,7,5,0.3,5,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,1.33333333333333,4,3.5,-2,
+66,106,1,1,6,Minju Party,1,1,2,1,3,0.2,4,3,Female,Conservative-consistent news,"Conservative
+Media",Conservative,6.33333333333333,7,6.125,2,0.3
+67,109,1,1,7,Minju Party,6,7,7,7,7,0.5,2,4,Male,Conservative-consistent news,"Conservative
+Media",Conservative,2.33333333333333,3,4.25,0,0
+68,115,1,1,3,Minju Party,7,1,3,1,1,0.4,3,5,Male,Conservative-consistent news,"Conservative
+Media",Liberal,4.33333333333333,4,2.5,0,0.9
+69,116,1,1,3,Minju Party,7,3,5,1,1,-0.2,1,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,6.66666666666667,7,1,0,0.3
+70,123,1,1,2,Minju Party,7,2,3,1,3,0.1,4,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,5.33333333333333,6.5,3.875,2,0.6
+71,130,1,1,2,Minju Party,7,7,3,1,2,0.3,2,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,4.66666666666667,6,1.5,1,0.8
+72,132,1,1,4,Minju Party,6,6,6,3,2,-0.2,3,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,4,6,2.125,-1,
+73,136,1,1,2,Minju Party,7,4,1,1,3,0.5,3,3,Female,Conservative-consistent news,"Conservative
+Media",Liberal,4.66666666666667,4.5,1,2,1
+74,141,1,1,7,Hankuk Party,5,1,6,7,6,0.3,5,4,Female,Conservative-consistent news,"Conservative
+Media",Conservative,2,4,1.75,-1,0.2
+75,144,1,1,3,Minju Party,7,2,1,1,1,0.5,4,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,5.66666666666667,6,1.75,0,1
+76,149,1,1,5,Minju Party,6,3,5,2,1,-0.1,3,4,Female,Conservative-consistent news,"Conservative
+Media",Conservative,4,5,2,-1,0.6
+77,152,1,1,3,Minju Party,5,3,4,5,5,0,3,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,2,5.5,1,0,0.5
+78,168,1,1,2,Hankuk Party,4,4,5,4,3,0,2,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,2,5.5,4.875,-1,0.5
+79,220,1,1,4,Hankuk Party,4,3,4,5,4,0,1,3,Male,Conservative-consistent news,"Conservative
+Media",Moderate,1,3.5,1,-1,
+80,226,1,1,4,Hankuk Party,4,1,6,7,7,-0.2,1,3,Male,Conservative-consistent news,"Conservative
+Media",Moderate,1,5.5,4,0,
+81,261,1,1,4,Hankuk Party,7,1,2,1,2,-0.3,1,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,1,2.5,1,1,
+82,272,1,1,4,Hankuk Party,6,5,6,2,4,0.2,1,3,Male,Conservative-consistent news,"Conservative
+Media",Moderate,4.33333333333333,3,3.875,2,
+83,294,1,1,7,Hankuk Party,1,7,3,7,7,-0.3,1,4,Female,Conservative-consistent news,"Conservative
+Media",Conservative,1,4,1.5,0,0.8
+84,297,1,1,6,Hankuk Party,2,2,5,7,6,0.3,1,4,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1.66666666666667,1,2,-1,0.2
+85,308,1,1,6,Hankuk Party,6,1,5,5,4,-0.2,1,3,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1.66666666666667,5.5,2.75,-1,0.7
+86,333,1,1,5,Hankuk Party,2,4,4,7,3,-0.3,1,4,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1.33333333333333,5,3.375,-4,0.8
+87,369,1,1,4,Hankuk Party,6,1,2,7,7,-0.3,4,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,1,7,1,0,
+88,378,1,1,4,Hankuk Party,4,4,4,7,4,0,1,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,1,4,1.125,-3,
+89,382,1,1,6,Hankuk Party,3,2,3,3,3,-0.1,1,3,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1.66666666666667,1.5,2.25,0,0.6
+90,412,1,1,6,Hankuk Party,6,2,5,7,5,-0.3,3,5,Female,Conservative-consistent news,"Conservative
+Media",Conservative,1.33333333333333,4.5,1.875,-2,0.8
+91,461,1,1,3,Hankuk Party,6,6,4,5,4,0,3,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,3.33333333333333,4.5,2,-1,0.5
+92,482,1,1,5,Hankuk Party,2,2,7,7,7,0,3,5,Female,Conservative-consistent news,"Conservative
+Media",Conservative,1,1,2.625,0,0.5
+93,484,1,1,5,Hankuk Party,4,4,4,5,3,0,3,4,Male,Conservative-consistent news,"Conservative
+Media",Conservative,2.33333333333333,2,3.75,-2,0.5
+94,499,1,1,5,Hankuk Party,4,4,2,7,6,-0.4,1,4,Female,Conservative-consistent news,"Conservative
+Media",Conservative,1,2.5,2.125,-1,0.9
+95,525,1,1,4,Hankuk Party,5,4,4,4,4,0.1,3,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,3,5,3.5,0,
+96,569,1,1,5,Hankuk Party,7,6,4,7,5,0.2,1,4,Female,Conservative-consistent news,"Conservative
+Media",Conservative,1.66666666666667,5.5,2.875,-2,0.3
+97,587,1,1,3,Hankuk Party,3,3,3,3,3,-0.1,1,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,3.66666666666667,3,3.5,0,0.4
+98,665,1,1,4,Hankuk Party,6,2,4,6,6,0.2,2,5,Female,Conservative-consistent news,"Conservative
+Media",Moderate,1,7,2.125,0,
+99,711,1,1,4,Independent,7,4,4,7,5,0,2,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,1,7,1.125,-2,
+100,714,1,1,4,Independent,4,4,5,7,7,-0.1,3,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,5,4.5,4,0,
+101,716,1,1,3,Independent,7,3,1,2,1,0.5,3,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,4.66666666666667,5.5,1,-1,1
+102,717,1,1,4,Independent,3,3,3,4,4,-0.1,3,3,Female,Conservative-consistent news,"Conservative
+Media",Moderate,3.33333333333333,4,3,0,
+103,719,1,1,2,Minju Party,4,4,4,3,4,0,3,5,Male,Conservative-consistent news,"Conservative
+Media",Liberal,5,5,4.5,1,0.5
+104,720,1,1,4,Independent,3,3,2,3,3,-0.3,3,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,2,4.5,2.75,0,
+105,721,1,1,4,Independent,5,4,4,3,4,0,2,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,3.66666666666667,4,3.875,1,
+106,722,1,1,4,Independent,6,2,4,3,3,0,2,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,4,4.5,2,0,
+107,723,1,1,3,Minju Party,6,4,2,2,3,0.3,3,3,Male,Conservative-consistent news,"Conservative
+Media",Liberal,5,4.5,2.25,1,0.8
+108,724,1,1,4,Independent,4,4,4,4,4,0,1,3,Female,Conservative-consistent news,"Conservative
+Media",Moderate,4,4,4,0,
+109,725,1,1,4,Independent,3,3,2,6,2,-0.4,1,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,2,4,3.75,-4,
+110,726,1,1,4,Independent,4,4,4,4,4,0,2,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,3,3.5,3.25,0,
+111,728,1,1,3,Minju Party,5,4,4,3,3,0.1,2,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,4,4.5,2.5,0,0.6
+112,733,1,1,3,Minju Party,7,6,2,1,2,0.5,4,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,2.33333333333333,7,2.5,1,1
+113,739,1,1,5,Minju Party,7,5,3,5,4,0.3,4,4,Female,Conservative-consistent news,"Conservative
+Media",Conservative,2.66666666666667,5,1.25,-1,0.2
+114,747,1,1,2,Minju Party,7,4,1,1,1,0.5,1,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,5.33333333333333,6.5,1,0,1
+115,750,1,1,4,Minju Party,2,2,4,3,4,0,1,4,Female,Conservative-consistent news,"Conservative
+Media",Moderate,5,5,2,1,
+116,760,1,1,4,Minju Party,6,2,3,3,3,0.3,1,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,3,4.5,2.125,0,
+117,782,1,1,6,Hankuk Party,6,1,3,6,5,-0.1,4,4,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1,6.5,1.375,-1,0.6
+118,793,1,1,2,Minju Party,7,6,1,1,1,0.4,4,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,4.66666666666667,6,1,0,0.9
+119,800,1,1,2,Minju Party,2,2,4,6,5,0,1,4,Male,Conservative-consistent news,"Conservative
+Media",Liberal,2,5,1.75,-1,0.5
+120,801,1,1,2,Minju Party,7,4,5,2,1,0,4,4,Female,Conservative-consistent news,"Conservative
+Media",Liberal,3.66666666666667,5,2.625,-1,0.5
+121,804,1,1,4,Minju Party,6,2,5,3,2,0,3,5,Male,Conservative-consistent news,"Conservative
+Media",Moderate,4.33333333333333,4.5,2.125,-1,
+122,862,1,1,6,Hankuk Party,6,3,2,7,6,-0.2,5,5,Female,Conservative-consistent news,"Conservative
+Media",Conservative,1.66666666666667,6.5,2.5,-1,0.7
+123,864,1,1,6,Hankuk Party,4,1,4,6,6,0,5,5,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1,3.5,1.75,0,0.5
+124,868,1,1,4,Hankuk Party,4,4,3,7,5,0,1,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,1,5,1.75,-2,
+125,869,1,1,4,Hankuk Party,4,1,4,7,5,0,5,5,Female,Conservative-consistent news,"Conservative
+Media",Moderate,1,7,1.25,-2,
+126,879,1,1,6,Hankuk Party,5,4,6,7,6,0.4,5,3,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1,4,1,-1,0.1
+127,894,1,1,5,Hankuk Party,3,5,4,7,4,0,1,4,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1,2,3.875,-3,0.5
+128,904,1,1,6,Hankuk Party,5,1,6,7,7,0.1,5,4,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1,1,5,0,0.4
+129,918,1,1,6,Hankuk Party,4,1,6,6,6,0.3,5,4,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1,1,2.875,0,0.2
+130,935,1,1,4,Hankuk Party,5,2,5,7,7,0.2,5,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,1,6,1.125,0,
+131,938,1,1,4,Hankuk Party,5,3,6,7,6,0.1,5,4,Male,Conservative-consistent news,"Conservative
+Media",Moderate,1,7,1.625,-1,
+132,941,1,1,6,Hankuk Party,5,2,4,6,6,-0.2,5,5,Male,Conservative-consistent news,"Conservative
+Media",Conservative,1.33333333333333,4,3,0,0.7
+133,1,2,2,4,Independent,6,5,5,5,5,0.1,4,2,Female,Conservative-consistent news,"Liberal
+Media",Moderate,1,6.5,3,0,
+134,2,2,2,4,Minju Party,7,3,1,2,1,0.5,3,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,3.66666666666667,5,1.375,-1,
+135,4,2,2,4,Independent,4,4,2,4,3,0.3,5,3,Male,Conservative-consistent news,"Liberal
+Media",Moderate,2,3,4.625,-1,
+136,5,2,2,4,Minju Party,7,4,5,2,1,-0.1,4,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,5,4.5,3.875,-1,
+137,6,2,2,4,Independent,4,2,5,5,5,-0.1,5,3,Female,Conservative-consistent news,"Liberal
+Media",Moderate,2,5,3.375,0,
+138,7,2,2,5,Independent,4,2,4,5,4,-0.1,5,3,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1.33333333333333,6.5,1.875,-1,0.6
+139,8,2,2,2,Independent,7,1,3,6,3,-0.5,3,5,Male,Conservative-consistent news,"Liberal
+Media",Liberal,1.66666666666667,2.5,2.75,-3,0
+140,9,2,2,5,Hankuk Party,5,4,4,6,5,0,5,4,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1.33333333333333,5.5,3.875,-1,0.5
+141,10,2,2,5,Independent,4,4,4,4,4,0,3,4,Female,Conservative-consistent news,"Liberal
+Media",Conservative,3.66666666666667,4,3.75,0,0.5
+142,11,2,2,3,Minju Party,7,5,5,1,1,0,2,4,Female,Conservative-consistent news,"Liberal
+Media",Liberal,7,7,1,0,0.5
+143,12,2,2,3,Minju Party,6,2,5,3,3,-0.1,3,4,Male,Conservative-consistent news,"Liberal
+Media",Liberal,4,4.5,3.125,0,0.4
+144,13,2,2,5,Independent,5,4,4,3,3,0,4,4,Female,Conservative-consistent news,"Liberal
+Media",Conservative,3.33333333333333,5,3.25,0,0.5
+145,14,2,2,4,Independent,4,1,1,7,7,-0.5,5,3,Female,Conservative-consistent news,"Liberal
+Media",Moderate,1,3.5,2.25,0,
+146,15,2,2,2,Minju Party,5,4,3,1,1,0.3,3,4,Female,Conservative-consistent news,"Liberal
+Media",Liberal,4,5.5,2,0,0.8
+147,16,2,2,1,Minju Party,7,3,3,1,1,0.5,3,3,Female,Conservative-consistent news,"Liberal
+Media",Liberal,7,5,1,0,1
+148,17,2,2,2,Independent,4,4,1,5,4,-0.4,5,5,Male,Conservative-consistent news,"Liberal
+Media",Liberal,1,1,1,-1,0.1
+149,18,2,2,4,Minju Party,4,1,6,1,1,0,3,5,Male,Conservative-consistent news,"Liberal
+Media",Moderate,3.66666666666667,4,4,0,
+150,19,2,2,3,Independent,7,2,1,4,2,-0.2,3,4,Male,Conservative-consistent news,"Liberal
+Media",Liberal,4.33333333333333,5.5,1.75,-2,0.3
+151,20,2,2,4,Independent,4,3,3,6,6,-0.1,5,5,Male,Conservative-consistent news,"Liberal
+Media",Moderate,2,2,2.625,0,
+152,21,2,2,4,Minju Party,4,4,4,5,4,0,3,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,3.66666666666667,4,3.875,-1,
+153,23,2,2,5,Minju Party,4,3,1,1,1,0.5,3,4,Male,Conservative-consistent news,"Liberal
+Media",Conservative,6,6,1,0,0
+154,24,2,2,3,Minju Party,5,4,4,3,2,-0.1,2,4,Male,Conservative-consistent news,"Liberal
+Media",Liberal,3.33333333333333,3.5,4,-1,0.4
+155,25,2,2,4,Independent,6,4,4,4,3,-0.1,4,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,2.66666666666667,3.5,2.125,-1,
+156,28,2,2,4,Minju Party,4,4,4,1,1,0,2,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,5.33333333333333,4.5,1.125,0,
+157,29,2,2,4,Independent,7,2,6,3,2,0,5,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,4.33333333333333,4,1.625,-1,
+158,30,2,2,4,Independent,6,2,5,7,6,-0.3,3,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,3,4,2,-1,
+159,31,2,2,4,Independent,6,1,5,7,7,0.3,5,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,1,1.5,1,0,
+160,32,2,2,4,Minju Party,5,4,5,6,4,0.1,4,3,Female,Conservative-consistent news,"Liberal
+Media",Moderate,2.66666666666667,7,3.75,-2,
+161,33,2,2,4,Independent,7,7,5,5,5,0.1,3,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,4,4,3.875,0,
+162,34,2,2,6,Independent,6,4,3,6,5,0.3,5,4,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1.66666666666667,6.5,1.625,-1,0.2
+163,36,2,2,4,Minju Party,7,4,6,1,1,0.2,3,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,7,5,1,0,
+164,38,2,2,6,Hankuk Party,6,2,3,6,5,-0.1,5,4,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1.66666666666667,4.5,1.375,-1,0.6
+165,39,2,2,3,Minju Party,7,2,6,1,1,-0.3,4,4,Male,Conservative-consistent news,"Liberal
+Media",Liberal,4.66666666666667,5,3,0,0.2
+166,41,2,2,5,Independent,6,1,4,7,6,0.1,4,4,Female,Conservative-consistent news,"Liberal
+Media",Conservative,1.33333333333333,5.5,2.5,-1,0.4
+167,42,2,2,4,Independent,7,7,3,7,7,0.4,3,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,1,2.5,1.375,0,
+168,43,2,2,4,Independent,4,4,4,4,4,0,2,3,Female,Conservative-consistent news,"Liberal
+Media",Moderate,3.66666666666667,3.5,3.875,0,
+169,46,2,2,3,Independent,5,4,4,2,2,0,3,4,Female,Conservative-consistent news,"Liberal
+Media",Liberal,3.33333333333333,3.5,3.125,0,0.5
+170,47,2,2,6,Hankuk Party,2,4,5,7,6,0.2,5,4,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1,3,2.5,-1,0.3
+171,49,2,2,7,Hankuk Party,3,3,2,6,6,-0.3,5,4,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1.66666666666667,4,3.125,0,0.8
+172,50,2,2,4,Independent,7,3,3,3,2,-0.1,3,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,3.66666666666667,3,1,-1,
+173,52,2,2,2,Minju Party,7,2,5,2,1,-0.1,1,4,Female,Conservative-consistent news,"Liberal
+Media",Liberal,4.66666666666667,5,1.625,-1,0.4
+174,55,2,2,3,Minju Party,7,4,6,1,1,0,3,4,Male,Conservative-consistent news,"Liberal
+Media",Liberal,4.33333333333333,4.5,2.625,0,0.5
+175,56,2,2,4,Independent,4,5,4,5,5,0.1,5,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,3.33333333333333,4,5,0,
+176,58,2,2,3,Independent,6,5,5,1,1,0,3,4,Male,Conservative-consistent news,"Liberal
+Media",Liberal,2,6,1.625,0,0.5
+177,59,2,2,4,Independent,6,3,4,4,4,-0.1,3,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,2,3.5,1.875,0,
+178,60,2,2,2,Minju Party,7,5,4,1,1,0,5,4,Female,Conservative-consistent news,"Liberal
+Media",Liberal,5.33333333333333,5.5,1.125,0,0.5
+179,61,2,2,4,Independent,3,3,3,4,3,-0.2,3,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,2,3.5,2.875,-1,
+180,63,2,2,4,Independent,6,5,4,6,5,-0.2,3,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,2.33333333333333,5.5,3.375,-1,
+181,66,2,2,4,Independent,5,4,4,3,3,-0.1,1,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,4,2,3.375,0,
+182,68,2,2,4,Independent,5,3,4,6,5,-0.3,4,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,2.66666666666667,2,3,-1,
+183,69,2,2,3,Independent,7,2,2,4,2,-0.3,4,3,Male,Conservative-consistent news,"Liberal
+Media",Liberal,3.66666666666667,5,3.5,-2,0.2
+184,74,2,2,7,Minju Party,7,7,7,1,1,0,5,5,Female,Conservative-consistent news,"Liberal
+Media",Conservative,4.66666666666667,6.5,1,0,0.5
+185,77,2,2,4,Minju Party,7,2,6,1,1,-0.5,4,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,4.66666666666667,7,5,0,
+186,79,2,2,4,Minju Party,4,3,4,4,4,0.1,2,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,4.33333333333333,4.5,4.25,0,
+187,82,2,2,5,Hankuk Party,3,3,3,7,5,-0.2,1,3,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1,6.5,1.625,-2,0.7
+188,84,2,2,2,Minju Party,6,3,4,2,2,-0.2,4,5,Male,Conservative-consistent news,"Liberal
+Media",Liberal,4.33333333333333,5.5,2.5,0,0.3
+189,85,2,2,3,Minju Party,6,2,3,5,5,-0.3,2,4,Male,Conservative-consistent news,"Liberal
+Media",Liberal,2.33333333333333,6,2,0,0.2
+190,86,2,2,2,Minju Party,7,4,3,1,7,-0.1,1,5,Female,Conservative-consistent news,"Liberal
+Media",Liberal,5.66666666666667,6,3,6,0.4
+191,88,2,2,4,Minju Party,7,5,4,1,2,-0.1,4,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,4,6.5,1,1,
+192,89,2,2,3,Independent,6,2,5,6,5,0.2,5,5,Female,Conservative-consistent news,"Liberal
+Media",Liberal,1.33333333333333,6.5,2.5,-1,0.7
+193,90,2,2,2,Minju Party,7,7,1,1,1,0.5,2,4,Male,Conservative-consistent news,"Liberal
+Media",Liberal,5,6,1.75,0,1
+194,91,2,2,3,Minju Party,7,2,5,2,2,-0.2,5,3,Female,Conservative-consistent news,"Liberal
+Media",Liberal,4,4,1.875,0,0.3
+195,92,2,2,4,Independent,7,2,4,2,2,-0.1,4,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,4.66666666666667,4,1.875,0,
+196,93,2,2,4,Independent,5,4,4,4,3,0,4,3,Female,Conservative-consistent news,"Liberal
+Media",Moderate,3,4,3.625,-1,
+197,94,2,2,3,Minju Party,5,2,5,3,3,0.2,4,4,Female,Conservative-consistent news,"Liberal
+Media",Liberal,2,3.5,2,0,0.7
+198,95,2,2,4,Minju Party,6,2,6,2,2,-0.1,4,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,4.66666666666667,5,2.5,0,
+199,96,2,2,7,Hankuk Party,5,1,3,2,2,-0.3,4,3,Female,Conservative-consistent news,"Liberal
+Media",Conservative,1.33333333333333,6.5,5.625,0,0.8
+200,98,2,2,4,Independent,7,2,4,3,4,0.2,4,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,2.66666666666667,5.5,2.625,1,
+201,99,2,2,2,Minju Party,7,3,6,1,1,-0.2,2,4,Female,Conservative-consistent news,"Liberal
+Media",Liberal,6.33333333333333,7,1.375,0,0.3
+202,103,2,2,3,Minju Party,3,4,4,3,3,-0.1,5,4,Female,Conservative-consistent news,"Liberal
+Media",Liberal,4.33333333333333,5.5,2.75,0,0.4
+203,105,2,2,2,Minju Party,7,3,1,1,1,0,4,4,Male,Conservative-consistent news,"Liberal
+Media",Liberal,4.33333333333333,7,1.375,0,0.5
+204,106,2,2,2,Minju Party,7,4,5,1,1,-0.1,4,4,Male,Conservative-consistent news,"Liberal
+Media",Liberal,5.66666666666667,7,1,0,0.4
+205,110,2,2,2,Minju Party,7,4,6,1,1,-0.1,4,4,Male,Conservative-consistent news,"Liberal
+Media",Liberal,4,6,2.125,0,0.4
+206,115,2,2,2,Minju Party,6,5,3,2,2,0.4,1,4,Female,Conservative-consistent news,"Liberal
+Media",Liberal,3,5.5,2,0,0.9
+207,118,2,2,4,Minju Party,4,5,5,4,3,0.2,4,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,2.66666666666667,3.5,3.875,-1,
+208,120,2,2,4,Minju Party,7,4,4,1,1,0,2,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,4,4,1.375,0,
+209,130,2,2,5,Hankuk Party,5,3,3,4,4,-0.2,5,5,Female,Conservative-consistent news,"Liberal
+Media",Conservative,3.33333333333333,5,2.375,0,0.7
+210,135,2,2,4,Hankuk Party,1,1,4,3,5,0.3,2,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,1.66666666666667,3.5,2.5,2,
+211,143,2,2,3,Hankuk Party,4,4,3,4,4,-0.1,1,3,Female,Conservative-consistent news,"Liberal
+Media",Liberal,2,4.5,2,0,0.4
+212,156,2,2,5,Hankuk Party,4,4,1,7,7,-0.5,1,5,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1.66666666666667,6.5,1,0,1
+213,168,2,2,5,Hankuk Party,7,1,3,7,7,-0.5,2,4,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1,7,1,0,1
+214,191,2,2,5,Hankuk Party,5,1,4,7,5,-0.2,1,4,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1,4.5,2.5,-2,0.7
+215,217,2,2,5,Hankuk Party,5,2,5,6,2,-0.5,1,3,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1,5,3.125,-4,1
+216,222,2,2,7,Hankuk Party,4,4,5,6,6,0.1,5,3,Female,Conservative-consistent news,"Liberal
+Media",Conservative,2.33333333333333,4,4,0,0.4
+217,229,2,2,5,Hankuk Party,5,2,4,5,5,-0.2,1,4,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1.66666666666667,6,4.25,0,0.7
+218,236,2,2,7,Hankuk Party,6,3,1,7,6,-0.5,1,4,Female,Conservative-consistent news,"Liberal
+Media",Conservative,1,7,4.75,-1,1
+219,241,2,2,5,Hankuk Party,3,3,4,6,4,0,1,3,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1,4.5,2,-2,0.5
+220,251,2,2,5,Hankuk Party,5,1,5,6,4,-0.3,1,5,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1.66666666666667,4.5,3,-2,0.8
+221,258,2,2,1,Hankuk Party,2,2,3,4,3,-0.1,1,3,Male,Conservative-consistent news,"Liberal
+Media",Liberal,1,1,2.125,-1,0.4
+222,290,2,2,5,Hankuk Party,6,1,3,7,7,-0.5,1,4,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1,5,3,0,1
+223,294,2,2,5,Hankuk Party,5,2,3,6,5,-0.1,1,4,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1,5,2.25,-1,0.6
+224,301,2,2,4,Hankuk Party,6,4,1,7,7,0,1,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,1,7,1,0,
+225,376,2,2,4,Hankuk Party,4,4,5,4,4,-0.1,2,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,2,2,3.625,0,
+226,431,2,2,5,Hankuk Party,4,4,4,5,4,0,1,4,Female,Conservative-consistent news,"Liberal
+Media",Conservative,1.66666666666667,5,1.5,-1,0.5
+227,435,2,2,4,Hankuk Party,7,4,4,6,4,0,1,3,Female,Conservative-consistent news,"Liberal
+Media",Moderate,1,4,1,-2,
+228,469,2,2,6,Hankuk Party,4,4,4,4,4,-0.1,2,4,Female,Conservative-consistent news,"Liberal
+Media",Conservative,1,6,1,0,0.6
+229,527,2,2,6,Hankuk Party,7,3,4,7,4,-0.3,2,4,Female,Conservative-consistent news,"Liberal
+Media",Conservative,1,7,1.875,-3,0.8
+230,599,2,2,6,Hankuk Party,7,1,1,7,6,-0.4,2,4,Female,Conservative-consistent news,"Liberal
+Media",Conservative,1,6,2,-1,0.9
+231,635,2,2,3,Hankuk Party,7,4,4,4,3,0,2,5,Female,Conservative-consistent news,"Liberal
+Media",Liberal,2.33333333333333,4.5,1,-1,0.5
+232,760,2,2,6,Hankuk Party,1,1,1,6,5,0.2,1,4,Female,Conservative-consistent news,"Liberal
+Media",Conservative,1,6.5,1.125,-1,0.3
+233,779,2,2,3,Independent,7,2,4,2,1,-0.1,2,4,Female,Conservative-consistent news,"Liberal
+Media",Liberal,5.33333333333333,5,1.375,-1,0.4
+234,782,2,2,2,Minju Party,7,5,7,3,6,0,2,5,Female,Conservative-consistent news,"Liberal
+Media",Liberal,3,5,1.125,3,0.5
+235,783,2,2,4,Independent,5,3,4,5,4,0,2,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,3,4,3.5,-1,
+236,784,2,2,4,Minju Party,4,4,4,3,3,-0.1,4,3,Female,Conservative-consistent news,"Liberal
+Media",Moderate,4,4.5,3.625,0,
+237,785,2,2,4,Independent,7,1,5,2,1,-0.2,2,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,4,4.5,2,-1,
+238,787,2,2,5,Independent,7,1,5,5,5,-0.2,2,4,Female,Conservative-consistent news,"Liberal
+Media",Conservative,2,4.5,1.75,0,0.7
+239,789,2,2,3,Minju Party,5,4,4,1,1,-0.1,2,5,Female,Conservative-consistent news,"Liberal
+Media",Liberal,5.33333333333333,5,3.125,0,0.4
+240,790,2,2,4,Independent,6,3,5,3,3,-0.1,1,3,Female,Conservative-consistent news,"Liberal
+Media",Moderate,3.33333333333333,3.5,3,0,
+241,791,2,2,3,Minju Party,7,1,6,1,1,-0.1,1,4,Female,Conservative-consistent news,"Liberal
+Media",Liberal,4.66666666666667,5.5,1,0,0.4
+242,792,2,2,4,Independent,4,4,1,4,1,0,2,1,Male,Conservative-consistent news,"Liberal
+Media",Moderate,1,4,1,-3,
+243,795,2,2,4,Independent,4,5,4,4,4,0.1,1,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,3,5,3,0,
+244,796,2,2,4,Hankuk Party,4,4,4,5,4,0.1,2,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,4,4,2.875,-1,
+245,798,2,2,4,Independent,7,1,1,7,4,-0.5,1,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,1,4,1,-3,
+246,804,2,2,4,Independent,5,4,3,4,5,0.2,1,4,Female,Conservative-consistent news,"Liberal
+Media",Moderate,4.33333333333333,5,4.375,1,
+247,806,2,2,3,Minju Party,6,3,6,1,1,0,2,4,Male,Conservative-consistent news,"Liberal
+Media",Liberal,4.33333333333333,5,3,0,0.5
+248,810,2,2,3,Minju Party,6,4,6,3,1,-0.3,1,4,Female,Conservative-consistent news,"Liberal
+Media",Liberal,3.33333333333333,4.5,1.25,-2,0.2
+249,812,2,2,4,Independent,7,4,2,2,1,0,2,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,3.33333333333333,4,1,-1,
+250,877,2,2,4,Hankuk Party,4,3,4,4,4,0,1,3,Male,Conservative-consistent news,"Liberal
+Media",Moderate,4,5,3.75,0,
+251,906,2,2,3,Minju Party,5,5,2,1,2,0.5,2,5,Male,Conservative-consistent news,"Liberal
+Media",Liberal,3.33333333333333,6,2,1,1
+252,931,2,2,2,Minju Party,4,3,3,3,3,0,1,4,Male,Conservative-consistent news,"Liberal
+Media",Liberal,4,5.5,2,0,0.5
+253,965,2,2,3,Minju Party,7,1,5,1,1,-0.2,2,3,Male,Conservative-consistent news,"Liberal
+Media",Liberal,4.33333333333333,4.5,2.125,0,0.3
+254,1003,2,2,5,Hankuk Party,5,1,3,7,6,-0.4,5,3,Female,Conservative-consistent news,"Liberal
+Media",Conservative,1,2,2,-1,0.9
+255,1036,2,2,6,Hankuk Party,7,1,3,6,6,-0.2,5,2,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1.66666666666667,4,2,0,0.7
+256,1038,2,2,4,Minju Party,7,3,5,1,1,-0.2,4,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,4.66666666666667,5,2,0,
+257,1041,2,2,5,Hankuk Party,6,1,3,6,5,-0.3,4,3,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1.66666666666667,6.5,4,-1,0.8
+258,1042,2,2,4,Minju Party,7,5,5,1,1,0,5,3,Male,Conservative-consistent news,"Liberal
+Media",Moderate,5.66666666666667,6.5,1.125,0,
+259,1049,2,2,4,Hankuk Party,5,3,1,7,7,-0.5,3,3,Male,Conservative-consistent news,"Liberal
+Media",Moderate,1,4,3.5,0,
+260,1050,2,2,4,Minju Party,6,3,3,4,4,0,3,3,Male,Conservative-consistent news,"Liberal
+Media",Moderate,3.66666666666667,4.5,2.5,0,
+261,1051,2,2,4,Hankuk Party,4,4,4,5,5,0,5,4,Male,Conservative-consistent news,"Liberal
+Media",Moderate,1.66666666666667,4,3.75,0,
+262,1079,2,2,6,Hankuk Party,6,1,6,7,6,0.3,4,4,Male,Conservative-consistent news,"Liberal
+Media",Conservative,1,1,4.5,-1,0.2
+263,1094,2,2,6,Hankuk Party,2,2,2,6,6,-0.3,5,3,Male,Conservative-consistent news,"Liberal
+Media",Conservative,2.33333333333333,4,2,0,0.8
+264,1169,2,2,4,Hankuk Party,4,2,1,7,7,-0.5,3,5,Male,Conservative-consistent news,"Liberal
+Media",Moderate,1,1,1.375,0,
+265,1,3,3,3,Minju Party,7,4,4,4,4,0.5,2,4,Male,Liberal-consistent news,"Conservative
+Media",Liberal,1,7,1,0,1
+266,3,3,3,5,Minju Party,7,3,2,5,6,0.5,5,3,Male,Liberal-consistent news,"Conservative
+Media",Conservative,5,5,1.75,1,0
+267,4,3,3,4,Minju Party,7,5,4,4,2,0.3,2,4,Female,Liberal-consistent news,"Conservative
+Media",Moderate,4,5,4.25,-2,
+268,5,3,3,4,Independent,3,3,2,4,3,0,1,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,3,4.5,3,-1,
+269,6,3,3,4,Independent,3,3,4,4,4,-0.1,3,4,Female,Liberal-consistent news,"Conservative
+Media",Moderate,1,2,1,0,
+270,7,3,3,6,Hankuk Party,1,5,1,1,1,0.1,5,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1.66666666666667,1,1.125,0,0.4
+271,8,3,3,7,Hankuk Party,5,1,7,2,1,0,5,5,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1.33333333333333,6,4.5,-1,0.5
+272,9,3,3,3,Minju Party,6,3,4,4,3,0,2,4,Male,Liberal-consistent news,"Conservative
+Media",Liberal,4,5,2.25,-1,0.5
+273,10,3,3,3,Minju Party,7,3,4,6,5,0.5,5,4,Male,Liberal-consistent news,"Conservative
+Media",Liberal,5,5.5,5.25,-1,1
+274,11,3,3,4,Independent,3,3,5,4,3,-0.1,2,3,Female,Liberal-consistent news,"Conservative
+Media",Moderate,4,4,2.625,-1,
+275,12,3,3,3,Minju Party,4,4,4,4,3,0.1,3,4,Male,Liberal-consistent news,"Conservative
+Media",Liberal,3,6,4,-1,0.6
+276,13,3,3,2,Minju Party,7,3,2,5,4,0.4,5,4,Male,Liberal-consistent news,"Conservative
+Media",Liberal,5.33333333333333,5.5,2,-1,0.9
+277,14,3,3,5,Independent,6,2,6,2,2,0.3,4,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1.33333333333333,7,3.125,0,0.2
+278,15,3,3,5,Independent,4,3,5,1,1,-0.3,5,4,Female,Liberal-consistent news,"Conservative
+Media",Conservative,1,2,1.5,0,0.8
+279,16,3,3,5,Independent,4,3,4,1,1,0,5,4,Female,Liberal-consistent news,"Conservative
+Media",Conservative,1,1.5,3.25,0,0.5
+280,17,3,3,5,Independent,3,2,4,4,2,0.1,3,4,Female,Liberal-consistent news,"Conservative
+Media",Conservative,1,4.5,1,-2,0.4
+281,18,3,3,4,Hankuk Party,6,1,7,1,1,0.1,3,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,1,4,2.25,0,
+282,20,3,3,2,Hankuk Party,7,6,2,7,6,0.5,3,4,Male,Liberal-consistent news,"Conservative
+Media",Liberal,6.33333333333333,5.5,1,-1,1
+283,21,3,3,4,Independent,4,5,2,3,1,0.4,5,5,Female,Liberal-consistent news,"Conservative
+Media",Moderate,2.33333333333333,6,2.625,-2,
+284,22,3,3,4,Independent,4,4,4,3,1,0.2,1,4,Female,Liberal-consistent news,"Conservative
+Media",Moderate,2,4,3.125,-2,
+285,23,3,3,3,Minju Party,7,2,1,5,1,0.5,4,4,Male,Liberal-consistent news,"Conservative
+Media",Liberal,5,6,2.375,-4,1
+286,25,3,3,3,Minju Party,7,7,4,3,4,0.5,3,5,Female,Liberal-consistent news,"Conservative
+Media",Liberal,4,7,1,1,1
+287,26,3,3,5,Minju Party,5,4,5,5,3,0.1,5,4,Female,Liberal-consistent news,"Conservative
+Media",Conservative,4.66666666666667,5,5.25,-2,0.4
+288,27,3,3,5,Independent,6,1,4,1,1,0,4,3,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1.33333333333333,1.5,1.875,0,0.5
+289,29,3,3,4,Independent,4,3,5,3,3,0,2,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,2,5,3.5,0,
+290,30,3,3,5,Independent,4,4,5,3,4,0.1,3,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,3.33333333333333,4,3.875,1,0.4
+291,31,3,3,4,Independent,6,2,7,2,1,0.4,4,5,Female,Liberal-consistent news,"Conservative
+Media",Moderate,2,6.5,2.875,-1,
+292,32,3,3,5,Independent,7,2,5,1,2,0.2,3,5,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1,5.5,1.625,1,0.3
+293,33,3,3,5,Independent,5,2,6,2,1,0.2,5,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1.33333333333333,2.5,5.25,-1,0.3
+294,35,3,3,4,Minju Party,7,1,3,5,5,-0.1,1,3,Female,Liberal-consistent news,"Conservative
+Media",Moderate,4.66666666666667,4.5,3.125,0,
+295,36,3,3,4,Minju Party,7,3,3,4,4,0.4,3,5,Male,Liberal-consistent news,"Conservative
+Media",Moderate,4,4.5,1,0,
+296,37,3,3,5,Hankuk Party,5,3,5,3,2,-0.1,5,3,Male,Liberal-consistent news,"Conservative
+Media",Conservative,3,4.5,4.75,-1,0.6
+297,38,3,3,4,Minju Party,7,4,2,5,5,0.5,3,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,6,6,1.125,0,
+298,39,3,3,4,Independent,3,3,3,3,3,0,5,3,Female,Liberal-consistent news,"Conservative
+Media",Moderate,2.33333333333333,4,4.125,0,
+299,41,3,3,4,Minju Party,7,3,1,4,2,0.4,4,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,4,4,1.875,-2,
+300,43,3,3,5,Hankuk Party,6,1,5,1,1,0.3,5,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1,2.5,2.375,0,0.2
+301,45,3,3,4,Independent,5,2,5,3,1,0.3,4,4,Female,Liberal-consistent news,"Conservative
+Media",Moderate,2,2.5,2.875,-2,
+302,46,3,3,4,Independent,6,2,3,2,2,0,5,4,Female,Liberal-consistent news,"Conservative
+Media",Moderate,2.66666666666667,5.5,3.125,0,
+303,47,3,3,5,Independent,4,4,4,4,4,0,5,3,Female,Liberal-consistent news,"Conservative
+Media",Conservative,3.33333333333333,5,3.625,0,0.5
+304,48,3,3,7,Hankuk Party,3,1,5,1,1,0.2,5,3,Female,Liberal-consistent news,"Conservative
+Media",Conservative,1,6,1.875,0,0.3
+305,49,3,3,6,Independent,5,2,4,1,1,0.1,4,3,Female,Liberal-consistent news,"Conservative
+Media",Conservative,1,6,2.375,0,0.4
+306,50,3,3,2,Minju Party,7,4,3,5,5,0.5,4,3,Female,Liberal-consistent news,"Conservative
+Media",Liberal,4,5.5,1.5,0,1
+307,51,3,3,4,Independent,4,4,5,5,5,0.2,5,3,Male,Liberal-consistent news,"Conservative
+Media",Moderate,4.33333333333333,5,4.25,0,
+308,52,3,3,4,Minju Party,5,5,3,4,3,-0.2,2,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,1.66666666666667,6,2.125,-1,
+309,53,3,3,3,Minju Party,7,2,4,4,4,-0.1,4,4,Male,Liberal-consistent news,"Conservative
+Media",Liberal,3.33333333333333,5,2.125,0,0.4
+310,54,3,3,4,Minju Party,4,4,4,5,4,0,2,5,Male,Liberal-consistent news,"Conservative
+Media",Moderate,4,4.5,4.125,-1,
+311,57,3,3,3,Minju Party,4,4,4,4,4,0,1,4,Male,Liberal-consistent news,"Conservative
+Media",Liberal,4,5.5,3,0,0.5
+312,58,3,3,4,Independent,6,6,3,4,4,0.3,2,3,Female,Liberal-consistent news,"Conservative
+Media",Moderate,4.33333333333333,6.5,2.125,0,
+313,60,3,3,4,Independent,4,1,1,1,1,-0.5,5,4,Female,Liberal-consistent news,"Conservative
+Media",Moderate,1,7,1.5,0,
+314,62,3,3,4,Minju Party,7,4,1,1,3,0.5,3,4,Female,Liberal-consistent news,"Conservative
+Media",Moderate,3,5,1.25,2,
+315,63,3,3,4,Independent,3,2,4,3,4,-0.1,3,3,Female,Liberal-consistent news,"Conservative
+Media",Moderate,2.66666666666667,3,2.5,1,
+316,64,3,3,4,Independent,5,5,4,3,1,0,2,4,Female,Liberal-consistent news,"Conservative
+Media",Moderate,2.66666666666667,2,2.375,-2,
+317,65,3,3,6,Independent,3,3,3,3,3,-0.1,3,4,Female,Liberal-consistent news,"Conservative
+Media",Conservative,3.33333333333333,5,2.625,0,0.6
+318,66,3,3,4,Independent,5,4,5,1,1,0.1,3,5,Female,Liberal-consistent news,"Conservative
+Media",Moderate,1.66666666666667,5.5,3.25,0,
+319,67,3,3,3,Minju Party,7,3,4,1,1,0.4,4,4,Male,Liberal-consistent news,"Conservative
+Media",Liberal,1,1.5,1.25,0,0.9
+320,68,3,3,4,Independent,5,3,5,2,3,0.2,4,4,Female,Liberal-consistent news,"Conservative
+Media",Moderate,1.66666666666667,3.5,2.625,1,
+321,69,3,3,4,Independent,7,5,3,5,5,-0.5,1,4,Female,Liberal-consistent news,"Conservative
+Media",Moderate,4,6.5,1,0,
+322,71,3,3,4,Minju Party,4,3,5,5,2,-0.1,3,4,Female,Liberal-consistent news,"Conservative
+Media",Moderate,2.66666666666667,3,3.125,-3,
+323,72,3,3,4,Independent,6,3,4,1,1,0,4,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,1.33333333333333,2,1.125,0,
+324,73,3,3,4,Independent,6,2,4,1,6,0.2,4,4,Female,Liberal-consistent news,"Conservative
+Media",Moderate,1,6,2.125,5,
+325,75,3,3,4,Minju Party,5,4,5,5,3,0,3,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,3,5,1.625,-2,
+326,76,3,3,6,Hankuk Party,6,1,6,1,1,0.1,5,3,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1,6.5,5.25,0,0.4
+327,77,3,3,3,Minju Party,7,6,1,6,6,0.5,3,4,Male,Liberal-consistent news,"Conservative
+Media",Liberal,6,5,1.25,0,1
+328,78,3,3,5,Independent,7,1,1,1,4,0.5,1,3,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1.66666666666667,4.5,1,3,0
+329,79,3,3,4,Independent,4,4,2,4,1,-0.2,5,3,Female,Liberal-consistent news,"Conservative
+Media",Moderate,1,6.5,2.5,-3,
+330,80,3,3,6,Independent,4,4,3,3,3,-0.1,5,3,Female,Liberal-consistent news,"Conservative
+Media",Conservative,3.33333333333333,5,1.625,0,0.6
+331,81,3,3,2,Minju Party,7,4,3,4,4,0.2,3,4,Male,Liberal-consistent news,"Conservative
+Media",Liberal,5,6,1.75,0,0.7
+332,86,3,3,6,Hankuk Party,4,3,1,1,1,-0.2,4,5,Female,Liberal-consistent news,"Conservative
+Media",Conservative,1,5.5,1,0,0.7
+333,87,3,3,6,Hankuk Party,4,1,6,1,1,0.2,5,5,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1,7,1.625,0,0.3
+334,93,3,3,4,Minju Party,3,4,4,4,4,0,1,4,Female,Liberal-consistent news,"Conservative
+Media",Moderate,4,4.5,3,0,
+335,98,3,3,4,Minju Party,4,4,4,4,4,0,2,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,4,4,2,0,
+336,101,3,3,4,Minju Party,4,4,4,4,5,0,3,5,Female,Liberal-consistent news,"Conservative
+Media",Moderate,4,4,3.5,1,
+337,103,3,3,4,Minju Party,7,2,4,5,5,0.1,4,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,4.33333333333333,5,4.25,0,
+338,104,3,3,3,Minju Party,7,4,3,5,5,0.2,1,3,Female,Liberal-consistent news,"Conservative
+Media",Liberal,4.66666666666667,4.5,2,0,0.7
+339,108,3,3,4,Minju Party,7,6,4,5,6,0.2,2,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,1.33333333333333,5.5,2.125,1,
+340,112,3,3,2,Minju Party,7,5,2,6,6,0,2,4,Male,Liberal-consistent news,"Conservative
+Media",Liberal,6,6,1,0,0.5
+341,117,3,3,5,Hankuk Party,6,2,5,1,1,0.2,3,4,Female,Liberal-consistent news,"Conservative
+Media",Conservative,1.33333333333333,6.5,1.875,0,0.3
+342,118,3,3,5,Hankuk Party,5,2,5,1,1,-0.5,4,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1,1,2.375,0,1
+343,121,3,3,4,Minju Party,6,4,4,4,5,0.3,4,3,Female,Liberal-consistent news,"Conservative
+Media",Moderate,5,5.5,2.375,1,
+344,122,3,3,6,Hankuk Party,7,1,4,2,1,0.1,1,3,Female,Liberal-consistent news,"Conservative
+Media",Conservative,1,6,1.375,-1,0.4
+345,125,3,3,2,Minju Party,7,3,2,4,2,0.3,2,4,Female,Liberal-consistent news,"Conservative
+Media",Liberal,3.33333333333333,3,1.875,-2,0.8
+346,132,3,3,4,Minju Party,5,5,4,4,3,0.2,2,3,Male,Liberal-consistent news,"Conservative
+Media",Moderate,4,4,1.125,-1,
+347,181,3,3,5,Hankuk Party,5,3,5,1,1,0.1,2,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1,4,1,0,0.4
+348,185,3,3,5,Hankuk Party,5,1,4,2,2,0.2,1,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,2,5.5,1.75,0,0.3
+349,229,3,3,6,Hankuk Party,3,4,4,5,5,0.1,1,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,2.33333333333333,4.5,4.75,0,0.4
+350,237,3,3,6,Hankuk Party,5,3,4,2,3,0,1,5,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1.33333333333333,4,4,1,0.5
+351,239,3,3,5,Hankuk Party,4,3,4,4,4,-0.1,1,4,Female,Liberal-consistent news,"Conservative
+Media",Conservative,3.66666666666667,4,4,0,0.6
+352,284,3,3,2,Hankuk Party,1,1,4,4,4,0,2,5,Female,Liberal-consistent news,"Conservative
+Media",Liberal,2,7,1.75,0,0.5
+353,287,3,3,7,Hankuk Party,7,1,7,1,1,0.5,2,5,Female,Liberal-consistent news,"Conservative
+Media",Conservative,1,6.5,3.25,0,0
+354,295,3,3,4,Hankuk Party,2,2,5,3,5,0.1,1,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,2.66666666666667,6,2.25,2,
+355,297,3,3,4,Hankuk Party,2,3,5,4,4,0.1,1,3,Male,Liberal-consistent news,"Conservative
+Media",Moderate,4,4,2.875,0,
+356,322,3,3,4,Hankuk Party,4,4,4,3,3,-0.1,1,3,Male,Liberal-consistent news,"Conservative
+Media",Moderate,2.66666666666667,3,3,0,
+357,331,3,3,5,Hankuk Party,3,3,5,1,1,0,2,5,Female,Liberal-consistent news,"Conservative
+Media",Conservative,1.66666666666667,6.5,3.5,0,0.5
+358,347,3,3,4,Hankuk Party,3,3,4,4,4,-0.1,1,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,1.66666666666667,4,3.5,0,
+359,374,3,3,5,Hankuk Party,5,3,4,2,2,0.2,4,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,2,3.5,2.125,0,0.3
+360,380,3,3,4,Hankuk Party,5,3,6,1,1,0.3,4,5,Male,Liberal-consistent news,"Conservative
+Media",Moderate,1,6,6,0,
+361,449,3,3,4,Hankuk Party,4,4,4,3,4,-0.1,2,4,Female,Liberal-consistent news,"Conservative
+Media",Moderate,1.33333333333333,4.5,2.625,1,
+362,504,3,3,5,Hankuk Party,3,3,2,2,2,-0.3,2,4,Female,Liberal-consistent news,"Conservative
+Media",Conservative,1,6,1.875,0,0.8
+363,539,3,3,5,Minju Party,7,4,2,5,5,-0.2,1,4,Female,Liberal-consistent news,"Conservative
+Media",Conservative,4.33333333333333,4,1,0,0.7
+364,540,3,3,5,Independent,7,1,6,2,1,0,1,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,2,5,2.625,-1,0.5
+365,541,3,3,5,Hankuk Party,5,2,6,1,1,0,3,5,Female,Liberal-consistent news,"Conservative
+Media",Conservative,1,3,1,0,0.5
+366,542,3,3,1,Minju Party,7,1,1,7,7,0.5,4,4,Male,Liberal-consistent news,"Conservative
+Media",Liberal,7,7,1,0,1
+367,543,3,3,2,Minju Party,7,2,1,5,5,0.5,1,4,Female,Liberal-consistent news,"Conservative
+Media",Liberal,5.66666666666667,5.5,1,0,1
+368,544,3,3,2,Minju Party,7,7,3,7,5,-0.3,4,3,Female,Liberal-consistent news,"Conservative
+Media",Liberal,4.33333333333333,5,1.875,-2,0.2
+369,545,3,3,3,Minju Party,6,5,5,5,3,0.1,1,4,Female,Liberal-consistent news,"Conservative
+Media",Liberal,4,5,1,-2,0.6
+370,546,3,3,1,Minju Party,7,4,4,5,4,0.1,2,4,Female,Liberal-consistent news,"Conservative
+Media",Liberal,4,3.5,1.75,-1,0.6
+371,547,3,3,3,Minju Party,3,3,4,4,4,0,2,4,Female,Liberal-consistent news,"Conservative
+Media",Liberal,3.33333333333333,5,2.5,0,0.5
+372,548,3,3,4,Independent,4,4,4,4,4,0,1,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,2,6,2.75,0,
+373,549,3,3,5,Independent,6,2,4,3,3,0.2,1,3,Male,Liberal-consistent news,"Conservative
+Media",Conservative,2,5,3,0,0.3
+374,550,3,3,2,Minju Party,7,4,1,6,5,0.5,2,3,Female,Liberal-consistent news,"Conservative
+Media",Liberal,6,6.5,1,-1,1
+375,551,3,3,2,Minju Party,7,4,2,6,5,0.3,4,5,Female,Liberal-consistent news,"Conservative
+Media",Liberal,4.66666666666667,5.5,1.125,-1,0.8
+376,552,3,3,3,Minju Party,4,4,4,3,4,-0.1,1,4,Female,Liberal-consistent news,"Conservative
+Media",Liberal,4.33333333333333,5,3.5,1,0.4
+377,553,3,3,3,Minju Party,7,7,2,6,5,0.3,2,4,Female,Liberal-consistent news,"Conservative
+Media",Liberal,5,6,3.25,-1,0.8
+378,555,3,3,3,Independent,5,5,4,2,2,0,2,4,Male,Liberal-consistent news,"Conservative
+Media",Liberal,3.33333333333333,4,2.875,0,0.5
+379,556,3,3,4,Minju Party,5,4,4,3,2,0.2,2,3,Female,Liberal-consistent news,"Conservative
+Media",Moderate,2,4,2.25,-1,
+380,557,3,3,4,Independent,6,6,2,4,4,0.3,1,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,3.66666666666667,5,1.875,0,
+381,559,3,3,3,Independent,5,4,5,4,4,0,1,4,Female,Liberal-consistent news,"Conservative
+Media",Liberal,1.66666666666667,4,2.125,0,0.5
+382,562,3,3,2,Independent,5,5,4,3,3,-0.1,3,3,Female,Liberal-consistent news,"Conservative
+Media",Liberal,3.66666666666667,4.5,3.25,0,0.4
+383,565,3,3,4,Independent,5,4,4,4,3,0.1,1,3,Female,Liberal-consistent news,"Conservative
+Media",Moderate,3.66666666666667,3.5,2.5,-1,
+384,573,3,3,5,Hankuk Party,4,1,5,1,1,0,4,3,Female,Liberal-consistent news,"Conservative
+Media",Conservative,1,6.5,1,0,0.5
+385,575,3,3,5,Independent,7,4,7,1,1,0,3,3,Female,Liberal-consistent news,"Conservative
+Media",Conservative,1,7,1,0,0.5
+386,598,3,3,5,Hankuk Party,5,1,6,1,1,0,2,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1,4,1.875,0,0.5
+387,614,3,3,4,Independent,4,3,3,5,4,0.1,4,3,Male,Liberal-consistent news,"Conservative
+Media",Moderate,2,4,3.875,-1,
+388,616,3,3,4,Independent,7,7,1,1,4,0.5,4,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,3.33333333333333,7,2.5,3,
+389,617,3,3,5,Independent,4,5,5,4,5,0,4,3,Female,Liberal-consistent news,"Conservative
+Media",Conservative,4,4.5,4.25,1,0.5
+390,691,3,3,5,Hankuk Party,5,3,4,2,4,0,3,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,3.66666666666667,3.5,2.375,2,0.5
+391,699,3,3,4,Hankuk Party,2,2,3,3,3,-0.2,3,4,Male,Liberal-consistent news,"Conservative
+Media",Moderate,1,1.5,2.375,0,
+392,724,3,3,7,Hankuk Party,6,1,5,1,1,0.5,4,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,2.33333333333333,4,2.25,0,0
+393,750,3,3,4,Hankuk Party,3,1,3,1,1,-0.3,5,3,Male,Liberal-consistent news,"Conservative
+Media",Moderate,1,2,1,0,
+394,773,3,3,5,Hankuk Party,5,2,5,3,2,0.2,5,5,Male,Liberal-consistent news,"Conservative
+Media",Conservative,3,3,3.375,-1,0.3
+395,774,3,3,5,Hankuk Party,5,2,5,2,2,0.1,5,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1.33333333333333,6,4.75,0,0.4
+396,793,3,3,4,Hankuk Party,4,4,4,4,4,0,3,3,Female,Liberal-consistent news,"Conservative
+Media",Moderate,2.33333333333333,5,3.875,0,
+397,828,3,3,5,Hankuk Party,3,3,3,3,3,-0.1,3,5,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1.66666666666667,2.5,2.625,0,0.6
+398,848,3,3,6,Hankuk Party,6,1,6,1,2,0.1,5,4,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1.33333333333333,5.5,3.25,1,0.4
+399,866,3,3,4,Hankuk Party,5,1,7,1,1,0.1,3,4,Female,Liberal-consistent news,"Conservative
+Media",Moderate,1,1,3.625,0,
+400,917,3,3,5,Hankuk Party,4,1,7,2,1,0,2,5,Male,Liberal-consistent news,"Conservative
+Media",Conservative,2,3.5,2,-1,0.5
+401,1101,3,3,5,Independent,6,2,5,5,6,0.2,3,5,Male,Liberal-consistent news,"Conservative
+Media",Conservative,1,4.5,2.625,1,0.3
+402,1,4,4,6,Hankuk Party,5,4,6,5,5,0.1,5,2,Female,Liberal-consistent news,"Liberal
+Media",Conservative,3.33333333333333,5.5,4.625,0,0.4
+403,2,4,4,3,Minju Party,7,6,4,4,4,0,5,4,Female,Liberal-consistent news,"Liberal
+Media",Liberal,4.33333333333333,5,2.5,0,0.5
+404,4,4,4,2,Minju Party,7,2,4,5,5,0.1,5,4,Male,Liberal-consistent news,"Liberal
+Media",Liberal,6.33333333333333,6,1,0,0.6
+405,5,4,4,4,Independent,4,4,4,3,3,0,3,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,2.33333333333333,5.5,3.875,0,
+406,6,4,4,3,Independent,4,4,4,5,2,0,1,3,Female,Liberal-consistent news,"Liberal
+Media",Liberal,3.33333333333333,3.5,3.25,-3,0.5
+407,7,4,4,4,Independent,5,2,5,2,1,0.1,4,5,Male,Liberal-consistent news,"Liberal
+Media",Moderate,1,5.5,4.375,-1,
+408,8,4,4,4,Independent,7,3,4,5,4,0.2,4,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,4.33333333333333,4,1,-1,
+409,10,4,4,6,Hankuk Party,5,3,4,1,1,0.5,5,4,Male,Liberal-consistent news,"Liberal
+Media",Conservative,1,7,1.25,0,0
+410,11,4,4,4,Independent,7,2,2,2,2,-0.3,3,4,Female,Liberal-consistent news,"Liberal
+Media",Moderate,1.66666666666667,4,2.125,0,
+411,12,4,4,4,Independent,7,1,4,3,3,-0.2,1,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,3.33333333333333,5.5,1.875,0,
+412,13,4,4,4,Independent,4,4,4,4,4,0,1,4,Female,Liberal-consistent news,"Liberal
+Media",Moderate,3.33333333333333,3,2,0,
+413,14,4,4,5,Independent,5,1,6,1,1,0.2,5,5,Male,Liberal-consistent news,"Liberal
+Media",Conservative,1,7,2.625,0,0.3
+414,16,4,4,4,Independent,7,2,5,6,6,-0.1,5,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,3,3.5,1,0,
+415,17,4,4,6,Minju Party,7,6,1,7,7,0.5,5,1,Male,Liberal-consistent news,"Liberal
+Media",Conservative,7,7,1,0,0
+416,18,4,4,6,Independent,5,3,5,3,3,0.1,5,4,Female,Liberal-consistent news,"Liberal
+Media",Conservative,3,4,2.875,0,0.4
+417,19,4,4,3,Independent,5,5,1,1,1,0,5,3,Female,Liberal-consistent news,"Liberal
+Media",Liberal,1,5.5,6.625,0,0.5
+418,21,4,4,5,Independent,7,1,5,6,5,0.2,3,4,Male,Liberal-consistent news,"Liberal
+Media",Conservative,5.66666666666667,6,1,-1,0.3
+419,24,4,4,3,Minju Party,4,5,5,5,4,-0.1,4,3,Female,Liberal-consistent news,"Liberal
+Media",Liberal,4.66666666666667,5.5,5.25,-1,0.4
+420,26,4,4,6,Independent,5,5,2,1,1,-0.4,5,4,Male,Liberal-consistent news,"Liberal
+Media",Conservative,1,3.5,1.625,0,0.9
+421,27,4,4,2,Minju Party,7,2,4,3,2,-0.3,4,4,Male,Liberal-consistent news,"Liberal
+Media",Liberal,2.66666666666667,6.5,1.5,-1,0.2
+422,28,4,4,3,Minju Party,5,3,5,4,5,0,4,3,Male,Liberal-consistent news,"Liberal
+Media",Liberal,5.66666666666667,5.5,4.125,1,0.5
+423,29,4,4,5,Hankuk Party,5,2,3,3,3,-0.2,3,4,Male,Liberal-consistent news,"Liberal
+Media",Conservative,2,4,3,0,0.7
+424,31,4,4,5,Minju Party,4,4,3,3,3,0.1,4,4,Female,Liberal-consistent news,"Liberal
+Media",Conservative,3.33333333333333,4,3.5,0,0.4
+425,32,4,4,1,Minju Party,7,6,1,7,7,0.5,4,4,Male,Liberal-consistent news,"Liberal
+Media",Liberal,7,7,1,0,1
+426,33,4,4,3,Independent,7,1,6,2,1,0,3,4,Male,Liberal-consistent news,"Liberal
+Media",Liberal,5.33333333333333,6,1.375,-1,0.5
+427,34,4,4,5,Independent,6,2,4,1,1,-0.5,5,3,Male,Liberal-consistent news,"Liberal
+Media",Conservative,2,3,1,0,1
+428,35,4,4,4,Independent,7,2,5,6,3,0,3,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,5,5.5,1,-3,
+429,36,4,4,2,Minju Party,7,2,6,5,4,0,4,4,Male,Liberal-consistent news,"Liberal
+Media",Liberal,5.66666666666667,6,2,-1,0.5
+430,38,4,4,4,Minju Party,5,5,4,4,4,0,3,4,Female,Liberal-consistent news,"Liberal
+Media",Moderate,4,4,4.375,0,
+431,39,4,4,2,Minju Party,7,7,1,7,6,0.5,2,4,Male,Liberal-consistent news,"Liberal
+Media",Liberal,5.66666666666667,6,1.875,-1,1
+432,40,4,4,4,Independent,4,4,4,4,4,0,3,4,Female,Liberal-consistent news,"Liberal
+Media",Moderate,3.66666666666667,5.5,4.375,0,
+433,41,4,4,5,Hankuk Party,5,2,3,3,3,-0.2,5,3,Female,Liberal-consistent news,"Liberal
+Media",Conservative,1,3,3,0,0.7
+434,42,4,4,2,Independent,7,2,4,5,5,0,4,4,Male,Liberal-consistent news,"Liberal
+Media",Liberal,4.66666666666667,5,1,0,0.5
+435,43,4,4,5,Minju Party,5,5,4,4,5,0.1,4,4,Male,Liberal-consistent news,"Liberal
+Media",Conservative,2.66666666666667,4.5,4.75,1,0.4
+436,44,4,4,4,Independent,6,3,4,4,4,-0.1,2,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,3.66666666666667,3.5,3.125,0,
+437,45,4,4,4,Independent,4,4,5,5,5,0.2,5,3,Female,Liberal-consistent news,"Liberal
+Media",Moderate,4.33333333333333,5.5,4.5,0,
+438,47,4,4,4,Independent,7,4,3,2,1,0,3,5,Female,Liberal-consistent news,"Liberal
+Media",Moderate,2.66666666666667,3.5,1,-1,
+439,48,4,4,4,Minju Party,4,3,4,4,4,0,4,4,Female,Liberal-consistent news,"Liberal
+Media",Moderate,3,3,4,0,
+440,50,4,4,6,Hankuk Party,6,1,1,1,1,-0.5,5,5,Male,Liberal-consistent news,"Liberal
+Media",Conservative,1.33333333333333,6,3.25,0,1
+441,51,4,4,4,Minju Party,6,3,5,5,3,0.3,2,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,3.66666666666667,5.5,3.375,-2,
+442,53,4,4,4,Minju Party,7,3,4,5,3,0,4,5,Male,Liberal-consistent news,"Liberal
+Media",Moderate,4.33333333333333,5,2,-2,
+443,55,4,4,3,Minju Party,7,3,3,7,7,0.3,5,4,Male,Liberal-consistent news,"Liberal
+Media",Liberal,6,6,1.125,0,0.8
+444,57,4,4,5,Independent,7,7,4,1,2,0.2,2,4,Female,Liberal-consistent news,"Liberal
+Media",Conservative,1,7,2.125,1,0.3
+445,58,4,4,4,Independent,7,1,5,1,1,0,5,3,Female,Liberal-consistent news,"Liberal
+Media",Moderate,1,4,3.625,0,
+446,59,4,4,3,Independent,7,1,2,2,3,0.1,3,5,Male,Liberal-consistent news,"Liberal
+Media",Liberal,2.66666666666667,3,1.625,1,0.6
+447,60,4,4,4,Minju Party,7,4,4,5,5,0,3,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,5,5,2.125,0,
+448,61,4,4,4,Minju Party,4,4,4,5,5,0,3,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,4.33333333333333,4.5,3.75,0,
+449,62,4,4,4,Minju Party,5,4,4,5,5,0,1,3,Female,Liberal-consistent news,"Liberal
+Media",Moderate,3.66666666666667,4.5,1.875,0,
+450,63,4,4,2,Minju Party,7,6,4,6,5,0.2,2,4,Female,Liberal-consistent news,"Liberal
+Media",Liberal,6.66666666666667,6.5,2,-1,0.7
+451,64,4,4,6,Independent,4,4,5,1,1,0.2,5,3,Female,Liberal-consistent news,"Liberal
+Media",Conservative,1.66666666666667,5.5,2.625,0,0.3
+452,65,4,4,4,Independent,5,3,2,1,1,-0.2,5,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,1,1,1.5,0,
+453,66,4,4,4,Minju Party,5,5,3,3,4,-0.2,3,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,1.66666666666667,4,3.375,1,
+454,69,4,4,5,Independent,6,2,5,3,6,0.2,5,4,Female,Liberal-consistent news,"Liberal
+Media",Conservative,2.66666666666667,6,4.625,3,0.3
+455,70,4,4,4,Minju Party,5,2,3,3,2,0.3,4,3,Female,Liberal-consistent news,"Liberal
+Media",Moderate,2.33333333333333,6.5,2.25,-1,
+456,71,4,4,1,Minju Party,4,4,4,5,5,0.1,2,4,Female,Liberal-consistent news,"Liberal
+Media",Liberal,6.66666666666667,7,3.75,0,0.6
+457,72,4,4,4,Independent,4,4,4,4,4,0,4,3,Male,Liberal-consistent news,"Liberal
+Media",Moderate,4,4,4.125,0,
+458,73,4,4,4,Independent,3,5,4,3,4,0.1,5,3,Female,Liberal-consistent news,"Liberal
+Media",Moderate,2,3.5,1.875,1,
+459,74,4,4,5,Minju Party,5,5,2,2,2,0.2,1,4,Female,Liberal-consistent news,"Liberal
+Media",Conservative,2.66666666666667,5.5,1,0,0.3
+460,75,4,4,3,Independent,7,3,4,3,4,0,2,4,Female,Liberal-consistent news,"Liberal
+Media",Liberal,3.66666666666667,6,1.75,1,0.5
+461,76,4,4,4,Independent,4,4,4,2,1,-0.5,5,3,Female,Liberal-consistent news,"Liberal
+Media",Moderate,1,5.5,3.875,-1,
+462,77,4,4,3,Independent,7,3,4,4,4,0,4,4,Female,Liberal-consistent news,"Liberal
+Media",Liberal,4.33333333333333,4.5,1,0,0.5
+463,78,4,4,4,Minju Party,7,3,6,5,2,-0.2,5,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,5.66666666666667,6,2.625,-3,
+464,79,4,4,5,Independent,7,7,1,1,1,-0.5,1,4,Male,Liberal-consistent news,"Liberal
+Media",Conservative,2,4.5,1,0,1
+465,80,4,4,2,Minju Party,5,3,4,5,5,0.2,1,4,Female,Liberal-consistent news,"Liberal
+Media",Liberal,4.66666666666667,4.5,3,0,0.7
+466,82,4,4,4,Independent,6,4,4,5,3,0,4,3,Female,Liberal-consistent news,"Liberal
+Media",Moderate,5,5.5,3.5,-2,
+467,92,4,4,3,Minju Party,6,3,4,6,4,0,1,4,Female,Liberal-consistent news,"Liberal
+Media",Liberal,4.33333333333333,5,2.5,-2,0.5
+468,94,4,4,4,Minju Party,6,3,6,4,2,0.1,2,4,Female,Liberal-consistent news,"Liberal
+Media",Moderate,4,5,1.625,-2,
+469,96,4,4,2,Minju Party,7,4,4,5,3,0.5,2,4,Male,Liberal-consistent news,"Liberal
+Media",Liberal,4.66666666666667,6,4.25,-2,1
+470,97,4,4,4,Minju Party,7,7,3,1,1,0.3,2,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,2.33333333333333,6.5,1,0,
+471,105,4,4,3,Minju Party,5,3,3,4,5,0.1,1,4,Male,Liberal-consistent news,"Liberal
+Media",Liberal,5,6,2.875,1,0.6
+472,107,4,4,2,Minju Party,7,4,3,6,5,0.3,4,4,Female,Liberal-consistent news,"Liberal
+Media",Liberal,5.33333333333333,5.5,1.375,-1,0.8
+473,110,4,4,2,Minju Party,7,1,4,4,4,-0.1,3,5,Male,Liberal-consistent news,"Liberal
+Media",Liberal,3.66666666666667,4,2.5,0,0.4
+474,114,4,4,5,Hankuk Party,5,3,3,5,4,0,4,5,Female,Liberal-consistent news,"Liberal
+Media",Conservative,4.33333333333333,5.5,4,-1,0.5
+475,122,4,4,4,Hankuk Party,4,4,1,1,1,-0.5,4,3,Female,Liberal-consistent news,"Liberal
+Media",Moderate,1,2.5,1,0,
+476,170,4,4,5,Hankuk Party,5,5,5,2,3,-0.2,1,4,Male,Liberal-consistent news,"Liberal
+Media",Conservative,2,5,2.625,1,0.7
+477,173,4,4,6,Hankuk Party,6,3,4,2,3,0.1,4,4,Female,Liberal-consistent news,"Liberal
+Media",Conservative,2.33333333333333,5,2.625,1,0.4
+478,199,4,4,4,Hankuk Party,4,4,4,4,4,0,1,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,4,4,3.75,0,
+479,223,4,4,5,Hankuk Party,5,2,5,3,6,0.1,2,3,Male,Liberal-consistent news,"Liberal
+Media",Conservative,2,3.5,2.25,3,0.4
+480,237,4,4,5,Hankuk Party,5,5,5,2,2,0,1,3,Male,Liberal-consistent news,"Liberal
+Media",Conservative,3,5,3.625,0,0.5
+481,242,4,4,5,Hankuk Party,5,3,6,3,2,0,2,4,Male,Liberal-consistent news,"Liberal
+Media",Conservative,2.33333333333333,5,5,-1,0.5
+482,243,4,4,7,Hankuk Party,5,2,5,3,1,0,1,3,Male,Liberal-consistent news,"Liberal
+Media",Conservative,1,6,3,-2,0.5
+483,271,4,4,5,Hankuk Party,4,4,5,3,2,0.1,1,3,Female,Liberal-consistent news,"Liberal
+Media",Conservative,3,5,2.125,-1,0.4
+484,291,4,4,7,Hankuk Party,4,4,4,1,2,0,2,5,Female,Liberal-consistent news,"Liberal
+Media",Conservative,1.33333333333333,7,1,1,0.5
+485,296,4,4,4,Hankuk Party,4,3,4,5,4,0.1,1,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,4.66666666666667,3,3.875,-1,
+486,305,4,4,5,Hankuk Party,5,4,4,2,2,0.1,3,4,Female,Liberal-consistent news,"Liberal
+Media",Conservative,1.33333333333333,6.5,3.125,0,0.4
+487,340,4,4,6,Hankuk Party,7,1,1,1,1,-0.5,1,4,Male,Liberal-consistent news,"Liberal
+Media",Conservative,1,4,4,0,1
+488,349,4,4,6,Hankuk Party,6,5,6,6,6,0.3,2,3,Female,Liberal-consistent news,"Liberal
+Media",Conservative,6.33333333333333,6.5,5.5,0,0.2
+489,375,4,4,5,Hankuk Party,4,4,4,3,3,0,2,4,Female,Liberal-consistent news,"Liberal
+Media",Conservative,3.33333333333333,4.5,3.125,0,0.5
+490,383,4,4,4,Hankuk Party,3,1,4,1,1,-0.4,3,4,Female,Liberal-consistent news,"Liberal
+Media",Moderate,1,1.5,1.5,0,
+491,396,4,4,4,Hankuk Party,5,2,7,1,1,0,1,4,Female,Liberal-consistent news,"Liberal
+Media",Moderate,1,7,3.25,0,
+492,410,4,4,3,Hankuk Party,5,2,5,3,2,0.2,4,4,Female,Liberal-consistent news,"Liberal
+Media",Liberal,2.33333333333333,6,2,-1,0.7
+493,414,4,4,5,Hankuk Party,5,5,1,1,1,-0.5,2,5,Male,Liberal-consistent news,"Liberal
+Media",Conservative,1,4,1.625,0,1
+494,439,4,4,4,Hankuk Party,2,2,6,1,1,0.3,2,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,1.66666666666667,6,1.75,0,
+495,463,4,4,6,Hankuk Party,5,1,4,2,1,0.5,2,4,Male,Liberal-consistent news,"Liberal
+Media",Conservative,1,7,2.5,-1,0
+496,476,4,4,4,Hankuk Party,3,3,3,4,3,0,3,3,Female,Liberal-consistent news,"Liberal
+Media",Moderate,2.33333333333333,4,1.875,-1,
+497,495,4,4,5,Hankuk Party,4,4,4,5,5,-0.2,3,4,Female,Liberal-consistent news,"Liberal
+Media",Conservative,5,4.5,4,0,0.7
+498,534,4,4,4,Hankuk Party,5,4,2,1,2,-0.4,3,4,Female,Liberal-consistent news,"Liberal
+Media",Moderate,1,5.5,1.25,1,
+499,545,4,4,5,Hankuk Party,2,5,4,3,4,0.2,3,4,Female,Liberal-consistent news,"Liberal
+Media",Conservative,3.33333333333333,5,2,1,0.3
+500,589,4,4,4,Hankuk Party,3,3,3,3,3,-0.1,3,4,Female,Liberal-consistent news,"Liberal
+Media",Moderate,3,2,3.125,0,
+501,598,4,4,5,Hankuk Party,5,2,3,1,2,-0.3,1,4,Female,Liberal-consistent news,"Liberal
+Media",Conservative,1.66666666666667,4.5,1.625,1,0.8
+502,624,4,4,4,Hankuk Party,4,2,5,1,1,0.1,3,3,Female,Liberal-consistent news,"Liberal
+Media",Moderate,1.33333333333333,3,4.375,0,
+503,712,4,4,2,Independent,3,4,1,4,1,-0.3,2,4,Male,Liberal-consistent news,"Liberal
+Media",Liberal,3,4,2.75,-3,0.2
+504,713,4,4,4,Independent,7,2,3,3,2,0.2,1,4,Female,Liberal-consistent news,"Liberal
+Media",Moderate,1.66666666666667,5.5,1.5,-1,
+505,714,4,4,4,Hankuk Party,3,3,4,4,4,0,2,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,3,5,3.375,0,
+506,715,4,4,3,Independent,6,5,2,2,1,-0.2,2,4,Female,Liberal-consistent news,"Liberal
+Media",Liberal,1,4.5,2.375,-1,0.3
+507,716,4,4,3,Independent,7,5,2,3,2,0.2,3,4,Female,Liberal-consistent news,"Liberal
+Media",Liberal,5.66666666666667,6,1,-1,0.7
+508,717,4,4,4,Independent,7,6,1,1,1,-0.4,3,4,Female,Liberal-consistent news,"Liberal
+Media",Moderate,1,1,1.125,0,
+509,718,4,4,4,Independent,6,2,5,3,2,0.2,2,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,3,5.5,2.375,-1,
+510,719,4,4,4,Independent,5,5,3,3,3,-0.1,3,4,Female,Liberal-consistent news,"Liberal
+Media",Moderate,1,3.5,1,0,
+511,721,4,4,7,Hankuk Party,5,1,4,1,1,0,2,4,Male,Liberal-consistent news,"Liberal
+Media",Conservative,1,1,1,0,0.5
+512,722,4,4,4,Independent,2,2,2,3,3,-0.3,3,4,Female,Liberal-consistent news,"Liberal
+Media",Moderate,2.66666666666667,3,2,0,
+513,723,4,4,3,Minju Party,5,3,3,5,3,-0.3,2,5,Male,Liberal-consistent news,"Liberal
+Media",Liberal,3,4,2.625,-2,0.2
+514,726,4,4,2,Independent,3,4,4,5,4,0,4,5,Female,Liberal-consistent news,"Liberal
+Media",Liberal,4.33333333333333,5,3.25,-1,0.5
+515,732,4,4,5,Hankuk Party,3,3,5,2,2,0,2,4,Female,Liberal-consistent news,"Liberal
+Media",Conservative,2.66666666666667,3,3.625,0,0.5
+516,738,4,4,4,Minju Party,7,7,4,5,5,-0.3,1,3,Male,Liberal-consistent news,"Liberal
+Media",Moderate,4.66666666666667,6,1.875,0,
+517,745,4,4,5,Minju Party,3,5,4,3,3,-0.1,1,4,Female,Liberal-consistent news,"Liberal
+Media",Conservative,4,4.5,3.125,0,0.6
+518,746,4,4,3,Minju Party,7,4,3,5,5,0.2,2,4,Female,Liberal-consistent news,"Liberal
+Media",Liberal,4.66666666666667,5.5,1,0,0.7
+519,747,4,4,1,Minju Party,7,5,3,5,3,0.3,1,4,Female,Liberal-consistent news,"Liberal
+Media",Liberal,3.33333333333333,4.5,1,-2,0.8
+520,748,4,4,2,Minju Party,7,7,2,7,7,0.4,1,4,Female,Liberal-consistent news,"Liberal
+Media",Liberal,5.66666666666667,3.5,2,0,0.9
+521,751,4,4,3,Independent,6,5,4,3,4,0.1,1,4,Female,Liberal-consistent news,"Liberal
+Media",Liberal,4.66666666666667,5,3.125,1,0.6
+522,752,4,4,3,Minju Party,3,4,3,4,3,0,1,3,Male,Liberal-consistent news,"Liberal
+Media",Liberal,3.66666666666667,4,4,-1,0.5
+523,754,4,4,5,Hankuk Party,3,4,2,1,2,-0.3,1,4,Female,Liberal-consistent news,"Liberal
+Media",Conservative,1,7,2.75,1,0.8
+524,758,4,4,4,Independent,7,4,5,4,4,0,2,4,Female,Liberal-consistent news,"Liberal
+Media",Moderate,1.66666666666667,4,1,0,
+525,760,4,4,3,Minju Party,7,1,1,5,5,0.2,2,5,Female,Liberal-consistent news,"Liberal
+Media",Liberal,5,5.5,1.5,0,0.7
+526,883,4,4,5,Minju Party,7,7,4,4,4,-0.1,4,5,Male,Liberal-consistent news,"Liberal
+Media",Conservative,3,3.5,2.625,0,0.6
+527,918,4,4,2,Minju Party,3,3,3,3,4,0.1,3,4,Male,Liberal-consistent news,"Liberal
+Media",Liberal,3,4,4.5,1,0.6
+528,938,4,4,4,Minju Party,7,1,4,6,5,0.2,1,4,Male,Liberal-consistent news,"Liberal
+Media",Moderate,6.66666666666667,7,1.25,-1,
+529,940,4,4,2,Minju Party,7,2,6,4,5,-0.2,3,4,Male,Liberal-consistent news,"Liberal
+Media",Liberal,4.66666666666667,5.5,2.125,1,0.3
+530,947,4,4,5,Hankuk Party,6,3,2,1,2,-0.2,3,4,Male,Liberal-consistent news,"Liberal
+Media",Conservative,1.66666666666667,6,2.75,1,0.7
+531,994,4,4,6,Hankuk Party,6,1,1,1,1,-0.5,3,4,Male,Liberal-consistent news,"Liberal
+Media",Conservative,1,6.5,2.375,0,1
