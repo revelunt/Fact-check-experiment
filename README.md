@@ -1,6 +1,6 @@
 # Fact-Check-Experiment
 
-This repository contains replication materials for the paper _"Attitudnal Persuasion and Perceptual Backfire? Effects of Fact-Checking News Delivered by Partisan Media"_ ([https://osf.io/ycrv9/](https://osf.io/ycrv9/)). 
+This repository contains replication materials for the paper _"Attitudinal Persuasion and Perceptual Backfire? Effects of Fact-Checking News Delivered by Partisan Media"_ ([https://osf.io/ycrv9/](https://osf.io/ycrv9/)). 
 
 For any questions or inquries, please contact the corresponding author, Hyunjin (Jin) Song (hyunjinsong@yonsei.ac.kr) or the first author Je Hoon Chae (chaejehoon@yonsei.ac.kr). Questions concerning R codes should be directed to the first author.
 
