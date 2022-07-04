@@ -1,4 +1,3 @@
-
 IRB/*.*
 .DS_Store
 .Rproj.user
@@ -8,3 +7,5 @@ manuscript Jin comment.docx
 manuscript_2nd.docx
 previous-files/
 01_data/
+.log
+previous-files/
