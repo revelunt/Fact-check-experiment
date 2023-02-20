@@ -19,7 +19,7 @@ format:
     number-sections: true
     colorlinks: true
     keep-tex: true
-    pdf-engine: lualatex
+    pdf-engine: pdflatex
     lof: true
     lot: true
     # fig_caption: yes
@@ -337,8 +337,8 @@ mod_list <- list(mod1, mod2, mod3, mod4, mod5, mod6)
 #| results: asis
 #| echo: false
 stargazer(mod1, mod2, mod3, mod4, mod5, mod6,
-          se = starprep(mod1, mod2, mod3, mod4, mod5, mod6),
-          p = starprep(mod1, mod2, mod3, mod4, mod5, mod6, stat = "p.value"),
+          se = starprep(mod1, mod2, mod3, mod4, mod5, mod6, se_type = "HC3"),
+          p = starprep(mod1, mod2, mod3, mod4, mod5, mod6, se_type = "HC3", stat = "p.value"),
           title = paste0("Regression results of degree of", 
                          " agreement, Post minus Pre",
                          " (Study 1, South Korean sample)"),
@@ -385,8 +385,8 @@ mod_list <- list(mod1, mod2, mod3, mod4, mod5, mod6)
 
 # Print the output
 stargazer(mod1, mod2, mod3, mod4, mod5, mod6,
-          se = starprep(mod1, mod2, mod3, mod4, mod5, mod6),
-          p = starprep(mod1, mod2, mod3, mod4, mod5, mod6, stat = "p.value"),
+          se = starprep(mod1, mod2, mod3, mod4, mod5, mod6, se_type = "HC3"),
+          p = starprep(mod1, mod2, mod3, mod4, mod5, mod6, stat = "p.value", se_type = "HC3"),
           title = "Regression results of hostile media perception (Study 1, South Korean sample), excluding moderate sample",
   column.labels = c("Liberals", "Conservatives", "Combined Partisan"),
           style = "apsr",
@@ -606,8 +606,8 @@ mod_list <- list(mod1, mod2, mod3, mod4, mod5, mod6)
 
 # Print the output
 stargazer(mod_list,
-          se = starprep(mod1, mod2, mod3, mod4, mod5, mod6),
-          p = starprep(mod1, mod2, mod3, mod4, mod5, mod6, stat = "p.value"),
+          se = starprep(mod1, mod2, mod3, mod4, mod5, mod6, se_type = "HC3"),
+          p = starprep(mod1, mod2, mod3, mod4, mod5, mod6, stat = "p.value", se_type = "HC3"),
           title = "Regression results of degree of agreement, Post minus Pre (Study 2, U.S. sample)",
   column.labels = c("Democrates", "Independents", "Republicans"),
           style = "apsr",
@@ -642,8 +642,8 @@ mod_list <- list(mod1, mod2, mod3, mod4, mod5, mod6)
 
 # Print the output
 stargazer(mod_list,
-          se = starprep(mod1, mod2, mod3, mod4, mod5, mod6),
-          p = starprep(mod1, mod2, mod3, mod4, mod5, mod6, stat = "p.value"),
+          se = starprep(mod1, mod2, mod3, mod4, mod5, mod6, se_type = "HC3"),
+          p = starprep(mod1, mod2, mod3, mod4, mod5, mod6, stat = "p.value", se_type = "HC3"),
           title = "Regression results of factual belief, Post minus Pre (Study 2, U.S. sample)",
   column.labels = c("Democrates", "Independents", "Republicans"),
           style = "apsr",
@@ -677,8 +677,8 @@ mod_list <- list(mod1, mod2, mod3, mod4, mod5, mod6)
 
 # Print the output
 stargazer(mod_list,
-          se = starprep(mod1, mod2, mod3, mod4, mod5, mod6),
-          p = starprep(mod1, mod2, mod3, mod4, mod5, mod6, stat = "p.value"),
+          se = starprep(mod1, mod2, mod3, mod4, mod5, mod6, se_type = "HC3"),
+          p = starprep(mod1, mod2, mod3, mod4, mod5, mod6, stat = "p.value", se_type = "HC3"),
           title = "Regression results of Relative hostile media effect, excluding Independents (Study 2, U.S. sample)",
   column.labels = c("Democrates", "Republicans", "Partisans combined"),
           style = "apsr",
@@ -884,8 +884,8 @@ mod_list <- list(mod1, mod2, mod3, mod4)
 
 # Print the output
 stargazer(mod_list,
-          se = starprep(mod1, mod2, mod3, mod4),
-          p = starprep(mod1, mod2, mod3, mod4, stat = "p.value"),
+          se = starprep(mod1, mod2, mod3, mod4, se_type = "HC3"),
+          p = starprep(mod1, mod2, mod3, mod4, stat = "p.value", se_type = "HC3"),
           title = "Regression results of degree of agreement, Post minus Pre (Study 3, U.S. sample)",
   column.labels = c("Democrates", "Republicans"),
           style = "apsr",
@@ -915,8 +915,8 @@ mod_list <- list(mod1, mod2, mod3, mod4)
 
 # Print the output
 stargazer(mod_list,
-          se = starprep(mod1, mod2, mod3, mod4),
-          p = starprep(mod1, mod2, mod3, mod4, stat = "p.value"),
+          se = starprep(mod1, mod2, mod3, mod4, se_type = "HC3"),
+          p = starprep(mod1, mod2, mod3, mod4, stat = "p.value", se_type = "HC3"),
           title = "Regression results of factual belief, Post minus Pre (Study 3, U.S. sample)",
   column.labels = c("Democrates", "Republicans"),
           style = "apsr",
@@ -947,8 +947,8 @@ mod_list <- list(mod1, mod2, mod3, mod4)
 
 # Print the output
 stargazer(mod_list,
-          se = starprep(mod1, mod2, mod3, mod4),
-          p = starprep(mod1, mod2, mod3, mod4, stat = "p.value"),
+          se = starprep(mod1, mod2, mod3, mod4, se_type = "HC3"),
+          p = starprep(mod1, mod2, mod3, mod4, stat = "p.value", se_type = "HC3"),
           title = "Regression results of hostile media effect (Study 3, U.S. sample)",
   column.labels = c("Democrates", "Republicans"),
           style = "apsr",
