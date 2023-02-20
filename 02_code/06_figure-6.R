@@ -17,6 +17,8 @@
 ## IMPORT PACKAGES =============================================================
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
+  ggrepel,
+  lsr,           # CohenD() 
   conflicted,    # Avoid conflict of functions with same names
   tidyverse      # Tidyverse umbrella package
 )  
@@ -43,14 +45,23 @@ tab <- df_study3 %>%
   mutate(conf_95_low = (mean - 1.96*se), conf_95_high = (mean + 1.96*se),
          conf_80_low = (mean - 1.282*se), conf_80_high = (mean + 1.282*se))
 
+tmp <- df_study3 %>%
+  select(media_slant, nfc, partisanship, hmp_score) %>%
+  group_by(media_slant, nfc, partisanship) %>%
+  group_modify(~ tidy(cohensD(.$hmp_score, mu = 0.5))) %>% 
+  mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
+  select(-x)
+
+tab <- tab |> left_join(tmp, by = c("media_slant", "nfc", "partisanship"))
+
 # Generate plot
 plot <- tab %>% 
-  ggplot(aes(media_slant, mean, colour = partisanship, shape = partisanship)) +
-  geom_hline(yintercept = 0.5, size = 1.5, colour = 'black', alpha = .5) +
-  geom_linerange(aes(ymin = conf_95_low, ymax = conf_95_high), size = 1, position = position_dodge(width = .6)) +
-  geom_linerange(aes(ymin = conf_80_low, ymax = conf_80_high), size = 2, position = position_dodge(width = .6)) +
-  geom_point(size = 3, fill = "white", position = position_dodge(width = .6)) +
-  scale_shape_manual(values = c(21, 23)) +
+  ggplot(aes(media_slant, mean, colour = partisanship)) +
+  geom_hline(yintercept = 0.5, size = 1.5, colour = 'grey', alpha = .5) +
+  geom_pointrange(aes(ymin = conf_95_low, ymax = conf_95_high), fill = "white",
+                  position = position_dodge(width = .6)) +
+  geom_text_repel(aes(label = d, hjust = ifelse(mean < 0, 0, 1)), 
+                  position = position_dodge(width = .6), vjust = 1) +
   scale_colour_manual(values = c("#1405BD", "#DE0100")) +
   labs(x = NULL, y = 'Mean score of hostile media effect\n(0.5: Neutral)', colour = "Partisanship:", shape = "Partisanship:") +
   theme_plot() +

@@ -1,5 +1,5 @@
 ---
-title: "Online Appendix for: \"Attitudinal Persuasion and Perceptual Backfire? Effects of Fact-Checking News Delivered by Partisan Media\" "
+title: "Online Appendix for: \"Perceiving Fact-Checks as Biased but Nevertheless Persuaded? Effects of Fact-Checking News Delivered by Partisan Media\" "
 # author:
 #   - name: Je Hoon Chae
 #   - name: Sang Yup Lee

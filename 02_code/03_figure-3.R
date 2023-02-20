@@ -17,6 +17,8 @@
 ## IMPORT PACKAGES =============================================================
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
+  ggrepel,
+  lsr,           # CohenD() 
   conflicted,    # Avoid conflict of functions with same names
   tidyverse      # Tidyverse umbrella package
 )  
@@ -52,13 +54,32 @@ tab <- bind_rows(
            dv = "DV: Factual belief")
 )
 
+tmp <- bind_rows(
+  df_study2 %>%
+    dplyr::select(agree_t1, agree_t2, valence, media_slant, partisanship) %>%
+    group_by(valence, media_slant, partisanship) %>%
+    group_modify(~ tidy(cohensD(.$agree_t2, .$agree_t1))) %>% 
+    mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
+    dplyr::select(-x) |> 
+    mutate(dv = "DV: Agreement"),
+  df_study2 %>%
+    dplyr::select(belief_t1, belief_t2, valence, media_slant, partisanship) %>%
+    group_by(valence, media_slant, partisanship) %>%
+    group_modify(~ tidy(cohensD(.$belief_t2, .$belief_t1))) %>% 
+    mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
+    dplyr::select(-x) |> 
+    mutate(dv = "DV: Factual belief"),
+)
+
+tab <- tab |> left_join(tmp, by = c("valence", "media_slant", "partisanship", "dv"))
+
 plot <- tab %>% 
-  ggplot(aes(media_slant, mean, colour = partisanship, shape = partisanship)) +
-  geom_hline(yintercept = 0, size = 1.5, colour = 'black', alpha = .5) +
-  geom_linerange(aes(ymin = conf_95_low, ymax = conf_95_high), size = 1, position = position_dodge(width = .6)) +
-  geom_linerange(aes(ymin = conf_80_low, ymax = conf_80_high), size = 2, position = position_dodge(width = .6)) +
-  geom_point(size = 3, fill = "white", position = position_dodge(width = .6)) +
-  scale_shape_manual(values = c(21, 22, 23)) +
+  ggplot(aes(media_slant, mean, colour = partisanship)) +
+  geom_hline(yintercept = 0, size = 1.5, colour = 'grey', alpha = .5) +
+  geom_pointrange(aes(ymin = conf_95_low, ymax = conf_95_high), fill = "white",
+                 position = position_dodge(width = .6), alpha = .7) +
+  geom_text_repel(aes(label = d, hjust = ifelse(mean < 0, 0, 1)), 
+                  position = position_dodge(width = .6), vjust = 1) +
   scale_colour_manual(values = c("#1405BD", "grey60", "#DE0100")) +
   labs(x = NULL, y = 'Mean change of agreement and factual belief\nPersuasive <-> Backfire', colour = "Partisanship:", shape = "Partisanship:") +
   theme_plot() +
