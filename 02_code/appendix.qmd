@@ -178,8 +178,10 @@ Other covariate variables including *party affiliation* (Democrat: $n = 369$ \[5
 ```{r}
 #| echo: false
 df_study1 <- read_csv('../01_data/FC_study-1.csv')
-df_study2 <- read_csv('../01_data/FC_study-2.csv')
-df_study3 <- read_csv('../01_data/FC_study-3.csv')
+# df_study2 <- read_csv('../01_data/FC_study-2.csv')
+df_study2 <- read_csv('../01_data/FC_study-2_new.csv')
+# df_study3 <- read_csv('../01_data/FC_study-3.csv')
+df_study3 <- read_csv('../01_data/FC_study-3_new.csv')
 ```
 
 ```{r}
@@ -413,9 +415,11 @@ stargazer(mod1, mod2, mod3, mod4, mod5, mod6,
 #| echo: false
 
 # Factor level setting
-df_study2 <- df_study2 %>% mutate(
-  media_slant = factor(media_slant, levels = c("FOX", "Reuter", "MSNBC"))
-)
+df_study2 <- df_study2 %>% 
+  mutate(
+    media_slant = factor(media_slant, levels = c("FOX", "Reuter", "MSNBC"))
+    )
+
 # Combine data frames with the results of the multiple t-tests
 tab1 <- df_study2 %>% 
   group_by(valence, media_slant, partisanship) %>% 
@@ -451,7 +455,8 @@ output <- tab1 %>%
 col_names <- c(" ", "$n$", "$M$", "$SD$", "$M$", "$SD$", "$t$", "$p$", "Cohen's $d$")
 colnames(output) <- col_names
 
-kbl(output, 'latex', booktabs = TRUE, escape = FALSE, align = c('l', rep('c', times = 8)),
+kbl(output, 'latex', booktabs = TRUE, escape = FALSE, 
+    align = c('l', rep('c', times = 8)),
     caption = "Mean comparison of degree of agreement in each sub-group (Study 2, U.S. sample)") %>% 
     kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
   add_header_above(c(" ", " ", "Pre" = 2, "Post" = 2, " ")) %>% 
@@ -595,11 +600,11 @@ rep_filtered <- df_study2 %>% filter(partisanship == "Republican")
 
 # Fit regression models
 mod1 <- lm(agree_diff ~ valence*media_slant, data = dem_filtered)
-mod2 <- lm(agree_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income, data = dem_filtered)
+mod2 <- lm(agree_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = dem_filtered)
 mod3 <- lm(agree_diff ~ valence*media_slant, data = ind_filtered)
-mod4 <- lm(agree_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income, data = ind_filtered)
+mod4 <- lm(agree_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = ind_filtered)
 mod5 <- lm(agree_diff ~ valence*media_slant, data = rep_filtered)
-mod6 <- lm(agree_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income, data = rep_filtered)
+mod6 <- lm(agree_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = rep_filtered)
 
 mod_list <- list(mod1, mod2, mod3, mod4, mod5, mod6)
 
@@ -616,7 +621,7 @@ stargazer(mod_list,
   covariate.labels = c("Ducey (vs. Biden)", "FOX (vs. Reuter)", "MSNBC (vs. Reuter)",
                        "General knowledge", "Immigration knowledge",
                        "Media trust", "Involvement",
-                       "Gender", "Age", "Education", "Income",
+                       "Gender", "Age", "Education", "Income", "Race",
                        "Ducey $\\times$ FOX", "Ducey $\\times$ MSNBC", "Constant"),
   notes = c("\\parbox[t]{16cm}{\\footnotesize \\textit{Notes:} Ducey = Debunking misinformation in Doug Ducey’s statement. Each cell includes regression coefficient and standard errors are in  parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
   omit.stat = c("f", "ser"), 
@@ -631,11 +636,11 @@ stargazer(mod_list,
 
 # Fit regression models
 mod1 <- lm(belief_diff ~ valence*media_slant, data = dem_filtered)
-mod2 <- lm(belief_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income, data = dem_filtered)
+mod2 <- lm(belief_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = dem_filtered)
 mod3 <- lm(belief_diff ~ valence*media_slant, data = ind_filtered)
-mod4 <- lm(belief_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income, data = ind_filtered)
+mod4 <- lm(belief_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = ind_filtered)
 mod5 <- lm(belief_diff ~ valence*media_slant, data = rep_filtered)
-mod6 <- lm(belief_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income, data = rep_filtered)
+mod6 <- lm(belief_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = rep_filtered)
 
 mod_list <- list(mod1, mod2, mod3, mod4, mod5, mod6)
 
@@ -652,7 +657,7 @@ stargazer(mod_list,
   covariate.labels = c("Ducey (vs. Biden)", "FOX (vs. Reuter)", "MSNBC (vs. Reuter)",
                        "General knowledge", "Immigration knowledge",
                        "Media trust", "Involvement",
-                       "Gender", "Age", "Education", "Income",
+                       "Gender", "Age", "Education", "Income", "Race",
                        "Ducey $\\times$ FOX", "Ducey $\\times$ MSNBC", "Constant"),
   notes = c("\\parbox[t]{16cm}{\\footnotesize \\textit{Notes:} Ducey = Debunking misinformation in Doug Ducey’s statement. Each cell includes regression coefficient and standard errors are in parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
   omit.stat = c("f", "ser"), 
@@ -667,11 +672,11 @@ stargazer(mod_list,
 partisan_filtered <- df_study2 %>% filter(partisanship != "Independent")
 
 mod1 <- lm(hmp_score ~ valence*media_slant, data = dem_filtered)
-mod2 <- lm(hmp_score ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income, data = dem_filtered)
+mod2 <- lm(hmp_score ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = dem_filtered)
 mod3 <- lm(hmp_score ~ valence*media_slant, data = rep_filtered)
-mod4 <- lm(hmp_score ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income, data = rep_filtered)
+mod4 <- lm(hmp_score ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = rep_filtered)
 mod5 <- lm(hmp_score ~ valence*media_slant*partisanship, data = partisan_filtered)
-mod6 <- lm(hmp_score ~ valence*media_slant*partisanship + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income, data = partisan_filtered)
+mod6 <- lm(hmp_score ~ valence*media_slant*partisanship + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = partisan_filtered)
 
 mod_list <- list(mod1, mod2, mod3, mod4, mod5, mod6)
 
@@ -687,7 +692,7 @@ stargazer(mod_list,
   covariate.labels = c("Ducey (vs. Biden)", "FOX (vs. Reuter)", "MSNBC (vs. Reuter)",
                        "General knowledge", "Immigration knowledge",
                        "Media trust", "Involvement",
-                       "Gender", "Age", "Education", "Income", 
+                       "Gender", "Age", "Education", "Income", "Race",
                        "Republican (vs. Democrat)",
                        "Ducey $\\times$ FOX", "Ducey $\\times$ MSNBC", 
                        "Ducey $\\times$ Republican", "FOX $\\times$ Republican",
@@ -877,9 +882,9 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE,
 
 # Fit regression models
 mod1 <- lm(agree_diff ~ nfc*media_slant, data = filter(df_study3, partisanship == 'Democrat')) 
-mod2 <- lm(agree_diff ~ nfc*media_slant + gen_knowledge + media_trust + involvement + gender + age + education + income, data = filter(df_study3, partisanship == 'Democrat')) 
+mod2 <- lm(agree_diff ~ nfc*media_slant + gen_knowledge + media_trust + involvement + gender + age + education + income + race, data = filter(df_study3, partisanship == 'Democrat')) 
 mod3 <- lm(agree_diff ~ nfc*media_slant, data = filter(df_study3, partisanship == 'Republican'))
-mod4 <- lm(agree_diff ~ nfc*media_slant + gen_knowledge + media_trust + involvement + gender + age + education + income, data = filter(df_study3, partisanship == 'Republican'))
+mod4 <- lm(agree_diff ~ nfc*media_slant + gen_knowledge + media_trust + involvement + gender + age + education + income + race, data = filter(df_study3, partisanship == 'Republican'))
 mod_list <- list(mod1, mod2, mod3, mod4)
 
 # Print the output
@@ -893,7 +898,7 @@ stargazer(mod_list,
           column.separate = c(2, 2), notes.append = FALSE,
   covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. FOX)", "Rueter (vs. FOX)",
                        "General knowledge", "Media trust", "Involvement",
-                       "Gender", "Age", "Education", "Income",
+                       "Gender", "Age", "Education", "Income", "Race",
                        "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuter", "Constant"),
   notes = c("\\parbox[t]{10cm}{\\textit{Notes:} Robust standard errors (HC3) are in parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
   omit.stat = c("f", "ser"), 
@@ -908,9 +913,9 @@ stargazer(mod_list,
 
 # Fit regression models
 mod1 <- lm(belief_diff ~ nfc*media_slant, data = filter(df_study3, partisanship == 'Democrat'))
-mod2 <- lm(belief_diff ~ nfc*media_slant + gen_knowledge + media_trust + involvement + gender + age + education + income, data = filter(df_study3, partisanship == 'Democrat'))
+mod2 <- lm(belief_diff ~ nfc*media_slant + gen_knowledge + media_trust + involvement + gender + age + education + income + race, data = filter(df_study3, partisanship == 'Democrat'))
 mod3 <- lm(belief_diff ~ nfc*media_slant, data = filter(df_study3, partisanship == 'Republican')) 
-mod4 <- lm(belief_diff ~ nfc*media_slant+ gen_knowledge + media_trust + involvement + gender + age + education + income, data = filter(df_study3, partisanship == 'Republican')) 
+mod4 <- lm(belief_diff ~ nfc*media_slant+ gen_knowledge + media_trust + involvement + gender + age + education + income + race, data = filter(df_study3, partisanship == 'Republican')) 
 mod_list <- list(mod1, mod2, mod3, mod4)
 
 # Print the output
@@ -924,7 +929,7 @@ stargazer(mod_list,
           column.separate = c(2, 2), notes.append = FALSE,
   covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. FOX)", "Rueter (vs. FOX)",
                        "General knowledge", "Media trust", "Involvement",
-                       "Gender", "Age", "Education", "Income",
+                       "Gender", "Age", "Education", "Income", "Race",
                        "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuter", "Constant"),
   notes = c("\\parbox[t]{10cm}{\\textit{Notes:} Robust standard errors (HC3) are in parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
   omit.stat = c("f", "ser"), 
@@ -940,9 +945,9 @@ stargazer(mod_list,
 # Fit regression models
 # Fit regression models
 mod1 <- lm(hmp_score ~ nfc*media_slant, data = filter(df_study3, partisanship == 'Democrat'))
-mod2 <- lm(hmp_score ~ nfc*media_slant  + gen_knowledge + media_trust + involvement + gender + age + education + income, data = filter(df_study3, partisanship == 'Democrat'))
+mod2 <- lm(hmp_score ~ nfc*media_slant  + gen_knowledge + media_trust + involvement + gender + age + education + income + race, data = filter(df_study3, partisanship == 'Democrat'))
 mod3 <- lm(hmp_score ~ nfc*media_slant, data = filter(df_study3, partisanship == 'Republican')) 
-mod4 <- lm(hmp_score ~ nfc*media_slant + gen_knowledge + media_trust + involvement + gender + age + education + income, data = filter(df_study3, partisanship == 'Republican')) 
+mod4 <- lm(hmp_score ~ nfc*media_slant + gen_knowledge + media_trust + involvement + gender + age + education + income + race, data = filter(df_study3, partisanship == 'Republican')) 
 mod_list <- list(mod1, mod2, mod3, mod4)
 
 # Print the output
@@ -956,7 +961,574 @@ stargazer(mod_list,
           column.separate = c(2, 2), notes.append = FALSE,
   covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. FOX)", "Rueter (vs. FOX)",
                        "General knowledge", "Media trust", "Involvement",
-                       "Gender", "Age", "Education", "Income",
+                       "Gender", "Age", "Education", "Income", "Race",
+                       "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuter", "Constant"),
+  notes = c("\\parbox[t]{10cm}{\\textit{Notes:} Robust standard errors (HC3) are in parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
+  omit.stat = c("f", "ser"), 
+  no.space = TRUE, star.cutoffs = c(0.05, 0.01, 0.001))
+```
+
+\newpage
+
+# Replication of Study 2 & Study 3 with Strict Attention Check Threshold
+
+## Study 2
+
+```{r}
+#| results: asis
+#| echo: false
+
+# Factor level setting
+df_study2 <- df_study2 %>% 
+  filter(attention_pass_media == 1) |> 
+  mutate(
+    media_slant = factor(media_slant, levels = c("FOX", "Reuter", "MSNBC"))
+    )
+
+# Combine data frames with the results of the multiple t-tests
+tab1 <- df_study2 %>% 
+  group_by(valence, media_slant, partisanship) %>% 
+  summarise(
+    n = n(), 
+    mean_t1 = mean(agree_t1) %>% round(2), 
+    sd_t1 = sd(agree_t1) %>% round(2),
+    mean_t2 = mean(agree_t2) %>% round(2), 
+    sd_t2 = sd(agree_t2) %>% round(2)
+  )
+
+tab2 <- df_study2 %>%
+  select(valence, media_slant, partisanship, agree_t1, agree_t2) %>%
+  group_by(valence, media_slant, partisanship) %>% 
+  group_modify(~tidy(t.test(.$agree_t2, .$agree_t1, alt = "two.sided", paired = TRUE))) %>% 
+  mutate(statistic = round(statistic, 2), p.value = as.character(round(p.value, 3))) %>% 
+  mutate(p.value = if_else((p.value == "0")|(p.value == "0.001"), "< .001", substr(p.value, 2, 5))) %>% 
+  select(-estimate, -parameter, -conf.low, -conf.high, -method, -alternative)
+
+tab3 <- df_study2 %>%
+  dplyr::select(agree_t1, agree_t2, valence, media_slant, partisanship) %>%
+  group_by(valence, media_slant, partisanship) %>%
+  group_modify(~ tidy(cohensD(.$agree_t2, .$agree_t1))) %>% 
+  mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
+  dplyr::select(-x)
+
+output <- tab1 %>% 
+  left_join(tab2) %>% 
+  left_join(tab3) %>% 
+  ungroup() %>% 
+  select(-c(valence, media_slant))
+
+col_names <- c(" ", "$n$", "$M$", "$SD$", "$M$", "$SD$", "$t$", "$p$", "Cohen's $d$")
+colnames(output) <- col_names
+
+kbl(output, 'latex', booktabs = TRUE, escape = FALSE, 
+    align = c('l', rep('c', times = 8)),
+    caption = "Mean comparison of degree of agreement in each sub-group (Study 2, U.S. sample)") %>% 
+    kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
+  add_header_above(c(" ", " ", "Pre" = 2, "Post" = 2, " ")) %>% 
+  pack_rows(
+    index = c(
+    "Debunking Biden $\\times$ FOX" = 3,
+    "Debunking Biden $\\times$ Reuter" = 3,
+    "Debunking Biden $\\times$ MSNBC" = 3,
+    "Debunking Ducey $\\times$ FOX" = 3,
+    "Debunking Ducey $\\times$ Reuter" = 3,
+    "Debunking Ducey $\\times$ MSNBC" = 3), escape = F
+    )
+```
+
+\newpage
+
+```{r}
+#| results: asis
+#| echo: false
+
+tab1 <- df_study2 %>% 
+  group_by(valence, media_slant, partisanship) %>% 
+  summarise(
+    n = n(), 
+    mean_t1 = mean(belief_t1) %>% round(2), 
+    sd_t1 = sd(belief_t1) %>% round(2),
+    mean_t2 = mean(belief_t2) %>% round(2), 
+    sd_t2 = sd(belief_t2) %>% round(2)
+  )
+
+tab2 <- df_study2 %>%
+  select(valence, media_slant, partisanship, belief_t1, belief_t2) %>%
+  group_by(valence, media_slant, partisanship) %>% 
+  group_modify(~tidy(t.test(.$belief_t2, .$belief_t1, alt = "two.sided", paired = TRUE))) %>% 
+  mutate(statistic = round(statistic, 2), p.value = as.character(round(p.value, 3))) %>% 
+  mutate(p.value = if_else((p.value == "0")|(p.value == "0.001"), "< .001", substr(p.value, 2, 5))) %>% 
+  select(-estimate, -parameter, -conf.low, -conf.high, -method, -alternative)
+
+tab3 <- df_study2 %>%
+  dplyr::select(belief_t1, belief_t2, valence, media_slant, partisanship) %>%
+  group_by(valence, media_slant, partisanship) %>%
+  group_modify(~ tidy(cohensD(.$belief_t2, .$belief_t1))) %>% 
+  mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
+  dplyr::select(-x)
+
+output <- tab1 %>% 
+  left_join(tab2) %>% 
+  left_join(tab3) %>% 
+  ungroup() %>% 
+  select(-c(valence, media_slant))
+
+# Prints the output
+col_names <- c(" ", "$n$", "$M$", "$SD$", "$M$", "$SD$", "$t$", "$p$", "Cohen's $d$")
+colnames(output) <- col_names
+
+kbl(output, 'latex', booktabs = TRUE, escape = FALSE, align = c('l', rep('c', times = 8)),
+    caption = "Mean comparison of factual belief in each sub-group  (Study 2, U.S. sample)") %>% 
+    kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
+  add_header_above(c(" ", " ", "Pre" = 2, "Post" = 2, " ")) %>% 
+  pack_rows(index = c(
+    "Debunking Biden $\\times$ FOX" = 3,
+    "Debunking Biden $\\times$ Reuter" = 3,
+    "Debunking Biden $\\times$ MSNBC" = 3,
+    "Debunking Ducey $\\times$ FOX" = 3,
+    "Debunking Ducey $\\times$ Reuter" = 3,
+    "Debunking Ducey $\\times$ MSNBC" = 3), escape = F)
+```
+
+\newpage
+
+```{r}
+#| results: asis
+#| echo: false
+tab1 <- df_study2 %>% 
+  filter(partisanship != "Independent") %>% 
+  group_by(valence, media_slant, partisanship) %>% 
+  summarise(n = n(), mean = round(mean(hmp_score),2), sd = round(sd(hmp_score),2))
+
+tab2 <- df_study2 %>%
+  filter(partisanship != "Independent") %>% 
+  select(valence, media_slant, partisanship, hmp_score) %>%
+  group_by(valence, media_slant, partisanship) %>% 
+  group_modify(~tidy(t.test(.$hmp_score, mu = 0.5, alt = "two.sided"))) %>% 
+  mutate(statistic = round(statistic, 2), p.value = as.character(round(p.value, 3))) %>% 
+  mutate(p.value = if_else((p.value == "0")|(p.value == "0.001"), "< .001", substr(p.value, 2, 5))) %>% 
+  select(-estimate, -parameter, -conf.low, -conf.high, -method, -alternative)
+
+tab3 <- df_study2 %>%
+  select(valence, media_slant, partisanship, hmp_score) %>%
+  group_by(valence, media_slant, partisanship) %>%
+  group_modify(~ tidy(cohensD(.$hmp_score, mu = 0.5))) %>% 
+  mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
+  select(-x)
+
+output <- tab1 %>% 
+  left_join(tab2) %>% 
+  left_join(tab3) %>% 
+  ungroup() %>% 
+  select(-c(valence, media_slant))
+
+# Prints the output
+# Prints the output
+col_names <- c(" ", "$n$", "$M$", "$SD$", "$t$", "$p$", "Cohen's $d$")
+colnames(output) <- col_names
+
+kbl(output, 'latex', booktabs = TRUE, escape = FALSE,
+    align = c('l', rep('c', times = 6)),
+    caption = "Mean comparison of hostile media perception (Study 2, U.S. sample)") %>% 
+    kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
+  pack_rows(index = c(
+    "Debunking Biden $\\times$ FOX" = 2,
+    "Debunking Biden $\\times$ Reuter" = 2,
+    "Debunking Biden $\\times$ MSNBC" = 2,
+    "Debunking Ducey $\\times$ FOX" = 2,
+    "Debunking Ducey $\\times$ Reuter" = 2,
+    "Debunking Ducey $\\times$ MSNBC" = 2), escape = F) %>% 
+    footnote(
+    general = 'Hostile media perception values were compared to 0.5 (perception of neutrality).', 
+    threeparttable = TRUE, escape = FALSE, footnote_as_chunk = TRUE)
+```
+
+\newpage
+
+```{r}
+#| results: asis
+#| echo: false
+
+# Contrast coding
+df_study2$media_slant <- factor(df_study2$media_slant)
+df_study2$media_slant <- relevel(df_study2$media_slant, "Reuter")
+## contrasts(df_study2$media_slant)
+##        FOX MSNBC
+## Reuter   0     0
+## FOX      1     0
+## MSNBC    0     1
+
+# Subsampling based on partisanship
+dem_filtered <- df_study2 %>% filter(partisanship == "Democrat")
+ind_filtered <- df_study2 %>% filter(partisanship == "Independent")
+rep_filtered <- df_study2 %>% filter(partisanship == "Republican")
+
+# Fit regression models
+mod1 <- lm(agree_diff ~ valence*media_slant, data = dem_filtered)
+mod2 <- lm(agree_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = dem_filtered)
+mod3 <- lm(agree_diff ~ valence*media_slant, data = ind_filtered)
+mod4 <- lm(agree_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = ind_filtered)
+mod5 <- lm(agree_diff ~ valence*media_slant, data = rep_filtered)
+mod6 <- lm(agree_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = rep_filtered)
+
+mod_list <- list(mod1, mod2, mod3, mod4, mod5, mod6)
+
+
+# Print the output
+stargazer(mod_list,
+          se = starprep(mod1, mod2, mod3, mod4, mod5, mod6, se_type = "HC3"),
+          p = starprep(mod1, mod2, mod3, mod4, mod5, mod6, stat = "p.value", se_type = "HC3"),
+          title = "Regression results of degree of agreement, Post minus Pre (Study 2, U.S. sample)",
+  column.labels = c("Democrates", "Independents", "Republicans"),
+          style = "apsr",
+          dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
+          column.separate = c(2, 2, 2), notes.append = FALSE, font.size = "small",
+  covariate.labels = c("Ducey (vs. Biden)", "FOX (vs. Reuter)", "MSNBC (vs. Reuter)",
+                       "General knowledge", "Immigration knowledge",
+                       "Media trust", "Involvement",
+                       "Gender", "Age", "Education", "Income", "Race",
+                       "Ducey $\\times$ FOX", "Ducey $\\times$ MSNBC", "Constant"),
+  notes = c("\\parbox[t]{16cm}{\\footnotesize \\textit{Notes:} Ducey = Debunking misinformation in Doug Ducey’s statement. Each cell includes regression coefficient and standard errors are in  parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
+  omit.stat = c("f", "ser"), 
+  no.space = TRUE, star.cutoffs = c(0.05, 0.01, 0.001))
+```
+
+\newpage
+
+```{r}
+#| results: asis
+#| echo: false
+
+# Fit regression models
+mod1 <- lm(belief_diff ~ valence*media_slant, data = dem_filtered)
+mod2 <- lm(belief_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = dem_filtered)
+mod3 <- lm(belief_diff ~ valence*media_slant, data = ind_filtered)
+mod4 <- lm(belief_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = ind_filtered)
+mod5 <- lm(belief_diff ~ valence*media_slant, data = rep_filtered)
+mod6 <- lm(belief_diff ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = rep_filtered)
+
+mod_list <- list(mod1, mod2, mod3, mod4, mod5, mod6)
+
+
+# Print the output
+stargazer(mod_list,
+          se = starprep(mod1, mod2, mod3, mod4, mod5, mod6, se_type = "HC3"),
+          p = starprep(mod1, mod2, mod3, mod4, mod5, mod6, stat = "p.value", se_type = "HC3"),
+          title = "Regression results of factual belief, Post minus Pre (Study 2, U.S. sample)",
+  column.labels = c("Democrates", "Independents", "Republicans"),
+          style = "apsr",
+          dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
+          column.separate = c(2, 2, 2), notes.append = FALSE, font.size = "small",
+  covariate.labels = c("Ducey (vs. Biden)", "FOX (vs. Reuter)", "MSNBC (vs. Reuter)",
+                       "General knowledge", "Immigration knowledge",
+                       "Media trust", "Involvement",
+                       "Gender", "Age", "Education", "Income", "Race",
+                       "Ducey $\\times$ FOX", "Ducey $\\times$ MSNBC", "Constant"),
+  notes = c("\\parbox[t]{16cm}{\\footnotesize \\textit{Notes:} Ducey = Debunking misinformation in Doug Ducey’s statement. Each cell includes regression coefficient and standard errors are in parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
+  omit.stat = c("f", "ser"), 
+  no.space = TRUE, star.cutoffs = c(0.05, 0.01, 0.001))
+```
+
+\newpage
+
+```{r}
+#| results: asis
+#| echo: false
+partisan_filtered <- df_study2 %>% filter(partisanship != "Independent")
+
+mod1 <- lm(hmp_score ~ valence*media_slant, data = dem_filtered)
+mod2 <- lm(hmp_score ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = dem_filtered)
+mod3 <- lm(hmp_score ~ valence*media_slant, data = rep_filtered)
+mod4 <- lm(hmp_score ~ valence*media_slant + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = rep_filtered)
+mod5 <- lm(hmp_score ~ valence*media_slant*partisanship, data = partisan_filtered)
+mod6 <- lm(hmp_score ~ valence*media_slant*partisanship + gen_knowledge + immig_knowledge + media_trust + involvement + gender + age + education + income + race, data = partisan_filtered)
+
+mod_list <- list(mod1, mod2, mod3, mod4, mod5, mod6)
+
+# Print the output
+stargazer(mod_list,
+          se = starprep(mod1, mod2, mod3, mod4, mod5, mod6, se_type = "HC3"),
+          p = starprep(mod1, mod2, mod3, mod4, mod5, mod6, stat = "p.value", se_type = "HC3"),
+          title = "Regression results of Relative hostile media effect, excluding Independents (Study 2, U.S. sample)",
+  column.labels = c("Democrates", "Republicans", "Partisans combined"),
+          style = "apsr",
+          dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
+          column.separate = c(2, 2, 2), notes.append = FALSE, font.size = "footnotesize",
+  covariate.labels = c("Ducey (vs. Biden)", "FOX (vs. Reuter)", "MSNBC (vs. Reuter)",
+                       "General knowledge", "Immigration knowledge",
+                       "Media trust", "Involvement",
+                       "Gender", "Age", "Education", "Income", "Race",
+                       "Republican (vs. Democrat)",
+                       "Ducey $\\times$ FOX", "Ducey $\\times$ MSNBC", 
+                       "Ducey $\\times$ Republican", "FOX $\\times$ Republican",
+                       "MSNBC $\\times$ Republican", 
+                       "Ducey $\\times$ FOX $\\times$ Republican",
+                       "Ducey $\\times$ MSNBC $\\times$ Republican", "Constant"),
+  notes = c("\\parbox[t]{16cm}{\\footnotesize \\textit{Notes:} Debunking misinformation in Dough Ducey’s statement. Each cell includes regression coefficient and standard errors are in parentheses. (-) value of dependent variable denotes lesser bias perception against one’s in-group, whereas (+) value of dependent variable denotes greater bias perception against one’s in-group (i.e., perceiving greater favorability towards out-groups)}", "*$p < .05$; **$p < .01$; ***$p < .001$."),
+  omit.stat = c("f", "ser"), 
+  no.space = TRUE, star.cutoffs = c(0.05, 0.01, 0.001))
+```
+
+\newpage
+
+## Study 3
+
+```{r}
+#| results: asis
+#| echo: false
+
+df_study3 <- df_study3 |> filter(attention_pass_media == 1)
+
+tab1 <- df_study3 %>% 
+  group_by(media_slant, nfc, partisanship) %>% 
+  summarise(
+    n = n(), 
+    mean_t1 = mean(agree_t1) %>% round(2), 
+    sd_t1 = sd(agree_t1) %>% round(2),
+    mean_t2 = mean(agree_t2) %>% round(2), 
+    sd_t2 = sd(agree_t2) %>% round(2)
+  )
+
+tab2 <- df_study3 %>%
+  select(media_slant, nfc, partisanship, agree_t1, agree_t2) %>%
+  group_by(media_slant, nfc, partisanship) %>% 
+  group_modify(~tidy(t.test(.$agree_t2, .$agree_t1, alt = "two.sided", paired = TRUE))) %>% 
+  mutate(statistic = round(statistic, 2), p.value = as.character(round(p.value, 3))) %>% 
+  mutate(p.value = if_else((p.value == "0")|(p.value == "0.001"), "< .001", substr(p.value, 2, 5))) %>% 
+  select(-estimate, -parameter, -conf.low, -conf.high, -method, -alternative)
+
+tab3 <- df_study3 %>%
+  dplyr::select(agree_t1, agree_t2, media_slant, nfc, partisanship) %>%
+  group_by(media_slant, nfc, partisanship) %>%
+  group_modify(~ tidy(cohensD(.$agree_t2, .$agree_t1))) %>% 
+  mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
+  dplyr::select(-x)
+
+output <- tab1 %>% 
+  left_join(tab2) %>% 
+  left_join(tab3) %>% 
+  ungroup() %>% 
+  select(-c(1, 2))
+
+# Prints the output
+col_names <- c(" ", "$n$", "$M$", "$SD$", "$M$", "$SD$", "$t$", "$p$", "Cohen's $d$")
+colnames(output) <- col_names
+
+kbl(output, 'latex', booktabs = TRUE, escape = FALSE, align = c('l', rep('c', times = 8)),
+    caption = "Mean comparison of degree of agreement in each sub-group (Study 3, U.S. sample)") %>% 
+    kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
+  add_header_above(c(" ", " ", "Pre" = 2, "Post" = 2, " ")) %>% 
+  pack_rows(index = c(
+    "FOX $\\times$ High NfC" = 2,
+    "FOX $\\times$ Low NfC" = 2,
+    "MSNBC $\\times$ High NfC" = 2,
+    "MSNBC $\\times$ Low NfC" = 2,
+    "Reuter $\\times$ High NfC" = 2,
+    "Reuter $\\times$ Low NfC" = 2), escape = F)
+```
+
+\newpage
+
+```{r}
+#| results: asis
+#| echo: false
+tab1 <- df_study3 %>% 
+  group_by(media_slant, nfc, partisanship) %>% 
+  summarise(
+    n = n(), 
+    mean_t1 = mean(belief_t1) %>% round(2), 
+    sd_t1 = sd(belief_t1) %>% round(2),
+    mean_t2 = mean(belief_t2) %>% round(2), 
+    sd_t2 = sd(belief_t2) %>% round(2)
+  )
+
+tab2 <- df_study3 %>%
+  select(media_slant, nfc, partisanship, belief_t1, belief_t2) %>%
+  group_by(media_slant, nfc, partisanship) %>% 
+  group_modify(~tidy(t.test(.$belief_t2, .$belief_t1, alt = "two.sided", paired = TRUE))) %>% 
+  mutate(statistic = round(statistic, 2), p.value = as.character(round(p.value, 3))) %>% 
+  mutate(p.value = if_else((p.value == "0")|(p.value == "0.001"), "< .001", substr(p.value, 2, 5))) %>% 
+  select(-estimate, -parameter, -conf.low, -conf.high, -method, -alternative)
+
+tab3 <- df_study3 %>%
+  dplyr::select(belief_t1, belief_t2, media_slant, nfc, partisanship) %>%
+  group_by(media_slant, nfc, partisanship) %>%
+  group_modify(~ tidy(cohensD(.$belief_t2, .$belief_t1))) %>% 
+  mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
+  dplyr::select(-x)
+
+output <- tab1 %>% 
+  left_join(tab2) %>% 
+  left_join(tab3) %>% 
+  ungroup() %>% 
+  select(-c(1, 2))
+
+# Prints the output
+col_names <- c(" ", "$n$", "$M$", "$SD$", "$M$", "$SD$", "$t$", "$p$", "Cohen's $d$")
+colnames(output) <- col_names
+
+kbl(output, 'latex', booktabs = TRUE, escape = FALSE, align = c('l', rep('c', times = 8)),
+    caption = "Mean comparison of factual belief in each sub-group (Study 3, U.S. sample)") %>% 
+    kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
+  add_header_above(c(" ", " ", "Pre" = 2, "Post" = 2, " ")) %>% 
+  pack_rows(index = c(
+    "FOX $\\times$ High NfC" = 2,
+    "FOX $\\times$ Low NfC" = 2,
+    "MSNBC $\\times$ High NfC" = 2,
+    "MSNBC $\\times$ Low NfC" = 2,
+    "Reuter $\\times$ High NfC" = 2,
+    "Reuter $\\times$ Low NfC" = 2), escape = F)
+```
+
+\newpage
+
+```{r}
+#| results: asis
+#| echo: false
+
+# Combine data frames with the results of the multiple t-tests
+tab1 <- df_study3 %>% 
+  group_by(media_slant, nfc, partisanship) %>% 
+  summarise(n = n(), mean = round(mean(hmp_score),2), sd = round(sd(hmp_score),2))
+
+tab2 <- df_study3 %>%
+  select(media_slant, nfc, partisanship, hmp_score) %>%
+  group_by(media_slant, nfc, partisanship) %>% 
+  group_modify(~tidy(t.test(.$hmp_score, mu = 0.5, alt = "two.sided"))) %>% 
+  mutate(statistic = round(statistic, 2), p.value = as.character(round(p.value, 3))) %>% 
+  mutate(p.value = if_else((p.value == "0")|(p.value == "0.001"), "< .001", substr(p.value, 2, 5))) %>% 
+  select(-estimate, -parameter, -conf.low, -conf.high, -method, -alternative)
+
+tab3 <- df_study3 %>%
+  select(media_slant, nfc, partisanship, hmp_score) %>%
+  group_by(media_slant, nfc, partisanship) %>%
+  group_modify(~ tidy(cohensD(.$hmp_score, mu = 0.5))) %>% 
+  mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
+  select(-x)
+
+summary_df <- tab1 %>% left_join(tab2) %>% left_join(tab3)
+
+# Prints the output
+output <- data.frame(summary_df)
+rownames(output) <- NULL
+col_names <- c(" ", "N", "M", "SD", "t", "p", "Cohen's d")
+colnames(output) <- col_names
+
+output <- tab1 %>% 
+  left_join(tab2) %>% 
+  left_join(tab3) %>% 
+  ungroup() %>% 
+  select(-c(1, 2))
+
+# Prints the output
+# Prints the output
+col_names <- c(" ", "$n$", "$M$", "$SD$", "$t$", "$p$", "Cohen's $d$")
+colnames(output) <- col_names
+
+kbl(output, 'latex', booktabs = TRUE, escape = FALSE,
+    align = c('l', rep('c', times = 6)),
+    caption = "Mean comparison of hostile media effect (Study 3, U.S. sample)") %>% 
+    kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
+  pack_rows(index = c(
+    "FOX $\\times$ High NfC" = 2,
+    "FOX $\\times$ Low NfC" = 2,
+    "MSNBC $\\times$ High NfC" = 2,
+    "MSNBC $\\times$ Low NfC" = 2,
+    "Reuter $\\times$ High NfC" = 2,
+    "Reuter $\\times$ Low NfC" = 2), escape = F) %>% 
+    footnote(
+    general = 'Hostile media perception values were compared to 0.5 (perception of neutrality).', 
+    threeparttable = TRUE, escape = FALSE, footnote_as_chunk = TRUE)
+```
+
+\newpage
+
+```{r}
+#| results: asis
+#| echo: false
+
+# Fit regression models
+mod1 <- lm(agree_diff ~ nfc*media_slant, data = filter(df_study3, partisanship == 'Democrat')) 
+mod2 <- lm(agree_diff ~ nfc*media_slant + gen_knowledge + media_trust + involvement + gender + age + education + income + race, data = filter(df_study3, partisanship == 'Democrat')) 
+mod3 <- lm(agree_diff ~ nfc*media_slant, data = filter(df_study3, partisanship == 'Republican'))
+mod4 <- lm(agree_diff ~ nfc*media_slant + gen_knowledge + media_trust + involvement + gender + age + education + income + race, data = filter(df_study3, partisanship == 'Republican'))
+mod_list <- list(mod1, mod2, mod3, mod4)
+
+# Print the output
+stargazer(mod_list,
+          se = starprep(mod1, mod2, mod3, mod4, se_type = "HC3"),
+          p = starprep(mod1, mod2, mod3, mod4, stat = "p.value", se_type = "HC3"),
+          title = "Regression results of degree of agreement, Post minus Pre (Study 3, U.S. sample)",
+  column.labels = c("Democrates", "Republicans"),
+          style = "apsr",
+          dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
+          column.separate = c(2, 2), notes.append = FALSE,
+  covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. FOX)", "Rueter (vs. FOX)",
+                       "General knowledge", "Media trust", "Involvement",
+                       "Gender", "Age", "Education", "Income", "Race",
+                       "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuter", "Constant"),
+  notes = c("\\parbox[t]{10cm}{\\textit{Notes:} Robust standard errors (HC3) are in parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
+  omit.stat = c("f", "ser"), 
+  no.space = TRUE, star.cutoffs = c(0.05, 0.01, 0.001))
+```
+
+\newpage
+
+```{r}
+#| results: asis
+#| echo: false
+
+# Fit regression models
+mod1 <- lm(belief_diff ~ nfc*media_slant, data = filter(df_study3, partisanship == 'Democrat'))
+mod2 <- lm(belief_diff ~ nfc*media_slant + gen_knowledge + media_trust + involvement + gender + age + education + income + race, data = filter(df_study3, partisanship == 'Democrat'))
+mod3 <- lm(belief_diff ~ nfc*media_slant, data = filter(df_study3, partisanship == 'Republican')) 
+mod4 <- lm(belief_diff ~ nfc*media_slant+ gen_knowledge + media_trust + involvement + gender + age + education + income + race, data = filter(df_study3, partisanship == 'Republican')) 
+mod_list <- list(mod1, mod2, mod3, mod4)
+
+# Print the output
+stargazer(mod_list,
+          se = starprep(mod1, mod2, mod3, mod4, se_type = "HC3"),
+          p = starprep(mod1, mod2, mod3, mod4, stat = "p.value", se_type = "HC3"),
+          title = "Regression results of factual belief, Post minus Pre (Study 3, U.S. sample)",
+  column.labels = c("Democrates", "Republicans"),
+          style = "apsr",
+          dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
+          column.separate = c(2, 2), notes.append = FALSE,
+  covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. FOX)", "Rueter (vs. FOX)",
+                       "General knowledge", "Media trust", "Involvement",
+                       "Gender", "Age", "Education", "Income", "Race",
+                       "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuter", "Constant"),
+  notes = c("\\parbox[t]{10cm}{\\textit{Notes:} Robust standard errors (HC3) are in parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
+  omit.stat = c("f", "ser"), 
+  no.space = TRUE, star.cutoffs = c(0.05, 0.01, 0.001))
+```
+
+\newpage
+
+```{r}
+#| results: asis
+#| echo: false
+
+# Fit regression models
+# Fit regression models
+mod1 <- lm(hmp_score ~ nfc*media_slant, data = filter(df_study3, partisanship == 'Democrat'))
+mod2 <- lm(hmp_score ~ nfc*media_slant  + gen_knowledge + media_trust + involvement + gender + age + education + income + race, data = filter(df_study3, partisanship == 'Democrat'))
+mod3 <- lm(hmp_score ~ nfc*media_slant, data = filter(df_study3, partisanship == 'Republican')) 
+mod4 <- lm(hmp_score ~ nfc*media_slant + gen_knowledge + media_trust + involvement + gender + age + education + income + race, data = filter(df_study3, partisanship == 'Republican')) 
+mod_list <- list(mod1, mod2, mod3, mod4)
+
+# Print the output
+stargazer(mod_list,
+          se = starprep(mod1, mod2, mod3, mod4, se_type = "HC3"),
+          p = starprep(mod1, mod2, mod3, mod4, stat = "p.value", se_type = "HC3"),
+          title = "Regression results of hostile media effect (Study 3, U.S. sample)",
+  column.labels = c("Democrates", "Republicans"),
+          style = "apsr",
+          dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
+          column.separate = c(2, 2), notes.append = FALSE,
+  covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. FOX)", "Rueter (vs. FOX)",
+                       "General knowledge", "Media trust", "Involvement",
+                       "Gender", "Age", "Education", "Income", "Race",
                        "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuter", "Constant"),
   notes = c("\\parbox[t]{10cm}{\\textit{Notes:} Robust standard errors (HC3) are in parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
   omit.stat = c("f", "ser"), 
