@@ -17,6 +17,7 @@
 ## IMPORT PACKAGES =============================================================
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
+  broom,
   conflicted,    # Avoid conflict of functions with same names
   ggrepel,
   lsr,           # CohenD() 
@@ -60,11 +61,10 @@ plot <- tab %>%
   geom_hline(yintercept = 0.5, size = 1.5, colour = 'grey', alpha = .5) +
   geom_pointrange(aes(ymin = conf_95_low, ymax = conf_95_high), fill = "white",
                   position = position_dodge(width = .6)) +
-  # geom_linerange(aes(ymin = conf_80_low, ymax = conf_80_high), size = 2, position = position_dodge(width = .6)) +
-  geom_text_repel(aes(label = d, hjust = ifelse(mean < 0, 1, 0)), 
-                  position = position_dodge(width = .6), vjust = -1) +
-  # geom_point(size = 3, fill = "white", position = position_dodge(width = .6)) +
-  # scale_shape_manual(values = c(21, 23)) +
+  geom_text(aes(x = media_slant, y = conf_95_high + 0.025,
+                label = d, group = ideology_discrete, colour = ideology_discrete),
+            position = position_dodge(width = .6), size = 3,
+            family = "ps", fontface = "bold") +
   scale_colour_manual(values = c("#004EA1", "#D22730")) +
   labs(x = NULL, y = 'Mean score of hostile media effect\n(0.5: Neutral)', 
        colour = "Ideology:", shape = "Ideology:", label = NULL) +

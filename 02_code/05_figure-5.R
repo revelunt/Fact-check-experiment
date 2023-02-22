@@ -17,7 +17,7 @@
 ## IMPORT PACKAGES =============================================================
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
-  ggrepel,
+  broom,
   lsr,           # CohenD() 
   conflicted,    # Avoid conflict of functions with same names
   tidyverse      # Tidyverse umbrella package
@@ -78,8 +78,10 @@ plot <- tab %>%
   geom_hline(yintercept = 0, size = 1.5, colour = 'grey', alpha = .5) +
   geom_pointrange(aes(ymin = conf_95_low, ymax = conf_95_high), fill = "white",
                   position = position_dodge(width = .6)) +
-  geom_text_repel(aes(label = d, hjust = ifelse(mean < 0, 0, 1)), 
-                  position = position_dodge(width = .6), vjust = 1) +
+  geom_text(aes(x = media_slant, y = conf_95_low - 0.12,
+                label = d, group = partisanship, colour = partisanship),
+            position = position_dodge(width = .6), size = 3,
+            family = "ps", fontface = "bold") +
   scale_colour_manual(values = c("#1405BD", "#DE0100")) +
   labs(x = NULL, y = 'Mean change of agreement and factual belief\nPersuasive <-> Backfire', colour = "Partisanship:", shape = "Partisanship:") +
   theme_plot() +

@@ -18,6 +18,7 @@
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
   ggrepel,
+  broom,
   lsr,           # CohenD() 
   conflicted,    # Avoid conflict of functions with same names
   tidyverse      # Tidyverse umbrella package
@@ -77,11 +78,14 @@ plot <- tab %>%
   ggplot(aes(media_slant, mean, colour = partisanship)) +
   geom_hline(yintercept = 0, size = 1.5, colour = 'grey', alpha = .5) +
   geom_pointrange(aes(ymin = conf_95_low, ymax = conf_95_high), fill = "white",
-                 position = position_dodge(width = .6), alpha = .7) +
-  geom_text_repel(aes(label = d, hjust = ifelse(mean < 0, 0, 1)), 
-                  position = position_dodge(width = .6), vjust = 1) +
+                 position = position_dodge(width = .6)) +
+  geom_text(aes(x = media_slant, y = conf_95_low - 0.15,
+                 label = d, group = partisanship, colour = partisanship),
+             position = position_dodge(width = .6), size = 3,
+             family = "ps", fontface = "bold") +
   scale_colour_manual(values = c("#1405BD", "grey60", "#DE0100")) +
-  labs(x = NULL, y = 'Mean change of agreement and factual belief\nPersuasive <-> Backfire', colour = "Partisanship:", shape = "Partisanship:") +
+  labs(x = NULL, y = 'Mean change of agreement and factual belief\nPersuasive <-> Backfire', 
+       colour = "Partisanship:", shape = "Partisanship:", fill = "Partisanship:") +
   theme_plot() +
   coord_flip() +
   facet_grid(dv ~ factor(valence, labels = c("Biden was wrong!", "Ducey was wrong!")))

@@ -13,16 +13,28 @@ PLOT_FONT_FAMILY <- 'ps'
 
 ## THEME SET ===================================================================
 theme_plot <- function() {
-  theme_bw(base_size = 15, base_family = PLOT_FONT_FAMILY) +
-    theme(axis.text = element_text(colour = "black"),
-          panel.grid.minor = element_blank(), 
-          panel.grid.major.y = element_blank(), 
+  theme_bw(base_family = PLOT_FONT_FAMILY, base_size = 15) +
+    theme(panel.grid.minor = element_blank(),
+          plot.background = element_rect(fill = "white", color = NA),
+          plot.title = element_text(face = "bold"),
           axis.title = element_text(size = 13),
-          plot.title = element_text(size = 15, face = "bold"),
-          strip.background = element_rect(size = .5),
-          plot.margin = margin(.1, .1, 0, .1, "cm"), 
-          strip.text = element_text(face = "bold", margin = margin(.2, .2, .2, .2, "cm")),
+          strip.text = element_text(face = "bold"),
+          strip.background = element_rect(fill = "grey80", color = NA),
+          plot.margin = margin(.1, .1, 0, .1, "cm"),
+          legend.title = element_text(face = "bold", size = 13),
           legend.position = "bottom",
-          legend.title = element_text(size = 13), 
           legend.margin = margin(0, .2, .2, .2, "cm"))
+  
+  # theme_bw(base_size = 15, base_family = PLOT_FONT_FAMILY) +
+  #   theme(axis.text = element_text(colour = "black"),
+  #         panel.grid.minor = element_blank(), 
+  #         # panel.grid.major.y = element_blank(), 
+  #         axis.title = element_text(size = 13),
+  #         plot.title = element_text(size = 15, face = "bold"),
+  #         strip.background = element_rect(size = .5),
+  #         plot.margin = margin(.1, .1, 0, .1, "cm"), 
+  #         strip.text = element_text(face = "bold", margin = margin(.2, .2, .2, .2, "cm")),
+  #         legend.position = "bottom",
+  #         legend.title = element_text(size = 13), 
+  #         legend.margin = margin(0, .2, .2, .2, "cm"))
 }

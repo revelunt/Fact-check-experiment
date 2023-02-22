@@ -47,12 +47,32 @@ pacman::p_load(
   estimatr,      # lm_robust(), starprep()
   lsr,           # CohenD() 
   kableExtra,
+  showtext,       # Import font from Google Font
+  here,
   tidyverse,     # Tidyverse umbrella package 
   stargazer
 )  
 
 conflict_prefer("select", "dplyr")
 conflict_prefer("filter", "dplyr")
+
+font_add_google('PT Sans', 'ps')
+showtext_auto()
+PLOT_FONT_FAMILY <- 'ps'
+
+theme_plot <- function() {
+  theme_bw(base_family = PLOT_FONT_FAMILY, base_size = 12) +
+    theme(panel.grid.minor = element_blank(),
+          plot.background = element_rect(fill = "white", color = NA),
+          plot.title = element_text(face = "bold"),
+          axis.title = element_text(size = 12),
+          strip.text = element_text(face = "bold"),
+          strip.background = element_rect(fill = "grey80", color = NA),
+          plot.margin = margin(.1, .1, 0, .1, "cm"),
+          legend.title = element_text(face = "bold", size = 12),
+          legend.position = "bottom",
+          legend.margin = margin(0, .2, .2, .2, "cm"))
+}
 ```
 
 # Treatment materials
@@ -1093,6 +1113,70 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE, align = c('l', rep('c', ti
 \newpage
 
 ```{r}
+#| echo: false
+#| out-width: 100%
+#| fig-height: 5
+#| fig-cap: Persuasive Effect of Fact-checking News, Study 2 (U.S. Sample, strict attention check subset). Each point indicates the mean value of net agreement and factual belief (i.e., difference between before and after exposure to the treatment). Bars represent 95% confidence intervals and each number is the effect size Cohen’s $d$.
+
+tab <- bind_rows(
+  df_study2 %>% 
+    group_by(partisanship, valence, media_slant) %>% 
+    summarise(mean = mean(agree_diff), sd = sd(agree_diff), n = n()) %>% 
+    mutate(se = sd/sqrt(n)) %>% 
+    mutate(conf_95_low = (mean - 1.96*se), conf_95_high = (mean + 1.96*se),
+           conf_80_low = (mean - 1.282*se), conf_80_high = (mean + 1.282*se),
+           dv = "DV: Agreement"),
+  df_study2 %>% 
+    group_by(partisanship, valence, media_slant) %>% 
+    summarise(mean = mean(belief_diff), sd = sd(belief_diff), n = n()) %>% 
+    mutate(se = sd/sqrt(n)) %>% 
+    mutate(conf_95_low = (mean - 1.96*se), conf_95_high = (mean + 1.96*se),
+           conf_80_low = (mean - 1.282*se), conf_80_high = (mean + 1.282*se),
+           dv = "DV: Factual belief")
+)
+
+tmp <- bind_rows(
+  df_study2 %>%
+    dplyr::select(agree_t1, agree_t2, valence, media_slant, partisanship) %>%
+    group_by(valence, media_slant, partisanship) %>%
+    group_modify(~ tidy(cohensD(.$agree_t2, .$agree_t1))) %>% 
+    mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
+    dplyr::select(-x) |> 
+    mutate(dv = "DV: Agreement"),
+  df_study2 %>%
+    dplyr::select(belief_t1, belief_t2, valence, media_slant, partisanship) %>%
+    group_by(valence, media_slant, partisanship) %>%
+    group_modify(~ tidy(cohensD(.$belief_t2, .$belief_t1))) %>% 
+    mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
+    dplyr::select(-x) |> 
+    mutate(dv = "DV: Factual belief"),
+)
+
+tab <- tab |> left_join(tmp, by = c("valence", "media_slant", "partisanship", "dv"))
+
+plot <- tab %>% 
+  ggplot(aes(media_slant, mean, colour = partisanship)) +
+  geom_hline(yintercept = 0, size = 1.5, colour = 'grey', alpha = .5) +
+  geom_pointrange(aes(ymin = conf_95_low, ymax = conf_95_high), fill = "white",
+                 position = position_dodge(width = .6)) +
+  geom_text(aes(x = media_slant, y = conf_95_low - 0.15,
+                 label = d, group = partisanship, colour = partisanship),
+             position = position_dodge(width = .6), size = 3,
+             family = "ps", fontface = "bold") +
+  scale_colour_manual(values = c("#1405BD", "grey60", "#DE0100")) +
+  labs(x = NULL, y = 'Mean change of agreement and factual belief\nPersuasive <-> Backfire', 
+       colour = "Partisanship:", shape = "Partisanship:", fill = "Partisanship:") +
+  theme_plot() +
+  coord_flip() +
+  facet_grid(dv ~ factor(valence, labels = c("Biden was wrong!", "Ducey was wrong!")))
+
+plot
+```
+
+
+\newpage
+
+```{r}
 #| results: asis
 #| echo: false
 tab1 <- df_study2 %>% 
@@ -1141,6 +1225,49 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE,
     footnote(
     general = 'Hostile media perception values were compared to 0.5 (perception of neutrality).', 
     threeparttable = TRUE, escape = FALSE, footnote_as_chunk = TRUE)
+```
+
+\newpage
+
+```{r}
+#| echo: false
+#| out-width: 100%
+#| fig-height: 3
+#| fig-cap: Hostile media effect of Fact-checking News, Study 2 (U.S. Sample, strict attention check subset). Each point indicates the mean value of hostile media effect. Bars represent 95% confidence intervals and each number is the effect size Cohen’s d.
+
+tab <- df_study2 %>% 
+  filter(partisanship != "Independent") %>% 
+  group_by(partisanship, valence, media_slant) %>% 
+  summarise(mean = mean(hmp_score), sd = sd(hmp_score), n = n()) %>% 
+  mutate(se = sd/sqrt(n)) %>% 
+  mutate(conf_95_low = (mean - 1.96*se), conf_95_high = (mean + 1.96*se),
+         conf_80_low = (mean - 1.282*se), conf_80_high = (mean + 1.282*se))
+
+tmp <- df_study2 %>%
+  select(valence, media_slant, partisanship, hmp_score) %>%
+  group_by(valence, media_slant, partisanship) %>%
+  group_modify(~ tidy(cohensD(.$hmp_score, mu = 0.5))) %>% 
+  mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
+  select(-x)
+
+tab <- tab |> left_join(tmp, by = c("valence", "media_slant", "partisanship"))
+
+plot <- tab %>% 
+  ggplot(aes(media_slant, mean, colour = partisanship)) +
+  geom_hline(yintercept = 0.5, size = 1.5, colour = 'grey', alpha = .5) +
+  geom_pointrange(aes(ymin = conf_95_low, ymax = conf_95_high), fill = "white",
+                  position = position_dodge(width = .6)) +
+  geom_text(aes(x = media_slant, y = conf_95_high + 0.025,
+                label = d, group = partisanship, colour = partisanship),
+            position = position_dodge(width = .6), size = 3,
+            family = "ps", fontface = "bold") +
+  scale_colour_manual(values = c("#1405BD", "#DE0100")) +
+  labs(x = NULL, y = 'Mean score of hostile media effect\n(0.5: Neutral)', colour = "Partisanship:", shape = "Partisanship:") +
+  theme_plot() +
+  coord_flip() +
+  facet_grid(. ~ factor(valence, labels = c("Biden was wrong!", "Ducey was wrong!")))
+
+plot
 ```
 
 \newpage
@@ -1383,6 +1510,69 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE, align = c('l', rep('c', ti
 \newpage
 
 ```{r}
+#| echo: false
+#| out-width: 100%
+#| fig-height: 5
+#| fig-cap: Persuasive Effect of Fact-checking News, Study 3 (U.S. Sample, strict attention check subset). Each point indicates the mean value of net agreement and factual belief (i.e., difference between before and after exposure to the treatment). Bars represent 95% confidence intervals and each number is the effect size Cohen’s $d$.
+
+tab <- bind_rows(
+  df_study3 %>% 
+    group_by(partisanship, nfc, media_slant) %>% 
+    summarise(mean = mean(agree_diff), sd = sd(agree_diff), n = n()) %>% 
+    mutate(se = sd/sqrt(n)) %>% 
+    mutate(conf_95_low = (mean - 1.96*se), conf_95_high = (mean + 1.96*se),
+           conf_80_low = (mean - 1.282*se), conf_80_high = (mean + 1.282*se),
+           dv = "DV: Agreement"),
+  df_study3 %>% 
+    group_by(partisanship, nfc, media_slant) %>% 
+    summarise(mean = mean(belief_diff), sd = sd(belief_diff), n = n()) %>% 
+    mutate(se = sd/sqrt(n)) %>% 
+    mutate(conf_95_low = (mean - 1.96*se), conf_95_high = (mean + 1.96*se),
+           conf_80_low = (mean - 1.282*se), conf_80_high = (mean + 1.282*se),
+           dv = "DV: Factual belief")
+  )
+
+tmp <- bind_rows(
+  df_study3 %>%
+    dplyr::select(agree_t1, agree_t2, media_slant, nfc, partisanship) %>%
+    group_by(media_slant, nfc, partisanship) %>%
+    group_modify(~ tidy(cohensD(.$agree_t2, .$agree_t1))) %>% 
+    mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
+    dplyr::select(-x) |> 
+    mutate(dv = "DV: Agreement"),
+  df_study3 %>%
+    dplyr::select(belief_t1, belief_t2, media_slant, nfc, partisanship) %>%
+    group_by(media_slant, nfc, partisanship) %>%
+    group_modify(~ tidy(cohensD(.$belief_t2, .$belief_t1))) %>% 
+    mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
+    dplyr::select(-x) |> 
+    mutate(dv = "DV: Factual belief")
+)
+
+tab <- tab |> left_join(tmp, by = c("media_slant", "nfc", "partisanship", "dv"))
+
+plot <- tab %>% 
+  ggplot(aes(media_slant, mean, colour = partisanship)) +
+  geom_hline(yintercept = 0, size = 1.5, colour = 'grey', alpha = .5) +
+  geom_pointrange(aes(ymin = conf_95_low, ymax = conf_95_high), fill = "white",
+                  position = position_dodge(width = .6)) +
+  geom_text(aes(x = media_slant, y = conf_95_low - 0.12,
+                label = d, group = partisanship, colour = partisanship),
+            position = position_dodge(width = .6), size = 3,
+            family = "ps", fontface = "bold") +
+  scale_colour_manual(values = c("#1405BD", "#DE0100")) +
+  labs(x = NULL, y = 'Mean change of agreement and factual belief\nPersuasive <-> Backfire', colour = "Partisanship:", shape = "Partisanship:") +
+  theme_plot() +
+  coord_flip() +
+  facet_grid(dv ~ factor(nfc, labels = c("NfC: High", "NfC: Low")))
+
+plot
+```
+
+
+\newpage
+
+```{r}
 #| results: asis
 #| echo: false
 
@@ -1440,6 +1630,48 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE,
     general = 'Hostile media perception values were compared to 0.5 (perception of neutrality).', 
     threeparttable = TRUE, escape = FALSE, footnote_as_chunk = TRUE)
 ```
+
+\newpage
+
+```{r}
+#| echo: false
+#| out-width: 100%
+#| fig-height: 3
+#| fig-cap: Hostile media effect of Fact-checking News, Study 3 (U.S. Sample, strict attention check subset). Each point indicates the mean value of hostile media effect. Bars represent 95% confidence intervals and each number is the effect size Cohen’s d.
+
+tab <- df_study3 %>% 
+  group_by(partisanship, nfc, media_slant) %>% 
+  summarise(mean = mean(hmp_score), sd = sd(hmp_score), n = n()) %>% 
+  mutate(se = sd/sqrt(n)) %>% 
+  mutate(conf_95_low = (mean - 1.96*se), conf_95_high = (mean + 1.96*se),
+         conf_80_low = (mean - 1.282*se), conf_80_high = (mean + 1.282*se))
+
+tmp <- df_study3 %>%
+  select(media_slant, nfc, partisanship, hmp_score) %>%
+  group_by(media_slant, nfc, partisanship) %>%
+  group_modify(~ tidy(cohensD(.$hmp_score, mu = 0.5))) %>% 
+  mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
+  select(-x)
+
+tab <- tab |> left_join(tmp, by = c("media_slant", "nfc", "partisanship"))
+
+# Generate plot
+plot <- tab %>% 
+  ggplot(aes(media_slant, mean, colour = partisanship)) +
+  geom_hline(yintercept = 0.5, size = 1.5, colour = 'grey', alpha = .5) +
+  geom_pointrange(aes(ymin = conf_95_low, ymax = conf_95_high), fill = "white",
+                  position = position_dodge(width = .6)) +
+  geom_text(aes(x = media_slant, y = conf_95_high + 0.02,
+                label = d, group = partisanship, colour = partisanship),
+            position = position_dodge(width = .6), size = 3,
+            family = "ps", fontface = "bold") +
+  scale_colour_manual(values = c("#1405BD", "#DE0100")) +
+  labs(x = NULL, y = 'Mean score of hostile media effect\n(0.5: Neutral)', colour = "Partisanship:", shape = "Partisanship:") +
+  theme_plot() +
+  coord_flip() +
+  facet_grid(. ~ factor(nfc, labels = c("NfC: High", "NfC: Low")))
+```
+
 
 \newpage
 

@@ -18,6 +18,7 @@
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
   ggrepel,
+  broom,
   lsr,           # CohenD() 
   conflicted,    # Avoid conflict of functions with same names
   tidyverse      # Tidyverse umbrella package
@@ -61,14 +62,13 @@ plot <- tab %>%
   geom_hline(yintercept = 0, size = 1.5, colour = 'grey', alpha = .5) +
   geom_pointrange(aes(ymin = conf_95_low, ymax = conf_95_high), fill = "white",
                   position = position_dodge(width = .6)) +
-  geom_text_repel(aes(label = d, hjust = ifelse(mean < 0, 0, 1)), 
-                  position = position_dodge(width = .6), vjust = 1) +
-  # geom_point(size = 3, fill = "white", position = position_dodge(width = .6)) +
-  scale_y_continuous(limits = c(-1.2, 0.5)) +
-  # scale_shape_manual(values = c(21, 22, 23)) +
+  geom_text(aes(x = media_slant, y = conf_95_low - 0.1,
+                label = d, group = ideology_discrete, colour = ideology_discrete),
+            position = position_dodge(width = .6), size = 3,
+            family = "ps", fontface = "bold") +
   scale_colour_manual(values = c("#004EA1", "grey60", "#D22730")) +
   labs(x = NULL, y = 'Mean change of agreement\nPersuasive <-> Backfire', 
-       colour = "Ideology:", shape = "Ideology:", label = NULL) +
+       colour = "Ideology:", shape = NULL, label = NULL, fill = "Ideology:") +
   theme_plot() +
   coord_flip() +
   facet_grid(. ~ valence)
