@@ -1637,7 +1637,7 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE,
 #| echo: false
 #| out-width: 100%
 #| fig-height: 3
-#| fig-cap: Hostile media effect of Fact-checking News, Study 3 (U.S. Sample, strict attention check subset). Each point indicates the mean value of hostile media effect. Bars represent 95% confidence intervals and each number is the effect size Cohen’s d.
+#| fig-cap: Hostile media effect of Fact-checking News, Study 3 (U.S. Sample, strict attention check subset). Each point indicates the mean value of hostile media effect. Bars represent 95% confidence intervals and each number is the effect size Cohen’s $d$.
 
 tab <- df_study3 %>% 
   group_by(partisanship, nfc, media_slant) %>% 
@@ -1670,6 +1670,8 @@ plot <- tab %>%
   theme_plot() +
   coord_flip() +
   facet_grid(. ~ factor(nfc, labels = c("NfC: High", "NfC: Low")))
+
+plot
 ```
 
 
