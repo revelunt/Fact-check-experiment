@@ -992,6 +992,8 @@ stargazer(mod_list,
 
 # Replication of Study 2 & Study 3 with Strict Attention Check Threshold
 
+There are concerns about the data quality of the MTurk sample, especially regarding the bot problem [see @webb2022too]. However, different from @webb2022too, we used standard screening procedures when recruiting Mturk respondents (e.g., only approved participants can take the HIT by setting the eligibility criteria based on a prior HIT acceptance rate of 98%). Also, during the experiment, we additionally included a few attention check questions (before and after misinformation and correction exposure) for monitoring potential data quality. Attention check problem asks what the news source where delivering fact-checking news was. Here, we replicate our analysis with samples only who passed this attention check. For both Study 2 and Study 3, there is no significant difference.
+
 ## Study 2
 
 ```{r}

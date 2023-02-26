@@ -69,7 +69,7 @@ tmp <- bind_rows(
     group_modify(~ tidy(cohensD(.$belief_t2, .$belief_t1))) %>% 
     mutate(d = as.character(sprintf("%.2f", round(x, 2)))) %>% 
     dplyr::select(-x) |> 
-    mutate(dv = "DV: Factual belief"),
+    mutate(dv = "DV: Factual belief")
 )
 
 tab <- tab |> left_join(tmp, by = c("valence", "media_slant", "partisanship", "dv"))
