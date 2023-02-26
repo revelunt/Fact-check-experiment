@@ -22,16 +22,13 @@ format:
     pdf-engine: pdflatex
     lof: true
     lot: true
-    # fig_caption: yes
     include-in-header: template.tex
-    # highlight-style: haddock
-    # colorlinks: true
 execute:
   warning: false
-urlcolor: myblue
-linkcolor: myblue
-toccolor: myblue
-citecolor: myblue
+colorlinks: true
+urlcolor: uoiorange2
+linkcolor: uoiorange2
+citecolor: uoiorange2
 csl: "apa.csl"
 bibliography: references.bib
 ---
@@ -119,15 +116,15 @@ In his first presidential news conference, president Joe Biden said the followin
 Arizona Gov. Doug Ducey in an interview with ABC News' "This Week," said the following: Ducey, a Republican, said there has been a "460\% spike in illegal apprehensions, over 100,000 people in custody," and blamed "the reverse of the Biden administration of the Trump policies, and it needs attention."
 \end{quote}
 
-![Biden $\times$ FOX (Study 2)](../01_data/treatment-materials/study2/biden-fox-desktop.pdf){height="95%"}
+![Biden $\times$ Fox (Study 2)](../01_data/treatment-materials/study2/biden-Fox-desktop.pdf){height="95%"}
 
-![Biden $\times$ Rueter (Study 2)](../01_data/treatment-materials/study2/biden-reuter-desktop.pdf){height="95%"}
+![Biden $\times$ Rueters (Study 2)](../01_data/treatment-materials/study2/biden-reuter-desktop.pdf){height="95%"}
 
 ![Biden $\times$ MSNBC (Study 2)](../01_data/treatment-materials/study2/biden-msnbc-desktop.pdf){height="95%"}
 
-![Ducey $\times$ FOX (Study 2)](../01_data/treatment-materials/study2/ducey-fox-desktop.pdf){height="95%"}
+![Ducey $\times$ Fox (Study 2)](../01_data/treatment-materials/study2/ducey-Fox-desktop.pdf){height="95%"}
 
-![Ducey $\times$ Rueter (Study 2)](../01_data/treatment-materials/study2/ducey-reuter-desktop.pdf){height="95%"}
+![Ducey $\times$ Rueters (Study 2)](../01_data/treatment-materials/study2/ducey-reuter-desktop.pdf){height="95%"}
 
 ![Ducey $\times$ MSNBC (Study 2)](../01_data/treatment-materials/study2/ducey-msnbc-desktop.pdf){height="95%"}
 
@@ -157,15 +154,15 @@ REP. LIZ CHENEY: "From cancelling the Keystone Pipeline to banning new oil \& ga
 \end{quote}
 
 
-![Democrat $\times$ FOX (Study 3)](../01_data/treatment-materials/study3/democrat-fox-desktop.pdf){height="95%"}
+![Democrat $\times$ Fox (Study 3)](../01_data/treatment-materials/study3/democrat-Fox-desktop.pdf){height="95%"}
 
-![Democrat $\times$ Rueter (Study 3)](../01_data/treatment-materials/study3/democrat-reuter-desktop.pdf){height="95%"}
+![Democrat $\times$ Rueters (Study 3)](../01_data/treatment-materials/study3/democrat-reuter-desktop.pdf){height="95%"}
 
 ![Democrat $\times$ MSNBC (Study 3)](../01_data/treatment-materials/study3/democrat-msnbc-desktop.pdf){height="95%"}
 
-![Republican $\times$ FOX (Study 3)](../01_data/treatment-materials/study3/republican-fox-desktop.pdf){height="95%"}
+![Republican $\times$ Fox (Study 3)](../01_data/treatment-materials/study3/republican-Fox-desktop.pdf){height="95%"}
 
-![Republican $\times$ Rueter (Study 3)](../01_data/treatment-materials/study3/republican-reuter-desktop.pdf){height="95%"}
+![Republican $\times$ Rueters (Study 3)](../01_data/treatment-materials/study3/republican-reuter-desktop.pdf){height="95%"}
 
 ![Republican $\times$ MSNBC (Study 3)](../01_data/treatment-materials/study3/republican-msnbc-desktop.pdf){height="95%"}
 
@@ -437,7 +434,7 @@ stargazer(mod1, mod2, mod3, mod4, mod5, mod6,
 # Factor level setting
 df_study2 <- df_study2 %>% 
   mutate(
-    media_slant = factor(media_slant, levels = c("FOX", "Reuter", "MSNBC"))
+    media_slant = factor(media_slant, levels = c("Fox", "Reuters", "MSNBC"))
     )
 
 # Combine data frames with the results of the multiple t-tests
@@ -482,11 +479,11 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE,
   add_header_above(c(" ", " ", "Pre" = 2, "Post" = 2, " ")) %>% 
   pack_rows(
     index = c(
-    "Debunking Biden $\\times$ FOX" = 3,
-    "Debunking Biden $\\times$ Reuter" = 3,
+    "Debunking Biden $\\times$ Fox" = 3,
+    "Debunking Biden $\\times$ Reuters" = 3,
     "Debunking Biden $\\times$ MSNBC" = 3,
-    "Debunking Ducey $\\times$ FOX" = 3,
-    "Debunking Ducey $\\times$ Reuter" = 3,
+    "Debunking Ducey $\\times$ Fox" = 3,
+    "Debunking Ducey $\\times$ Reuters" = 3,
     "Debunking Ducey $\\times$ MSNBC" = 3), escape = F
     )
 ```
@@ -537,11 +534,11 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE, align = c('l', rep('c', ti
     kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
   add_header_above(c(" ", " ", "Pre" = 2, "Post" = 2, " ")) %>% 
   pack_rows(index = c(
-    "Debunking Biden $\\times$ FOX" = 3,
-    "Debunking Biden $\\times$ Reuter" = 3,
+    "Debunking Biden $\\times$ Fox" = 3,
+    "Debunking Biden $\\times$ Reuters" = 3,
     "Debunking Biden $\\times$ MSNBC" = 3,
-    "Debunking Ducey $\\times$ FOX" = 3,
-    "Debunking Ducey $\\times$ Reuter" = 3,
+    "Debunking Ducey $\\times$ Fox" = 3,
+    "Debunking Ducey $\\times$ Reuters" = 3,
     "Debunking Ducey $\\times$ MSNBC" = 3), escape = F)
 ```
 
@@ -587,11 +584,11 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE,
     caption = "Mean comparison of hostile media perception (Study 2, U.S. sample)") %>% 
     kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
   pack_rows(index = c(
-    "Debunking Biden $\\times$ FOX" = 2,
-    "Debunking Biden $\\times$ Reuter" = 2,
+    "Debunking Biden $\\times$ Fox" = 2,
+    "Debunking Biden $\\times$ Reuters" = 2,
     "Debunking Biden $\\times$ MSNBC" = 2,
-    "Debunking Ducey $\\times$ FOX" = 2,
-    "Debunking Ducey $\\times$ Reuter" = 2,
+    "Debunking Ducey $\\times$ Fox" = 2,
+    "Debunking Ducey $\\times$ Reuters" = 2,
     "Debunking Ducey $\\times$ MSNBC" = 2), escape = F) %>% 
     footnote(
     general = 'Hostile media perception values were compared to 0.5 (perception of neutrality).', 
@@ -606,11 +603,11 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE,
 
 # Contrast coding
 df_study2$media_slant <- factor(df_study2$media_slant)
-df_study2$media_slant <- relevel(df_study2$media_slant, "Reuter")
+df_study2$media_slant <- relevel(df_study2$media_slant, "Reuters")
 ## contrasts(df_study2$media_slant)
-##        FOX MSNBC
+##        Fox MSNBC
 ## Reuter   0     0
-## FOX      1     0
+## Fox      1     0
 ## MSNBC    0     1
 
 # Subsampling based on partisanship
@@ -638,11 +635,11 @@ stargazer(mod_list,
           style = "apsr",
           dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
           column.separate = c(2, 2, 2), notes.append = FALSE, font.size = "small",
-  covariate.labels = c("Ducey (vs. Biden)", "FOX (vs. Reuter)", "MSNBC (vs. Reuter)",
+  covariate.labels = c("Ducey (vs. Biden)", "Fox (vs. Reuters)", "MSNBC (vs. Reuters)",
                        "General knowledge", "Immigration knowledge",
                        "Media trust", "Involvement",
                        "Gender", "Age", "Education", "Income", "Race",
-                       "Ducey $\\times$ FOX", "Ducey $\\times$ MSNBC", "Constant"),
+                       "Ducey $\\times$ Fox", "Ducey $\\times$ MSNBC", "Constant"),
   notes = c("\\parbox[t]{16cm}{\\footnotesize \\textit{Notes:} Ducey = Debunking misinformation in Doug Ducey’s statement. Each cell includes regression coefficient and standard errors are in  parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
   omit.stat = c("f", "ser"), 
   no.space = TRUE, star.cutoffs = c(0.05, 0.01, 0.001))
@@ -674,11 +671,11 @@ stargazer(mod_list,
           style = "apsr",
           dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
           column.separate = c(2, 2, 2), notes.append = FALSE, font.size = "small",
-  covariate.labels = c("Ducey (vs. Biden)", "FOX (vs. Reuter)", "MSNBC (vs. Reuter)",
+  covariate.labels = c("Ducey (vs. Biden)", "Fox (vs. Reuters)", "MSNBC (vs. Reuters)",
                        "General knowledge", "Immigration knowledge",
                        "Media trust", "Involvement",
                        "Gender", "Age", "Education", "Income", "Race",
-                       "Ducey $\\times$ FOX", "Ducey $\\times$ MSNBC", "Constant"),
+                       "Ducey $\\times$ Fox", "Ducey $\\times$ MSNBC", "Constant"),
   notes = c("\\parbox[t]{16cm}{\\footnotesize \\textit{Notes:} Ducey = Debunking misinformation in Doug Ducey’s statement. Each cell includes regression coefficient and standard errors are in parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
   omit.stat = c("f", "ser"), 
   no.space = TRUE, star.cutoffs = c(0.05, 0.01, 0.001))
@@ -709,15 +706,15 @@ stargazer(mod_list,
           style = "apsr",
           dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
           column.separate = c(2, 2, 2), notes.append = FALSE, font.size = "footnotesize",
-  covariate.labels = c("Ducey (vs. Biden)", "FOX (vs. Reuter)", "MSNBC (vs. Reuter)",
+  covariate.labels = c("Ducey (vs. Biden)", "Fox (vs. Reuters)", "MSNBC (vs. Reuters)",
                        "General knowledge", "Immigration knowledge",
                        "Media trust", "Involvement",
                        "Gender", "Age", "Education", "Income", "Race",
                        "Republican (vs. Democrat)",
-                       "Ducey $\\times$ FOX", "Ducey $\\times$ MSNBC", 
-                       "Ducey $\\times$ Republican", "FOX $\\times$ Republican",
+                       "Ducey $\\times$ Fox", "Ducey $\\times$ MSNBC", 
+                       "Ducey $\\times$ Republican", "Fox $\\times$ Republican",
                        "MSNBC $\\times$ Republican", 
-                       "Ducey $\\times$ FOX $\\times$ Republican",
+                       "Ducey $\\times$ Fox $\\times$ Republican",
                        "Ducey $\\times$ MSNBC $\\times$ Republican", "Constant"),
   notes = c("\\parbox[t]{16cm}{\\footnotesize \\textit{Notes:} Debunking misinformation in Dough Ducey’s statement. Each cell includes regression coefficient and standard errors are in parentheses. (-) value of dependent variable denotes lesser bias perception against one’s in-group, whereas (+) value of dependent variable denotes greater bias perception against one’s in-group (i.e., perceiving greater favorability towards out-groups)}", "*$p < .05$; **$p < .01$; ***$p < .001$."),
   omit.stat = c("f", "ser"), 
@@ -772,12 +769,12 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE, align = c('l', rep('c', ti
     kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
   add_header_above(c(" ", " ", "Pre" = 2, "Post" = 2, " ")) %>% 
   pack_rows(index = c(
-    "FOX $\\times$ High NfC" = 2,
-    "FOX $\\times$ Low NfC" = 2,
+    "Fox $\\times$ High NfC" = 2,
+    "Fox $\\times$ Low NfC" = 2,
     "MSNBC $\\times$ High NfC" = 2,
     "MSNBC $\\times$ Low NfC" = 2,
-    "Reuter $\\times$ High NfC" = 2,
-    "Reuter $\\times$ Low NfC" = 2), escape = F)
+    "Reuters $\\times$ High NfC" = 2,
+    "Reuters $\\times$ Low NfC" = 2), escape = F)
 ```
 
 \newpage
@@ -825,12 +822,12 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE, align = c('l', rep('c', ti
     kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
   add_header_above(c(" ", " ", "Pre" = 2, "Post" = 2, " ")) %>% 
   pack_rows(index = c(
-    "FOX $\\times$ High NfC" = 2,
-    "FOX $\\times$ Low NfC" = 2,
+    "Fox $\\times$ High NfC" = 2,
+    "Fox $\\times$ Low NfC" = 2,
     "MSNBC $\\times$ High NfC" = 2,
     "MSNBC $\\times$ Low NfC" = 2,
-    "Reuter $\\times$ High NfC" = 2,
-    "Reuter $\\times$ Low NfC" = 2), escape = F)
+    "Reuters $\\times$ High NfC" = 2,
+    "Reuters $\\times$ Low NfC" = 2), escape = F)
 ```
 
 \newpage
@@ -883,12 +880,12 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE,
     caption = "Mean comparison of hostile media effect (Study 3, U.S. sample)") %>% 
     kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
   pack_rows(index = c(
-    "FOX $\\times$ High NfC" = 2,
-    "FOX $\\times$ Low NfC" = 2,
+    "Fox $\\times$ High NfC" = 2,
+    "Fox $\\times$ Low NfC" = 2,
     "MSNBC $\\times$ High NfC" = 2,
     "MSNBC $\\times$ Low NfC" = 2,
-    "Reuter $\\times$ High NfC" = 2,
-    "Reuter $\\times$ Low NfC" = 2), escape = F) %>% 
+    "Reuters $\\times$ High NfC" = 2,
+    "Reuters $\\times$ Low NfC" = 2), escape = F) %>% 
     footnote(
     general = 'Hostile media perception values were compared to 0.5 (perception of neutrality).', 
     threeparttable = TRUE, escape = FALSE, footnote_as_chunk = TRUE)
@@ -916,7 +913,7 @@ stargazer(mod_list,
           style = "apsr",
           dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
           column.separate = c(2, 2), notes.append = FALSE,
-  covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. FOX)", "Rueter (vs. FOX)",
+  covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. Fox)", "Rueter (vs. Fox)",
                        "General knowledge", "Media trust", "Involvement",
                        "Gender", "Age", "Education", "Income", "Race",
                        "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuter", "Constant"),
@@ -947,10 +944,10 @@ stargazer(mod_list,
           style = "apsr",
           dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
           column.separate = c(2, 2), notes.append = FALSE,
-  covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. FOX)", "Rueter (vs. FOX)",
+  covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. Fox)", "Rueter (vs. Fox)",
                        "General knowledge", "Media trust", "Involvement",
                        "Gender", "Age", "Education", "Income", "Race",
-                       "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuter", "Constant"),
+                       "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuters", "Constant"),
   notes = c("\\parbox[t]{10cm}{\\textit{Notes:} Robust standard errors (HC3) are in parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
   omit.stat = c("f", "ser"), 
   no.space = TRUE, star.cutoffs = c(0.05, 0.01, 0.001))
@@ -979,10 +976,10 @@ stargazer(mod_list,
           style = "apsr",
           dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
           column.separate = c(2, 2), notes.append = FALSE,
-  covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. FOX)", "Rueter (vs. FOX)",
+  covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. Fox)", "Rueter (vs. Fox)",
                        "General knowledge", "Media trust", "Involvement",
                        "Gender", "Age", "Education", "Income", "Race",
-                       "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuter", "Constant"),
+                       "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuters", "Constant"),
   notes = c("\\parbox[t]{10cm}{\\textit{Notes:} Robust standard errors (HC3) are in parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
   omit.stat = c("f", "ser"), 
   no.space = TRUE, star.cutoffs = c(0.05, 0.01, 0.001))
@@ -1004,7 +1001,7 @@ There are concerns about the data quality of the MTurk sample, especially regard
 df_study2 <- df_study2 %>% 
   filter(attention_pass_media == 1) |> 
   mutate(
-    media_slant = factor(media_slant, levels = c("FOX", "Reuter", "MSNBC"))
+    media_slant = factor(media_slant, levels = c("Fox", "Reuters", "MSNBC"))
     )
 
 # Combine data frames with the results of the multiple t-tests
@@ -1049,11 +1046,11 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE,
   add_header_above(c(" ", " ", "Pre" = 2, "Post" = 2, " ")) %>% 
   pack_rows(
     index = c(
-    "Debunking Biden $\\times$ FOX" = 3,
-    "Debunking Biden $\\times$ Reuter" = 3,
+    "Debunking Biden $\\times$ Fox" = 3,
+    "Debunking Biden $\\times$ Reuters" = 3,
     "Debunking Biden $\\times$ MSNBC" = 3,
-    "Debunking Ducey $\\times$ FOX" = 3,
-    "Debunking Ducey $\\times$ Reuter" = 3,
+    "Debunking Ducey $\\times$ Fox" = 3,
+    "Debunking Ducey $\\times$ Reuters" = 3,
     "Debunking Ducey $\\times$ MSNBC" = 3), escape = F
     )
 ```
@@ -1104,11 +1101,11 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE, align = c('l', rep('c', ti
     kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
   add_header_above(c(" ", " ", "Pre" = 2, "Post" = 2, " ")) %>% 
   pack_rows(index = c(
-    "Debunking Biden $\\times$ FOX" = 3,
-    "Debunking Biden $\\times$ Reuter" = 3,
+    "Debunking Biden $\\times$ Fox" = 3,
+    "Debunking Biden $\\times$ Reuters" = 3,
     "Debunking Biden $\\times$ MSNBC" = 3,
-    "Debunking Ducey $\\times$ FOX" = 3,
-    "Debunking Ducey $\\times$ Reuter" = 3,
+    "Debunking Ducey $\\times$ Fox" = 3,
+    "Debunking Ducey $\\times$ Reuters" = 3,
     "Debunking Ducey $\\times$ MSNBC" = 3), escape = F)
 ```
 
@@ -1218,11 +1215,11 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE,
     caption = "Mean comparison of hostile media perception (Study 2, U.S. sample)") %>% 
     kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
   pack_rows(index = c(
-    "Debunking Biden $\\times$ FOX" = 2,
-    "Debunking Biden $\\times$ Reuter" = 2,
+    "Debunking Biden $\\times$ Fox" = 2,
+    "Debunking Biden $\\times$ Reuters" = 2,
     "Debunking Biden $\\times$ MSNBC" = 2,
-    "Debunking Ducey $\\times$ FOX" = 2,
-    "Debunking Ducey $\\times$ Reuter" = 2,
+    "Debunking Ducey $\\times$ Fox" = 2,
+    "Debunking Ducey $\\times$ Reuters" = 2,
     "Debunking Ducey $\\times$ MSNBC" = 2), escape = F) %>% 
     footnote(
     general = 'Hostile media perception values were compared to 0.5 (perception of neutrality).', 
@@ -1235,7 +1232,7 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE,
 #| echo: false
 #| out-width: 100%
 #| fig-height: 3
-#| fig-cap: Hostile media effect of Fact-checking News, Study 2 (U.S. Sample, strict attention check subset). Each point indicates the mean value of hostile media effect. Bars represent 95% confidence intervals and each number is the effect size Cohen’s d.
+#| fig-cap: Hostile media effect of Fact-checking News, Study 2 (U.S. Sample, strict attention check subset). Each point indicates the mean value of hostile media effect. Bars represent 95% confidence intervals and each number is the effect size Cohen’s $d$.
 
 tab <- df_study2 %>% 
   filter(partisanship != "Independent") %>% 
@@ -1280,11 +1277,11 @@ plot
 
 # Contrast coding
 df_study2$media_slant <- factor(df_study2$media_slant)
-df_study2$media_slant <- relevel(df_study2$media_slant, "Reuter")
+df_study2$media_slant <- relevel(df_study2$media_slant, "Reuters")
 ## contrasts(df_study2$media_slant)
-##        FOX MSNBC
+##        Fox MSNBC
 ## Reuter   0     0
-## FOX      1     0
+## Fox      1     0
 ## MSNBC    0     1
 
 # Subsampling based on partisanship
@@ -1312,11 +1309,11 @@ stargazer(mod_list,
           style = "apsr",
           dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
           column.separate = c(2, 2, 2), notes.append = FALSE, font.size = "small",
-  covariate.labels = c("Ducey (vs. Biden)", "FOX (vs. Reuter)", "MSNBC (vs. Reuter)",
+  covariate.labels = c("Ducey (vs. Biden)", "Fox (vs. Reuters)", "MSNBC (vs. Reuters)",
                        "General knowledge", "Immigration knowledge",
                        "Media trust", "Involvement",
                        "Gender", "Age", "Education", "Income", "Race",
-                       "Ducey $\\times$ FOX", "Ducey $\\times$ MSNBC", "Constant"),
+                       "Ducey $\\times$ Fox", "Ducey $\\times$ MSNBC", "Constant"),
   notes = c("\\parbox[t]{16cm}{\\footnotesize \\textit{Notes:} Ducey = Debunking misinformation in Doug Ducey’s statement. Each cell includes regression coefficient and standard errors are in  parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
   omit.stat = c("f", "ser"), 
   no.space = TRUE, star.cutoffs = c(0.05, 0.01, 0.001))
@@ -1348,11 +1345,11 @@ stargazer(mod_list,
           style = "apsr",
           dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
           column.separate = c(2, 2, 2), notes.append = FALSE, font.size = "small",
-  covariate.labels = c("Ducey (vs. Biden)", "FOX (vs. Reuter)", "MSNBC (vs. Reuter)",
+  covariate.labels = c("Ducey (vs. Biden)", "Fox (vs. Reuters)", "MSNBC (vs. Reuters)",
                        "General knowledge", "Immigration knowledge",
                        "Media trust", "Involvement",
                        "Gender", "Age", "Education", "Income", "Race",
-                       "Ducey $\\times$ FOX", "Ducey $\\times$ MSNBC", "Constant"),
+                       "Ducey $\\times$ Fox", "Ducey $\\times$ MSNBC", "Constant"),
   notes = c("\\parbox[t]{16cm}{\\footnotesize \\textit{Notes:} Ducey = Debunking misinformation in Doug Ducey’s statement. Each cell includes regression coefficient and standard errors are in parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
   omit.stat = c("f", "ser"), 
   no.space = TRUE, star.cutoffs = c(0.05, 0.01, 0.001))
@@ -1383,15 +1380,15 @@ stargazer(mod_list,
           style = "apsr",
           dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
           column.separate = c(2, 2, 2), notes.append = FALSE, font.size = "footnotesize",
-  covariate.labels = c("Ducey (vs. Biden)", "FOX (vs. Reuter)", "MSNBC (vs. Reuter)",
+  covariate.labels = c("Ducey (vs. Biden)", "Fox (vs. Reuters)", "MSNBC (vs. Reuters)",
                        "General knowledge", "Immigration knowledge",
                        "Media trust", "Involvement",
                        "Gender", "Age", "Education", "Income", "Race",
                        "Republican (vs. Democrat)",
-                       "Ducey $\\times$ FOX", "Ducey $\\times$ MSNBC", 
-                       "Ducey $\\times$ Republican", "FOX $\\times$ Republican",
+                       "Ducey $\\times$ Fox", "Ducey $\\times$ MSNBC", 
+                       "Ducey $\\times$ Republican", "Fox $\\times$ Republican",
                        "MSNBC $\\times$ Republican", 
-                       "Ducey $\\times$ FOX $\\times$ Republican",
+                       "Ducey $\\times$ Fox $\\times$ Republican",
                        "Ducey $\\times$ MSNBC $\\times$ Republican", "Constant"),
   notes = c("\\parbox[t]{16cm}{\\footnotesize \\textit{Notes:} Debunking misinformation in Dough Ducey’s statement. Each cell includes regression coefficient and standard errors are in parentheses. (-) value of dependent variable denotes lesser bias perception against one’s in-group, whereas (+) value of dependent variable denotes greater bias perception against one’s in-group (i.e., perceiving greater favorability towards out-groups)}", "*$p < .05$; **$p < .01$; ***$p < .001$."),
   omit.stat = c("f", "ser"), 
@@ -1448,12 +1445,12 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE, align = c('l', rep('c', ti
     kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
   add_header_above(c(" ", " ", "Pre" = 2, "Post" = 2, " ")) %>% 
   pack_rows(index = c(
-    "FOX $\\times$ High NfC" = 2,
-    "FOX $\\times$ Low NfC" = 2,
+    "Fox $\\times$ High NfC" = 2,
+    "Fox $\\times$ Low NfC" = 2,
     "MSNBC $\\times$ High NfC" = 2,
     "MSNBC $\\times$ Low NfC" = 2,
-    "Reuter $\\times$ High NfC" = 2,
-    "Reuter $\\times$ Low NfC" = 2), escape = F)
+    "Reuters $\\times$ High NfC" = 2,
+    "Reuters $\\times$ Low NfC" = 2), escape = F)
 ```
 
 \newpage
@@ -1501,12 +1498,12 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE, align = c('l', rep('c', ti
     kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
   add_header_above(c(" ", " ", "Pre" = 2, "Post" = 2, " ")) %>% 
   pack_rows(index = c(
-    "FOX $\\times$ High NfC" = 2,
-    "FOX $\\times$ Low NfC" = 2,
+    "Fox $\\times$ High NfC" = 2,
+    "Fox $\\times$ Low NfC" = 2,
     "MSNBC $\\times$ High NfC" = 2,
     "MSNBC $\\times$ Low NfC" = 2,
-    "Reuter $\\times$ High NfC" = 2,
-    "Reuter $\\times$ Low NfC" = 2), escape = F)
+    "Reuters $\\times$ High NfC" = 2,
+    "Reuters $\\times$ Low NfC" = 2), escape = F)
 ```
 
 \newpage
@@ -1622,12 +1619,12 @@ kbl(output, 'latex', booktabs = TRUE, escape = FALSE,
     caption = "Mean comparison of hostile media effect (Study 3, U.S. sample)") %>% 
     kable_styling(latex_options = c("hold_position"), full_width = FALSE) %>% 
   pack_rows(index = c(
-    "FOX $\\times$ High NfC" = 2,
-    "FOX $\\times$ Low NfC" = 2,
+    "Fox $\\times$ High NfC" = 2,
+    "Fox $\\times$ Low NfC" = 2,
     "MSNBC $\\times$ High NfC" = 2,
     "MSNBC $\\times$ Low NfC" = 2,
-    "Reuter $\\times$ High NfC" = 2,
-    "Reuter $\\times$ Low NfC" = 2), escape = F) %>% 
+    "Reuters $\\times$ High NfC" = 2,
+    "Reuters $\\times$ Low NfC" = 2), escape = F) %>% 
     footnote(
     general = 'Hostile media perception values were compared to 0.5 (perception of neutrality).', 
     threeparttable = TRUE, escape = FALSE, footnote_as_chunk = TRUE)
@@ -1699,10 +1696,10 @@ stargazer(mod_list,
           style = "apsr",
           dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
           column.separate = c(2, 2), notes.append = FALSE,
-  covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. FOX)", "Rueter (vs. FOX)",
+  covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. Fox)", "Rueter (vs. Fox)",
                        "General knowledge", "Media trust", "Involvement",
                        "Gender", "Age", "Education", "Income", "Race",
-                       "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuter", "Constant"),
+                       "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuters", "Constant"),
   notes = c("\\parbox[t]{10cm}{\\textit{Notes:} Robust standard errors (HC3) are in parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
   omit.stat = c("f", "ser"), 
   no.space = TRUE, star.cutoffs = c(0.05, 0.01, 0.001))
@@ -1730,10 +1727,10 @@ stargazer(mod_list,
           style = "apsr",
           dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
           column.separate = c(2, 2), notes.append = FALSE,
-  covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. FOX)", "Rueter (vs. FOX)",
+  covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. Fox)", "Rueter (vs. Fox)",
                        "General knowledge", "Media trust", "Involvement",
                        "Gender", "Age", "Education", "Income", "Race",
-                       "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuter", "Constant"),
+                       "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuters", "Constant"),
   notes = c("\\parbox[t]{10cm}{\\textit{Notes:} Robust standard errors (HC3) are in parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
   omit.stat = c("f", "ser"), 
   no.space = TRUE, star.cutoffs = c(0.05, 0.01, 0.001))
@@ -1762,10 +1759,10 @@ stargazer(mod_list,
           style = "apsr",
           dep.var.labels.include = FALSE, out.header = FALSE, header = FALSE,
           column.separate = c(2, 2), notes.append = FALSE,
-  covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. FOX)", "Rueter (vs. FOX)",
+  covariate.labels = c("Low NfC (vs. High NfC)", "MSNBC (vs. Fox)", "Rueter (vs. Fox)",
                        "General knowledge", "Media trust", "Involvement",
                        "Gender", "Age", "Education", "Income", "Race",
-                       "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuter", "Constant"),
+                       "Low NfC $\\times$ MSNBC", "Low NfC $\\times$ Reuters", "Constant"),
   notes = c("\\parbox[t]{10cm}{\\textit{Notes:} Robust standard errors (HC3) are in parentheses.}", "*$p < .05$; **$p < .01$; ***$p < .001$. "),
   omit.stat = c("f", "ser"), 
   no.space = TRUE, star.cutoffs = c(0.05, 0.01, 0.001))

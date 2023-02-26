@@ -33,7 +33,7 @@ source(paste0(SUB_PATH, "/00_theme-set.R"))
 
 
 ## IMPORT DATA =================================================================
-df_study2 <- read_csv('./01_data/FC_study-2.csv')
+df_study2 <- read_csv('./01_data/FC_study-2_new.csv')
 
 
 ## GENERATE PLOTS ==============================================================
@@ -72,8 +72,8 @@ plot <- tab %>%
 
 ## OUTPUT ======================================================================
 # .png extension file output
-FILE_PATH_PNG <- './03_results/figure-4.png'
-ggsave(filename = FILE_PATH_PNG, width = 7, height = 3, device = 'png', dpi = 'retina')
+# FILE_PATH_PNG <- './03_results/figure-4.png'
+# ggsave(filename = FILE_PATH_PNG, width = 7, height = 3, device = 'png', dpi = 'retina')
 
 # .pdf extension file output
 FILE_PATH_PDF <- './03_results/figure-4.pdf'
